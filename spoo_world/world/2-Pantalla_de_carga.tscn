@@ -1,0 +1,16 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="DynamicFont" id=1]
+size = 100
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+margin_left = 55.0
+margin_top = 18.0
+margin_right = 266.0
+margin_bottom = 92.0
+custom_fonts/font = SubResource( 1 )
+text = "escena 2"
+
+[node name="Sprite" type="Sprite" parent="."]
