@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/0-intro.jpg-3a5dc38c97121db6367306527a43f847.stex"
+path="res://.import/logo1.0.jpeg-502ef95e2b624c4f269b0e4bf3367441.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spoo_world/assets/img/0-intro.jpg"
-dest_files=[ "res://.import/0-intro.jpg-3a5dc38c97121db6367306527a43f847.stex" ]
+source_file="res://spoo_world/assets/icon/logo1.0.jpeg"
+dest_files=[ "res://.import/logo1.0.jpeg-502ef95e2b624c4f269b0e4bf3367441.stex" ]
 
 [params]
 

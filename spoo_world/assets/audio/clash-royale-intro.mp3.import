@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/clash-royale-intro.mp3-40b34f5ca4dedfdea30706464f7a2c21.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/clash-royale-intro.mp3"
+dest_files=[ "res://.import/clash-royale-intro.mp3-40b34f5ca4dedfdea30706464f7a2c21.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
