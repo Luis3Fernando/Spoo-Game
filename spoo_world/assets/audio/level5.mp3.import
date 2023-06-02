@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/level5.mp3-0735911a36fc2c5abe9548a1568d8eb4.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/level5.mp3"
+dest_files=[ "res://.import/level5.mp3-0735911a36fc2c5abe9548a1568d8eb4.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
