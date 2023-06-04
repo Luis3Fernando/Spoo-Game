@@ -6,4 +6,4 @@ func _ready():
 	$AnimationPlayer.play("Desaparecer")
 	yield(get_tree().create_timer(2),"timeout")
 	#cambio de escena automaticamente
-	get_tree().change_scene("res://spoo_world/world/levels/level_main.tscn")
+	get_tree().change_scene("res://spoo_world/world/inicio.tscn")
