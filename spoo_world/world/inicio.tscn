@@ -46,21 +46,52 @@ normal = ExtResource( 5 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Admin"]
 shape = SubResource( 5 )
 
-[node name="VBoxContainer" type="VBoxContainer" parent="."]
-margin_left = 105.0
-margin_top = 339.0
-margin_right = 1161.0
-margin_bottom = 808.0
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = 123.0
+margin_top = 277.0
+margin_right = 1180.0
+margin_bottom = 805.0
 
-[node name="Button" type="Button" parent="VBoxContainer"]
-margin_right = 1056.0
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 1053.0
+margin_bottom = 530.0
+
+[node name="Button" type="Button" parent="ScrollContainer/VBoxContainer"]
+margin_right = 1053.0
 margin_bottom = 70.0
 custom_styles/hover = SubResource( 3 )
 custom_styles/pressed = SubResource( 4 )
 custom_styles/normal = SubResource( 2 )
-text = "Nombre Estudiante"
+text = "           1                                                                                             Nombre Estudiante"
 icon = ExtResource( 4 )
+align = 0
+icon_align = 2
+
+[node name="Button2" type="Button" parent="ScrollContainer/VBoxContainer"]
+margin_top = 74.0
+margin_right = 1053.0
+margin_bottom = 144.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 2 )
+text = "           2                                                                                             Nombre Estudiante"
+icon = ExtResource( 4 )
+align = 0
+icon_align = 2
+
+[node name="Button3" type="Button" parent="ScrollContainer/VBoxContainer"]
+margin_top = 148.0
+margin_right = 1053.0
+margin_bottom = 218.0
+custom_styles/hover = SubResource( 3 )
+custom_styles/pressed = SubResource( 4 )
+custom_styles/normal = SubResource( 2 )
+text = "           3                                                                                             Nombre Estudiante"
+icon = ExtResource( 4 )
+align = 0
 icon_align = 2
 
 [connection signal="pressed" from="Admin/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
-[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button2" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button3" to="." method="_on_Button_pressed"]
