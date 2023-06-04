@@ -63,3 +63,4 @@ icon = ExtResource( 4 )
 icon_align = 2
 
 [connection signal="pressed" from="Admin/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_Button_pressed"]
