@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://spoo_world/assets/img/fondo_main.jpg" type="Texture" id=1]
+[ext_resource path="res://spoo_world/assets/img/amarillo.png" type="Texture" id=2]
 
 [node name="Login" type="Node2D"]
 
@@ -15,3 +16,57 @@ margin_top = 147.0
 margin_right = 985.0
 margin_bottom = 683.0
 size_flags_stretch_ratio = 0.0
+color = Color( 0.14902, 0.14902, 0.14902, 1 )
+
+[node name="Button" type="Button" parent="ColorRect"]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -45.0
+margin_top = 404.0
+margin_right = 53.0
+margin_bottom = 454.0
+custom_colors/font_color = Color( 0.027451, 0.027451, 0.027451, 1 )
+text = "JUGAR"
+icon = ExtResource( 2 )
+flat = true
+icon_align = 1
+expand_icon = true
+
+[node name="TextEdit" type="TextEdit" parent="ColorRect"]
+margin_left = 171.0
+margin_top = 317.0
+margin_right = 497.0
+margin_bottom = 357.0
+custom_constants/line_spacing = 8
+custom_constants/completion_lines = -3
+text = "Contraseña:"
+
+[node name="TextEdit2" type="TextEdit" parent="ColorRect"]
+margin_left = 172.0
+margin_top = 202.0
+margin_right = 494.0
+margin_bottom = 242.0
+custom_constants/line_spacing = 8
+custom_constants/completion_lines = -3
+text = "Nombre de Usuario:"
+
+[node name="Label" type="Label" parent="ColorRect"]
+margin_left = 287.0
+margin_top = 81.0
+margin_right = 382.0
+margin_bottom = 95.0
+text = "SPOO GAME"
+
+[node name="Label2" type="Label" parent="ColorRect"]
+margin_left = 173.0
+margin_top = 298.0
+margin_right = 268.0
+margin_bottom = 313.0
+text = "Password:"
+
+[node name="Label3" type="Label" parent="ColorRect"]
+margin_left = 174.0
+margin_top = 179.0
+margin_right = 269.0
+margin_bottom = 193.0
+text = "Usuario"
