@@ -71,7 +71,6 @@ margin_top = -7.46665
 margin_right = 50.1778
 margin_bottom = 14.5334
 text = "0/5"
-percent_visible = -0.333333
 
 [node name="Sprite" type="Sprite" parent="Sprite3"]
 position = Vector2( -37.855, -16.2999 )
