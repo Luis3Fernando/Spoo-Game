@@ -8,6 +8,7 @@
 size = 20
 font_data = ExtResource( 2 )
 
+<<<<<<< HEAD
 [node name="Node2D" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -38,3 +39,6 @@ margin_bottom = -23.0
 custom_colors/font_color_disabled = Color( 0.619608, 0.160784, 0.160784, 1 )
 custom_fonts/font = SubResource( 1 )
 text = "Continuar"
+=======
+[node name="level4" type="Node2D"]
+>>>>>>> 6687275696c59f513434f784d997f2157055d736

@@ -1,14 +1,18 @@
+<<<<<<< HEAD
 [gd_scene load_steps=12 format=2]
+=======
+[gd_scene load_steps=6 format=2]
+>>>>>>> 6687275696c59f513434f784d997f2157055d736
 
 [ext_resource path="res://spoo_world/world/inicio.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/assets/img/fondo_main.jpg" type="Texture" id=2]
 [ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=3]
-[ext_resource path="res://spoo_world/assets/icon/arrow_50.png" type="Texture" id=4]
 [ext_resource path="res://spoo_world/assets/img/ajustes.png" type="Texture" id=5]
 [ext_resource path="res://spoo_world/assets/typography/Lemonade Bold Demo.ttf" type="DynamicFontData" id=6]
 
 [sub_resource type="CircleShape2D" id=5]
 
+<<<<<<< HEAD
 [sub_resource type="DynamicFont" id=6]
 font_data = ExtResource( 6 )
 
@@ -21,6 +25,8 @@ bg_color = Color( 0.105882, 0.258824, 0.317647, 1 )
 [sub_resource type="StyleBoxFlat" id=2]
 bg_color = Color( 0, 0, 0, 1 )
 
+=======
+>>>>>>> 6687275696c59f513434f784d997f2157055d736
 [node name="inicio" type="Node2D"]
 script = ExtResource( 1 )
 
@@ -29,13 +35,20 @@ scale = Vector2( 2.5, 2.08333 )
 texture = ExtResource( 2 )
 centered = false
 
-[node name="Sprite2" type="Sprite" parent="."]
+[node name="title" type="Sprite" parent="."]
 position = Vector2( 618, 144 )
 scale = Vector2( 2.40897, 1.29048 )
 texture = ExtResource( 3 )
 __meta__ = {
 "_edit_group_": true
 }
+
+[node name="Label" type="Label" parent="title"]
+margin_left = -52.0
+margin_top = -1.0
+margin_right = 38.0
+margin_bottom = 14.0
+text = "Estudiantes"
 
 [node name="Admin" type="KinematicBody2D" parent="."]
 position = Vector2( 53, 42 )
@@ -51,10 +64,10 @@ normal = ExtResource( 5 )
 shape = SubResource( 5 )
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
-margin_left = 128.0
-margin_top = 276.0
-margin_right = 1181.0
-margin_bottom = 804.0
+margin_left = 129.0
+margin_top = 275.0
+margin_right = 1182.0
+margin_bottom = 761.0
 mouse_filter = 1
 scroll_horizontal_enabled = false
 __meta__ = {
@@ -62,6 +75,7 @@ __meta__ = {
 }
 
 [node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+<<<<<<< HEAD
 margin_right = 708.0
 margin_bottom = 292.0
 
@@ -112,9 +126,14 @@ text = "           3                                                            
 icon = ExtResource( 4 )
 align = 0
 icon_align = 2
+=======
+margin_right = 1028.0
+margin_bottom = 14.0
+
+[node name="Label" type="Label" parent="ScrollContainer/VBoxContainer"]
+margin_right = 1028.0
+margin_bottom = 14.0
+text = "                                                                                                                                                                                                                                                                 "
+>>>>>>> 6687275696c59f513434f784d997f2157055d736
 
 [connection signal="pressed" from="Admin/TouchScreenButton" to="." method="_on_TouchScreenButton_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button2" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button3" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="ScrollContainer/VBoxContainer/Button4" to="." method="_on_Button_pressed"]
