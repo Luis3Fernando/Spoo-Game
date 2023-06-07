@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var ppm: int = 40
+var ppm: int = 6
 var velocidad : Vector2
 #var fuerza_salto: float = -300.0
 var en_piso: bool
@@ -9,7 +9,7 @@ var is_moving: bool = false
 var initial_position = Vector2.ZERO  
 
 onready var distancia_salto : float = 5 *ppm
-onready var tiempo_salto : float = 0.4
+onready var tiempo_salto : float = 0.34
 
 onready var fuerza_salto = (-2*distancia_salto)/tiempo_salto
 onready var gravedad = (2*distancia_salto)/(tiempo_salto*tiempo_salto)

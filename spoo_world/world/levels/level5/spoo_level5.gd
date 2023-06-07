@@ -15,15 +15,11 @@ onready var tiempo_salto : float = 0.4
 onready var fuerza_salto = (-2*distancia_salto)/tiempo_salto
 onready var gravedad = (2*distancia_salto)/(tiempo_salto*tiempo_salto)
 
-#onready var gravedad : float = 9.8 *ppm
 onready var rapidez : float = 3.0 *ppm
 
 func _ready():
+	get_tree().get_root().get_node("level5/Timer").connect("timeout",self, "_on_Timer_timeout")
 	initial_position = get_global_position()
-	
-func _input(event):
-	calcular_direction()
-	calcular_salto(event)
 	
 func _physics_process(delta):
 	velocidad.x = direction_horizontal*rapidez
@@ -34,24 +30,21 @@ func _physics_process(delta):
 		
 	else:
 		en_piso = false
-	
-func calcular_direction():
-	direction_horizontal = Input.get_axis("ui_left","ui_right")
-
-func calcular_salto(event: InputEvent):
-	if event.is_action_pressed("ui_accept") and en_piso:
-		velocidad.y = fuerza_salto
 
 func _process(delta):
 	if is_moving:
 		if en_piso:
 			velocidad.y = fuerza_salto
 			
-		move_and_collide(Vector2(3.9,0))
+		move_and_collide(Vector2(4.2,0))
 
 func _on_play_pressed():
-	is_moving = true
+	get_tree().get_root().get_node("level5/Timer").start()
 
 func reset_game():
 	is_moving = false
 	position = initial_position
+	get_tree().get_root().get_node("level5/Timer").stop()
+
+func _on_Timer_timeout():
+	is_moving = !is_moving

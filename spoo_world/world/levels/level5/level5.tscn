@@ -55,7 +55,7 @@ region_rect = Rect2( 0, 0, 200, 200 )
 extents = Vector2( 41, 43.625 )
 
 [sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 38.5, 3.5 )
+extents = Vector2( 38.5, 13.75 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 28.5, 57.5 )
@@ -119,7 +119,7 @@ shape = SubResource( 18 )
 [node name="Area2D_b1" type="Area2D" parent="b1"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="b1/Area2D_b1"]
-position = Vector2( 73.5, 36 )
+position = Vector2( 73, 23.75 )
 shape = SubResource( 19 )
 
 [node name="b2" type="KinematicBody2D" parent="."]
@@ -393,6 +393,9 @@ margin_right = 33.0
 margin_bottom = 10.0
 text = "0 / 15"
 
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.72
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="button_up" from="play" to="spoo" method="_on_play_button_up"]
 [connection signal="pressed" from="play" to="spoo" method="_on_play_pressed"]
@@ -414,3 +417,4 @@ text = "0 / 15"
 [connection signal="body_entered" from="coin1" to="." method="_on_coin1_body_entered"]
 [connection signal="body_entered" from="coin2" to="." method="_on_coin2_body_entered"]
 [connection signal="body_entered" from="coin3" to="." method="_on_coin3_body_entered"]
+[connection signal="timeout" from="Timer" to="spoo" method="_on_Timer_timeout"]

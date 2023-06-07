@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var ppm: int = 40
+var ppm: int = 6
 var velocidad : Vector2
 #var fuerza_salto: float = -300.0
 var en_piso: bool
