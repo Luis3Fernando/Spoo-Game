@@ -10,63 +10,102 @@ var count5 = 0
 var count6 = 0
 var count7 = 0
 
-var valores = [count1, count2, count3, count4, count5, count5, count6, count7]
+var iteration = 1
+var valores = [count1, count2, count3, count4, count5, count6, count7, 0]
 
 func _ready():
 	generar_valores_cuadros()
-	
+	print(valores)
 	for i in range (7):
 		get_tree().get_root().get_node("level5/b"+str(i+1)+"/Button"+str(i+1)+"/Label").text = str(valores[i])
 		
 	get_tree().get_root().get_node("level5/points/label_point").text = str(points) + "/15"
 	
-func generar_valores_cuadros():
-	var repetidos = []
-	var Array_ubicacion = []
-	var Array_valores = [] 
-	var j=4
-	var n = 1
-	for i in range(j):
-		if n==1:
-			var ubicacion = round(randi() % 4)
-			var valor = round(randi() % 4)
-			
-			valores[ubicacion] = valor
-			repetidos.append(ubicacion)
-			Array_ubicacion.append(ubicacion)
-			Array_valores.append(valor)
-			n+=1
-			print(i)
-			print(valores)
-				
-		elif n==2:
-			var ubicacion = round(rand_range(Array_ubicacion[0], Array_ubicacion[0]+3))
-			var valor = round(rand_range(Array_valores[0], Array_valores[0]+3))
-			if ubicacion in repetidos:
-				j+=1
-			else:
-				valores[ubicacion] = valor
-				repetidos.append(ubicacion)
-				Array_ubicacion.append(ubicacion)
-				Array_valores.append(valor)
-				n+=1
-				print(i)
-				print(valores)
-				
-		elif n==3:
-			var ubicacion = round(rand_range(Array_ubicacion[1], Array_ubicacion[1]+3))
-			var valor = round(rand_range(Array_valores[1], Array_valores[1]+3))
-			if ubicacion in repetidos:
-				j+=1
-			else:
-				valores[ubicacion] = valor
-				repetidos.append(ubicacion)
-				Array_ubicacion.append(ubicacion)
-				Array_valores.append(valor)
-				n+=1
-				print(i)
-				print(valores)
+	
+func generarNumerosAleatorios(menor, mayor):
+	var numeros = []
+	
+	while numeros.size() < 3:
+		var numero =  randi() %(mayor - menor + 1) + menor
 		
+		if not numeros.has(numero):
+			numeros.append(numero)
+	
+	numeros.append(100)
+	numeros.sort()
+	print(numeros)
+	return numeros
+
+func generar_valores_cuadros():
+	var ceros=0
+	
+	if iteration ==1:
+		var ubicaciones= generarNumerosAleatorios(1, 5)
+		for i in range(7):
+			if ubicaciones[ceros]==i and (i>0 and i<6):
+				valores[i] = 0
+				ceros+=1
+				
+			else:
+				valores[i] = i+1
+			
+		
+	elif iteration ==2:
+		var ubicaciones= generarNumerosAleatorios(9, 13)
+		var j=0
+		for i in range(8,15):
+			if ubicaciones[ceros]==i and (i>8 and i<14):
+				valores[j] = 0
+				ceros+=1
+				j+=1
+				
+			else:
+				valores[j] = i
+				j+=1
+	
+	elif iteration ==3:
+		var ubicaciones= generarNumerosAleatorios(12, 17)
+		var j=0
+		for i in range(11,18):
+			if ubicaciones[ceros]==i and (i>11 and i<18):
+				valores[j] = 0
+				ceros+=1
+				j+=1
+				
+			else:
+				valores[j] = i
+				j+=1
+			
+	elif iteration ==4:
+		var ubicaciones= generarNumerosAleatorios(19, 24)
+		var j=0
+		for i in range(18,25):
+			if ubicaciones[ceros]==i and (i>18 and i<25):
+				valores[j] = 0
+				ceros+=1
+				j+=1
+				
+			else:
+				valores[j] = i
+				j+=1
+			
+	elif iteration ==5:
+		var ubicaciones= generarNumerosAleatorios(25, 30)
+		var j=0
+		for i in range(24,31):
+			if ubicaciones[ceros]==i and (i>24 and i<31):
+				valores[j] = 0
+				ceros+=1
+				j+=1
+				
+			else:
+				valores[j] = i
+				j+=1
+	else:
+		print("ganaste")
+		var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
+		get_tree().change_scene(new_scene_path)
+
 #retroceder
 func _on_back_pressed():
 	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
@@ -75,7 +114,6 @@ func _on_back_pressed():
 
 #reiniciar el juego
 func _on_limite_body_entered(body):
-	generar_valores_cuadros()
 	$spoo.reset_game()
 	$coin1.visible = true
 	$coin2.visible = true
@@ -87,9 +125,10 @@ func _on_limite_body_entered(body):
 	$b5.reset_position()
 	$b6.reset_position()
 	$b7.reset_position()
+	iteration+=1
+	_ready()
 
 func _on_abajo_body_exited(body):
-	generar_valores_cuadros()
 	$spoo.reset_game()
 	$coin1.visible = true
 	$coin2.visible = true
@@ -101,6 +140,8 @@ func _on_abajo_body_exited(body):
 	$b5.reset_position()
 	$b6.reset_position()
 	$b7.reset_position()
+	iteration+=1
+	_ready()
 	
 
 #para las monedas
@@ -200,29 +241,37 @@ func _on_Button7_pressed():
 
 
 func _on_Area2D_b1_body_entered(body):
-	if !(0 in valores):
-		$b1.caer()
+	pass
 
 func _on_Area2D_b2_body_entered(body):
-	if !(0 in valores):
+	var abajo = int(get_tree().get_root().get_node("level5/b1/Button1/Label").text)
+	
+	if !(int(get_tree().get_root().get_node("level5/b2/Button2/Label").text) == abajo+1):
 		$b2.caer()
 		
 func _on_Area2D_b3_body_entered(body):
-	if !(0 in valores):
+	var abajo = int(get_tree().get_root().get_node("level5/b1/Button1/Label").text)
+	
+	if !(int(get_tree().get_root().get_node("level5/b3/Button3/Label").text) == abajo+2):
 		$b3.caer()
 
 func _on_Area2D_b4_body_entered(body):
-	if (0 in valores):
+	var abajo = int(get_tree().get_root().get_node("level5/b1/Button1/Label").text)
+	
+	if !(int(get_tree().get_root().get_node("level5/b4/Button4/Label").text) == abajo+3):
 		$b4.caer()
 
 func _on_Area2D_b5_body_entered(body):
-	if !(0 in valores):
+	var abajo = int(get_tree().get_root().get_node("level5/b1/Button1/Label").text)
+	
+	if !(int(get_tree().get_root().get_node("level5/b5/Button5/Label").text) == abajo+4):
 		$b5.caer()
 
 func _on_Area2D_b6_body_entered(body):
-	if (0 in valores):
+	var abajo = int(get_tree().get_root().get_node("level5/b1/Button1/Label").text)
+	
+	if !(int(get_tree().get_root().get_node("level5/b6/Button6/Label").text) == abajo+5):
 		$b6.caer()
 	
 func _on_Area2D_b7_body_entered(body):
-	if !(0 in valores):
-		$b7.caer()
+	pass
