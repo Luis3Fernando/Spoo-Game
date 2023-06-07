@@ -12,7 +12,7 @@ position = Vector2( 640, 393.5 )
 scale = Vector2( 2.45703, 2.00781 )
 texture = ExtResource( 1 )
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="Panel" type="ColorRect" parent="."]
 margin_left = 305.0
 margin_top = 147.0
 margin_right = 985.0
@@ -20,7 +20,7 @@ margin_bottom = 683.0
 size_flags_stretch_ratio = 0.0
 color = Color( 0.14902, 0.14902, 0.14902, 1 )
 
-[node name="Button" type="Button" parent="ColorRect"]
+[node name="JUGAR" type="Button" parent="Panel"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -45.0
@@ -28,49 +28,52 @@ margin_top = 404.0
 margin_right = 53.0
 margin_bottom = 454.0
 custom_colors/font_color = Color( 0.027451, 0.027451, 0.027451, 1 )
-text = "JUGAR"
+text = "INGRESAR"
 icon = ExtResource( 2 )
 flat = true
 icon_align = 1
 expand_icon = true
 
-[node name="TextEdit" type="TextEdit" parent="ColorRect"]
+[node name="Password2" type="TextEdit" parent="Panel"]
 margin_left = 171.0
 margin_top = 317.0
 margin_right = 497.0
 margin_bottom = 357.0
 custom_constants/line_spacing = 8
 custom_constants/completion_lines = -3
-text = "Contraseña:"
+text = "Password
 
-[node name="TextEdit2" type="TextEdit" parent="ColorRect"]
+"
+
+[node name="Usuario" type="TextEdit" parent="Panel"]
 margin_left = 172.0
 margin_top = 202.0
 margin_right = 494.0
 margin_bottom = 242.0
 custom_constants/line_spacing = 8
 custom_constants/completion_lines = -3
-text = "Nombre de Usuario:"
+text = "Usuario
+"
 
-[node name="Label" type="Label" parent="ColorRect"]
+[node name="Titulo" type="Label" parent="Panel"]
 margin_left = 287.0
 margin_top = 81.0
 margin_right = 382.0
 margin_bottom = 95.0
 text = "SPOO GAME"
 
-[node name="Label2" type="Label" parent="ColorRect"]
+[node name="Password" type="Label" parent="Panel"]
 margin_left = 173.0
 margin_top = 298.0
 margin_right = 268.0
 margin_bottom = 313.0
 text = "Password:"
 
-[node name="Label3" type="Label" parent="ColorRect"]
+[node name="Usuario2" type="Label" parent="Panel"]
 margin_left = 174.0
 margin_top = 179.0
 margin_right = 269.0
 margin_bottom = 193.0
 text = "Usuario"
 
-[connection signal="pressed" from="ColorRect/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Panel/JUGAR" to="." method="_on_JUGAR_pressed"]

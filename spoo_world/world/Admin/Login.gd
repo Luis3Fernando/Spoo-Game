@@ -1,20 +1,23 @@
 extends Node2D
+var usuario = "Admin"
+var password = "admin"
+var created = false
 
-
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
-func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
-
-
-func _on_Button_pressed():
-	pass # Replace with function body.
+func _on_JUGAR_pressed():
+	usuario = $Usuario.text
+	password = $Password2.text
+	$Usuario.text = ""
+	$Password2.text = ""
+	print ("Account Created!")
+	if $Usuario.text == usuario:
+		if $Password2.text == password:
+			print ("INGRESAR Seccess!")
+			get_tree().change_scene_to_file("res://menu.tscn")
+		else:
+			$Usuario.text = ""
+			$Password2.text = ""
+			print ("INGRESAR Fail!")
+	else:
+		$Usuario.text = ""
+		$Password2.text = ""
+		print ("INGRESAR Fail!")
