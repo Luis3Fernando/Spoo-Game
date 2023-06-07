@@ -27,6 +27,6 @@ func _process(delta):
 func caer():
 	velocidad = move_and_slide(velocidad, Vector2.UP)
 
-func reset_game():
+func reset_position():
 	is_moving = false
 	position = initial_position

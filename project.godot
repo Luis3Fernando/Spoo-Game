@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "",
+"class": "Admin",
+"language": "GDScript",
+"path": "res://spoo_world/assets/script/admin.gd"
+} ]
+_global_script_class_icons={
+"Admin": ""
+}
+
 [application]
 
 config/name="SpooGame"

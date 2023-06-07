@@ -80,6 +80,13 @@ func _on_limite_body_entered(body):
 	$coin1.visible = true
 	$coin2.visible = true
 	$coin3.visible = true
+	$b1.reset_position()
+	$b2.reset_position()
+	$b3.reset_position()
+	$b4.reset_position()
+	$b5.reset_position()
+	$b6.reset_position()
+	$b7.reset_position()
 
 func _on_abajo_body_exited(body):
 	generar_valores_cuadros()
@@ -87,6 +94,14 @@ func _on_abajo_body_exited(body):
 	$coin1.visible = true
 	$coin2.visible = true
 	$coin3.visible = true
+	$b1.reset_position()
+	$b2.reset_position()
+	$b3.reset_position()
+	$b4.reset_position()
+	$b5.reset_position()
+	$b6.reset_position()
+	$b7.reset_position()
+	
 
 #para las monedas
 func _on_coin1_body_entered(body):
@@ -205,7 +220,7 @@ func _on_Area2D_b5_body_entered(body):
 		$b5.caer()
 
 func _on_Area2D_b6_body_entered(body):
-	if !(0 in valores):
+	if (0 in valores):
 		$b6.caer()
 	
 func _on_Area2D_b7_body_entered(body):
