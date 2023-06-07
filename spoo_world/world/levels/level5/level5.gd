@@ -77,28 +77,34 @@ func _on_back_pressed():
 func _on_limite_body_entered(body):
 	generar_valores_cuadros()
 	$spoo.reset_game()
+	$coin1.visible = true
+	$coin2.visible = true
+	$coin3.visible = true
+
+func _on_abajo_body_exited(body):
+	generar_valores_cuadros()
+	$spoo.reset_game()
+	$coin1.visible = true
+	$coin2.visible = true
+	$coin3.visible = true
 
 #para las monedas
 func _on_coin1_body_entered(body):
 	points += 1
 	get_tree().get_root().get_node("level5/points/label_point").text = str(points) + "/15"
-	$coin1.queue_free()
+	$coin1.visible = false
 
 
 func _on_coin2_body_entered(body):
 	points += 1
 	get_tree().get_root().get_node("level5/points/label_point").text = str(points) + "/15"
-	$coin2.queue_free()
+	$coin2.visible = false
 
 
 func _on_coin3_body_entered(body):
 	points += 1
 	get_tree().get_root().get_node("level5/points/label_point").text = str(points) + "/15"
-	$coin3.queue_free()
-
-func _on_Area2D_1_body_entered(body):
-	#$block1.caer()
-	pass
+	$coin3.visible = false
 
 #para el conteo de los botones
 func _on_Button1_pressed():
@@ -191,7 +197,7 @@ func _on_Area2D_b3_body_entered(body):
 		$b3.caer()
 
 func _on_Area2D_b4_body_entered(body):
-	if !(0 in valores):
+	if (0 in valores):
 		$b4.caer()
 
 func _on_Area2D_b5_body_entered(body):
@@ -199,7 +205,7 @@ func _on_Area2D_b5_body_entered(body):
 		$b5.caer()
 
 func _on_Area2D_b6_body_entered(body):
-	if (0 in valores):
+	if !(0 in valores):
 		$b6.caer()
 	
 func _on_Area2D_b7_body_entered(body):

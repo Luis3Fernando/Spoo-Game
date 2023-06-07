@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://spoo_world/world/levels/level5/spoo_level5.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/world/levels/level5/level5.gd" type="Script" id=2]
@@ -64,6 +64,9 @@ extents = Vector2( 28.5, 57.5 )
 extents = Vector2( 27.25, 424.25 )
 
 [sub_resource type="CircleShape2D" id=13]
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 624, 47 )
 
 [node name="level5" type="Node2D"]
 script = ExtResource( 2 )
@@ -396,6 +399,12 @@ text = "0 / 15"
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.72
 
+[node name="abajo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="abajo"]
+position = Vector2( 624, 953 )
+shape = SubResource( 20 )
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="button_up" from="play" to="spoo" method="_on_play_button_up"]
 [connection signal="pressed" from="play" to="spoo" method="_on_play_pressed"]
@@ -418,3 +427,4 @@ wait_time = 0.72
 [connection signal="body_entered" from="coin2" to="." method="_on_coin2_body_entered"]
 [connection signal="body_entered" from="coin3" to="." method="_on_coin3_body_entered"]
 [connection signal="timeout" from="Timer" to="spoo" method="_on_Timer_timeout"]
+[connection signal="body_exited" from="abajo" to="." method="_on_abajo_body_exited"]
