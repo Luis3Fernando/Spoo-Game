@@ -156,3 +156,7 @@ func _on_button_mayor_pressed():
 		#Mensaje.rect_position = Vector2(10, 100)
 		print("¡Incorrecto! " + str(number1) + " no es mayor que " + str(number2))
 	generateNumbers()
+
+
+func _on_Button_pressed():
+	get_tree().change_scene("res://spoo_world/world/levels/level_main.tscn")

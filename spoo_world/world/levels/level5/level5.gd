@@ -164,7 +164,7 @@ func _on_coin3_body_entered(body):
 
 #para el conteo de los botones
 func _on_Button1_pressed():
-	if(valores[0]>=9):
+	if(valores[0]>=30):
 		valores[0] =0
 		get_tree().get_root().get_node("level5/b1/Button1/Label").text = str(valores[0])
 		valores[0] +=1
@@ -175,7 +175,7 @@ func _on_Button1_pressed():
 
 
 func _on_Button2_pressed():
-	if(valores[1]>=9):
+	if(valores[1]>=30):
 		valores[1]=0
 		get_tree().get_root().get_node("level5/b2/Button2/Label").text = str(valores[1])
 		valores[1] +=1
@@ -186,7 +186,7 @@ func _on_Button2_pressed():
 
 
 func _on_Button3_pressed():
-	if(valores[2]>=9):
+	if(valores[2]>=30):
 		valores[2]=0
 		get_tree().get_root().get_node("level5/b3/Button3/Label").text = str(valores[2])
 		valores[2] +=1
@@ -197,7 +197,7 @@ func _on_Button3_pressed():
 
 
 func _on_Button4_pressed():
-	if(valores[3]>=9):
+	if(valores[3]>=30):
 		valores[3]=0
 		get_tree().get_root().get_node("level5/b4/Button4/Label").text = str(valores[3])
 		valores[3] +=1
@@ -208,7 +208,7 @@ func _on_Button4_pressed():
 
 
 func _on_Button5_pressed():
-	if(valores[4]>=9):
+	if(valores[4]>=30):
 		valores[4]=0
 		get_tree().get_root().get_node("level5/b5/Button5/Label").text = str(valores[4])
 		valores[4] +=1
@@ -219,7 +219,7 @@ func _on_Button5_pressed():
 
 
 func _on_Button6_pressed():
-	if(valores[5]>=9):
+	if(valores[5]>=30):
 		valores[5]=0
 		get_tree().get_root().get_node("level5/b6/Button6/Label").text = str(valores[5])
 		valores[5] +=1
@@ -230,7 +230,7 @@ func _on_Button6_pressed():
 
 
 func _on_Button7_pressed():
-	if(valores[6]>=9):
+	if(valores[6]>=30):
 		valores[6]=0
 		get_tree().get_root().get_node("level5/b7/Button7/Label").text = str(valores[6])
 		valores[6] +=1

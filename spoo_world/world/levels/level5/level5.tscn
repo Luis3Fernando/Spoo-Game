@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=2]
+[gd_scene load_steps=34 format=2]
 
 [ext_resource path="res://spoo_world/world/levels/level5/spoo_level5.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/world/levels/level5/level5.gd" type="Script" id=2]
@@ -16,6 +16,7 @@
 [ext_resource path="res://spoo_world/world/levels/level5/b5.gd" type="Script" id=14]
 [ext_resource path="res://spoo_world/world/levels/level5/b6.gd" type="Script" id=15]
 [ext_resource path="res://spoo_world/world/levels/level5/b7.gd" type="Script" id=16]
+[ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=17]
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 6 )
@@ -64,6 +65,10 @@ extents = Vector2( 28.5, 57.5 )
 extents = Vector2( 27.25, 424.25 )
 
 [sub_resource type="CircleShape2D" id=13]
+
+[sub_resource type="DynamicFont" id=21]
+size = 25
+font_data = ExtResource( 17 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 624, 47 )
@@ -390,10 +395,11 @@ __meta__ = {
 }
 
 [node name="label_point" type="Label" parent="points"]
-margin_left = -16.0
-margin_top = -4.0
-margin_right = 33.0
-margin_bottom = 10.0
+margin_left = -41.0526
+margin_top = -12.1387
+margin_right = 53.9474
+margin_bottom = 19.8613
+custom_fonts/font = SubResource( 21 )
 text = "0 / 15"
 
 [node name="Timer" type="Timer" parent="."]
