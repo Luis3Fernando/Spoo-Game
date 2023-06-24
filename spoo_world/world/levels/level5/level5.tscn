@@ -82,10 +82,10 @@ scale = Vector2( 1.00195, 0.939918 )
 texture = ExtResource( 9 )
 
 [node name="back" type="Button" parent="."]
-margin_left = 23.0
-margin_top = 20.0
-margin_right = 86.0
-margin_bottom = 85.0
+margin_left = 36.0
+margin_top = 21.0
+margin_right = 99.0
+margin_bottom = 86.0
 custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
