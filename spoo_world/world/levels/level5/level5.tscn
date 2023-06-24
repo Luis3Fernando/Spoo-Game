@@ -1,0 +1,436 @@
+[gd_scene load_steps=34 format=2]
+
+[ext_resource path="res://spoo_world/world/levels/level5/spoo_level5.gd" type="Script" id=1]
+[ext_resource path="res://spoo_world/world/levels/level5/level5.gd" type="Script" id=2]
+[ext_resource path="res://spoo_world/world/levels/level5/b1.gd" type="Script" id=3]
+[ext_resource path="res://spoo_world/assets/icon/moneda.png" type="Texture" id=4]
+[ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=5]
+[ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=6]
+[ext_resource path="res://spoo_world/assets/icon/spoo.png" type="Texture" id=7]
+[ext_resource path="res://spoo_world/assets/icon/block_night.png" type="Texture" id=8]
+[ext_resource path="res://spoo_world/assets/img/fondo_level5.png" type="Texture" id=9]
+[ext_resource path="res://spoo_world/assets/icon/playbutton.png" type="Texture" id=10]
+[ext_resource path="res://spoo_world/world/levels/level5/b2.gd" type="Script" id=11]
+[ext_resource path="res://spoo_world/world/levels/level5/b3.gd" type="Script" id=12]
+[ext_resource path="res://spoo_world/world/levels/level5/b4.gd" type="Script" id=13]
+[ext_resource path="res://spoo_world/world/levels/level5/b5.gd" type="Script" id=14]
+[ext_resource path="res://spoo_world/world/levels/level5/b6.gd" type="Script" id=15]
+[ext_resource path="res://spoo_world/world/levels/level5/b7.gd" type="Script" id=16]
+[ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=17]
+
+[sub_resource type="StyleBoxTexture" id=4]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 50, 70 )
+
+[sub_resource type="StyleBoxTexture" id=5]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 50, 70 )
+
+[sub_resource type="StyleBoxTexture" id=6]
+texture = ExtResource( 6 )
+region_rect = Rect2( 0, 0, 50, 70 )
+
+[sub_resource type="StyleBoxTexture" id=7]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 230, 230 )
+
+[sub_resource type="StyleBoxTexture" id=8]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 230, 230 )
+
+[sub_resource type="StyleBoxTexture" id=9]
+texture = ExtResource( 10 )
+region_rect = Rect2( 0, 0, 230, 230 )
+
+[sub_resource type="StyleBoxTexture" id=15]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 200, 200 )
+
+[sub_resource type="StyleBoxTexture" id=16]
+
+[sub_resource type="StyleBoxTexture" id=17]
+texture = ExtResource( 8 )
+region_rect = Rect2( 0, 0, 200, 200 )
+
+[sub_resource type="RectangleShape2D" id=18]
+extents = Vector2( 41, 43.625 )
+
+[sub_resource type="RectangleShape2D" id=19]
+extents = Vector2( 38.5, 13.75 )
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 28.5, 57.5 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 27.25, 424.25 )
+
+[sub_resource type="CircleShape2D" id=13]
+
+[sub_resource type="DynamicFont" id=21]
+size = 25
+font_data = ExtResource( 17 )
+
+[sub_resource type="RectangleShape2D" id=20]
+extents = Vector2( 624, 47 )
+
+[node name="level5" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 640.75, 400.125 )
+scale = Vector2( 1.00195, 0.939918 )
+texture = ExtResource( 9 )
+
+[node name="back" type="Button" parent="."]
+margin_left = 36.0
+margin_top = 21.0
+margin_right = 99.0
+margin_bottom = 86.0
+custom_styles/hover = SubResource( 4 )
+custom_styles/pressed = SubResource( 5 )
+custom_styles/normal = SubResource( 6 )
+
+[node name="play" type="Button" parent="."]
+margin_left = 1155.0
+margin_top = 35.0
+margin_right = 1225.0
+margin_bottom = 105.0
+custom_styles/hover = SubResource( 7 )
+custom_styles/pressed = SubResource( 8 )
+custom_styles/normal = SubResource( 9 )
+
+[node name="b1" type="KinematicBody2D" parent="."]
+position = Vector2( 22, 435 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button1" type="Button" parent="b1"]
+margin_right = 152.0
+margin_bottom = 151.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+
+[node name="Label" type="Label" parent="b1/Button1"]
+margin_left = 67.0
+margin_top = 73.0
+margin_right = 107.0
+margin_bottom = 87.0
+text = "0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b1"]
+position = Vector2( 75, 80.625 )
+shape = SubResource( 18 )
+
+[node name="Area2D_b1" type="Area2D" parent="b1"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b1/Area2D_b1"]
+position = Vector2( 73, 23.75 )
+shape = SubResource( 19 )
+
+[node name="b2" type="KinematicBody2D" parent="."]
+position = Vector2( 201, 427 )
+script = ExtResource( 11 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button2" type="Button" parent="b2"]
+margin_right = 152.0
+margin_bottom = 151.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+
+[node name="Label" type="Label" parent="b2/Button2"]
+margin_left = 67.0
+margin_top = 73.0
+margin_right = 107.0
+margin_bottom = 87.0
+text = "0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b2"]
+position = Vector2( 75, 80.625 )
+shape = SubResource( 18 )
+
+[node name="Area2D_b2" type="Area2D" parent="b2"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b2/Area2D_b2"]
+position = Vector2( 73.5, 36 )
+shape = SubResource( 19 )
+
+[node name="b3" type="KinematicBody2D" parent="."]
+position = Vector2( 390, 441 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button3" type="Button" parent="b3"]
+margin_right = 152.0
+margin_bottom = 151.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+
+[node name="Label" type="Label" parent="b3/Button3"]
+margin_left = 67.0
+margin_top = 73.0
+margin_right = 107.0
+margin_bottom = 87.0
+text = "0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b3"]
+position = Vector2( 75, 80.625 )
+shape = SubResource( 18 )
+
+[node name="Area2D_b3" type="Area2D" parent="b3"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b3/Area2D_b3"]
+position = Vector2( 73.5, 36 )
+shape = SubResource( 19 )
+
+[node name="b4" type="KinematicBody2D" parent="."]
+position = Vector2( 559, 437 )
+script = ExtResource( 13 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button4" type="Button" parent="b4"]
+margin_right = 152.0
+margin_bottom = 151.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+
+[node name="Label" type="Label" parent="b4/Button4"]
+margin_left = 67.0
+margin_top = 73.0
+margin_right = 107.0
+margin_bottom = 87.0
+text = "0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b4"]
+position = Vector2( 75, 80.625 )
+shape = SubResource( 18 )
+
+[node name="Area2D_b4" type="Area2D" parent="b4"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b4/Area2D_b4"]
+position = Vector2( 73.5, 36 )
+shape = SubResource( 19 )
+
+[node name="b5" type="KinematicBody2D" parent="."]
+position = Vector2( 747, 455 )
+script = ExtResource( 14 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button5" type="Button" parent="b5"]
+margin_right = 152.0
+margin_bottom = 151.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+
+[node name="Label" type="Label" parent="b5/Button5"]
+margin_left = 67.0
+margin_top = 73.0
+margin_right = 107.0
+margin_bottom = 87.0
+text = "0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b5"]
+position = Vector2( 75, 80.625 )
+shape = SubResource( 18 )
+
+[node name="Area2D_b5" type="Area2D" parent="b5"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b5/Area2D_b5"]
+position = Vector2( 73.5, 36 )
+shape = SubResource( 19 )
+
+[node name="b6" type="KinematicBody2D" parent="."]
+position = Vector2( 923, 423 )
+script = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button6" type="Button" parent="b6"]
+margin_right = 152.0
+margin_bottom = 151.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+
+[node name="Label" type="Label" parent="b6/Button6"]
+margin_left = 67.0
+margin_top = 73.0
+margin_right = 107.0
+margin_bottom = 87.0
+text = "0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b6"]
+position = Vector2( 75, 80.625 )
+shape = SubResource( 18 )
+
+[node name="Area2D_b6" type="Area2D" parent="b6"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b6/Area2D_b6"]
+position = Vector2( 73.5, 36 )
+shape = SubResource( 19 )
+
+[node name="b7" type="KinematicBody2D" parent="."]
+position = Vector2( 1114, 437 )
+script = ExtResource( 16 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Button7" type="Button" parent="b7"]
+margin_right = 152.0
+margin_bottom = 151.0
+custom_styles/hover = SubResource( 15 )
+custom_styles/pressed = SubResource( 16 )
+custom_styles/normal = SubResource( 17 )
+
+[node name="Label" type="Label" parent="b7/Button7"]
+margin_left = 67.0
+margin_top = 73.0
+margin_right = 107.0
+margin_bottom = 87.0
+text = "0"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b7"]
+position = Vector2( 75, 80.625 )
+shape = SubResource( 18 )
+
+[node name="Area2D_b7" type="Area2D" parent="b7"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b7/Area2D_b7"]
+position = Vector2( 73.5, 36 )
+shape = SubResource( 19 )
+
+[node name="spoo" type="KinematicBody2D" parent="."]
+position = Vector2( 0, -47 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="personaje" type="Sprite" parent="spoo"]
+position = Vector2( 97, 405 )
+scale = Vector2( 0.8125, 0.805 )
+texture = ExtResource( 7 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spoo"]
+position = Vector2( 97.5, 403.5 )
+shape = SubResource( 11 )
+
+[node name="limite" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="limite"]
+position = Vector2( 1282, 398.25 )
+shape = SubResource( 12 )
+
+[node name="coin1" type="Area2D" parent="."]
+position = Vector2( 2, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="coin1"]
+position = Vector2( 273, 448 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin1"]
+position = Vector2( 273, 449 )
+scale = Vector2( 1.7, 1.7 )
+shape = SubResource( 13 )
+
+[node name="coin2" type="Area2D" parent="."]
+position = Vector2( 359, -2 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="coin2"]
+position = Vector2( 273, 448 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin2"]
+position = Vector2( 273, 449 )
+scale = Vector2( 1.7, 1.7 )
+shape = SubResource( 13 )
+
+[node name="coin3" type="Area2D" parent="."]
+position = Vector2( 725, -15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="coin3"]
+position = Vector2( 273, 448 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="coin3"]
+position = Vector2( 273, 449 )
+scale = Vector2( 1.7, 1.7 )
+shape = SubResource( 13 )
+
+[node name="points" type="Sprite" parent="."]
+position = Vector2( 911, 62 )
+scale = Vector2( 0.828205, 0.82381 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="label_point" type="Label" parent="points"]
+margin_left = -41.0526
+margin_top = -12.1387
+margin_right = 53.9474
+margin_bottom = 19.8613
+custom_fonts/font = SubResource( 21 )
+text = "0 / 15"
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.72
+
+[node name="abajo" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="abajo"]
+position = Vector2( 624, 953 )
+shape = SubResource( 20 )
+
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="button_up" from="play" to="spoo" method="_on_play_button_up"]
+[connection signal="pressed" from="play" to="spoo" method="_on_play_pressed"]
+[connection signal="pressed" from="b1/Button1" to="." method="_on_Button1_pressed"]
+[connection signal="body_entered" from="b1/Area2D_b1" to="." method="_on_Area2D_b1_body_entered"]
+[connection signal="pressed" from="b2/Button2" to="." method="_on_Button2_pressed"]
+[connection signal="body_entered" from="b2/Area2D_b2" to="." method="_on_Area2D_b2_body_entered"]
+[connection signal="pressed" from="b3/Button3" to="." method="_on_Button3_pressed"]
+[connection signal="body_entered" from="b3/Area2D_b3" to="." method="_on_Area2D_b3_body_entered"]
+[connection signal="pressed" from="b4/Button4" to="." method="_on_Button4_pressed"]
+[connection signal="body_entered" from="b4/Area2D_b4" to="." method="_on_Area2D_b4_body_entered"]
+[connection signal="pressed" from="b5/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="body_entered" from="b5/Area2D_b5" to="." method="_on_Area2D_b5_body_entered"]
+[connection signal="pressed" from="b6/Button6" to="." method="_on_Button6_pressed"]
+[connection signal="body_entered" from="b6/Area2D_b6" to="." method="_on_Area2D_b6_body_entered"]
+[connection signal="pressed" from="b7/Button7" to="." method="_on_Button7_pressed"]
+[connection signal="body_entered" from="b7/Area2D_b7" to="." method="_on_Area2D_b7_body_entered"]
+[connection signal="body_entered" from="limite" to="." method="_on_limite_body_entered"]
+[connection signal="body_entered" from="coin1" to="." method="_on_coin1_body_entered"]
+[connection signal="body_entered" from="coin2" to="." method="_on_coin2_body_entered"]
+[connection signal="body_entered" from="coin3" to="." method="_on_coin3_body_entered"]
+[connection signal="timeout" from="Timer" to="spoo" method="_on_Timer_timeout"]
+[connection signal="body_exited" from="abajo" to="." method="_on_abajo_body_exited"]

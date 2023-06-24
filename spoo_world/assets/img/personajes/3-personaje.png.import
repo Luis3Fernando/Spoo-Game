@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/fondo_main.jpg-bdeed25191b33a0661a3132df93ac776.stex"
+path="res://.import/3-personaje.png-15a1e7c9170d486f57fc68a161595ba9.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://spoo_world/assets/img/fondo_main.jpg"
-dest_files=[ "res://.import/fondo_main.jpg-bdeed25191b33a0661a3132df93ac776.stex" ]
+source_file="res://spoo_world/assets/img/personajes/3-personaje.png"
+dest_files=[ "res://.import/3-personaje.png-15a1e7c9170d486f57fc68a161595ba9.stex" ]
 
 [params]
 

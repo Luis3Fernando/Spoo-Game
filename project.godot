@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "",
+"class": "Admin",
+"language": "GDScript",
+"path": "res://spoo_world/assets/script/admin.gd"
+} ]
+_global_script_class_icons={
+"Admin": ""
+}
+
 [application]
 
 config/name="SpooGame"
@@ -22,6 +32,10 @@ window/size/height=800
 [gui]
 
 common/drop_mouse_on_gui_input_disabled=true
+
+[input_devices]
+
+pointing/emulate_touch_from_mouse=true
 
 [physics]
 
