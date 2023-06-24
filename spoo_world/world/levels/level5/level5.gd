@@ -275,3 +275,12 @@ func _on_Area2D_b6_body_entered(body):
 	
 func _on_Area2D_b7_body_entered(body):
 	pass
+
+
+func _on_music_pressed():
+	var audioPlayer = get_node("AudioFondo") 
+	if audioPlayer.playing:
+		audioPlayer.stop()
+	else:
+		audioPlayer.play()
+	pass # Replace with function body.

@@ -160,3 +160,13 @@ func _on_button_mayor_pressed():
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://spoo_world/world/levels/level_main.tscn")
+	pass
+
+
+func _on_music_pressed():
+	var audioPlayer = get_node("AudioFondo") 
+	if audioPlayer.playing:
+		audioPlayer.stop()
+	else:
+		audioPlayer.play()
+	pass # Replace with function body.

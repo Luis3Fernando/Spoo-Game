@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://spoo_world/world/levels/scripts_levels/level4.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/assets/img/nivel4.jpg" type="Texture" id=2]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=3]
 [ext_resource path="res://spoo_world/assets/icon/spoo.png" type="Texture" id=4]
+[ext_resource path="res://spoo_world/assets/audio/level4.mp3" type="AudioStream" id=5]
+[ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=6]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
@@ -33,9 +35,11 @@ margin_left = 49.0
 margin_top = 38.0
 margin_right = 107.0
 margin_bottom = 102.0
+focus_mode = 0
 custom_styles/hover = SubResource( 1 )
 custom_styles/pressed = SubResource( 2 )
 custom_styles/normal = SubResource( 3 )
+enabled_focus_mode = 0
 
 [node name="KinematicBody2D" type="KinematicBody2D" parent="."]
 position = Vector2( 1121, 154 )
@@ -50,4 +54,19 @@ texture = ExtResource( 4 )
 position = Vector2( -2, -2 )
 shape = SubResource( 4 )
 
+[node name="music" type="Button" parent="."]
+margin_left = 33.0
+margin_top = 116.0
+margin_right = 127.0
+margin_bottom = 194.0
+focus_mode = 0
+icon = ExtResource( 6 )
+flat = true
+expand_icon = true
+
+[node name="AudioFondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 5 )
+autoplay = true
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
