@@ -55,10 +55,10 @@ position = Vector2( -2, -2 )
 shape = SubResource( 4 )
 
 [node name="music" type="Button" parent="."]
-margin_left = 33.0
-margin_top = 116.0
-margin_right = 127.0
-margin_bottom = 194.0
+margin_left = 1165.0
+margin_top = 14.0
+margin_right = 1259.0
+margin_bottom = 92.0
 focus_mode = 0
 icon = ExtResource( 6 )
 flat = true
