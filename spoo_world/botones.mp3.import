@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/botones.mp3-fe347738cde4a5380fdfb95227583e6f.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/botones.mp3"
+dest_files=[ "res://.import/botones.mp3-fe347738cde4a5380fdfb95227583e6f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

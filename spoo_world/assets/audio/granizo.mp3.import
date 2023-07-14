@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/granizo.mp3-4dd4da071a936b2c053e06e0d4507760.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/granizo.mp3"
+dest_files=[ "res://.import/granizo.mp3-4dd4da071a936b2c053e06e0d4507760.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/viento.mp3-0155054ae8c2e90d1399e9ebcc0ea9b3.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/viento.mp3"
+dest_files=[ "res://.import/viento.mp3-0155054ae8c2e90d1399e9ebcc0ea9b3.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

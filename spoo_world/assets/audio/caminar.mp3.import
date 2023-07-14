@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/caminar.mp3-472e2d36a64e3b4161a62f4056fdc05f.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/caminar.mp3"
+dest_files=[ "res://.import/caminar.mp3-472e2d36a64e3b4161a62f4056fdc05f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

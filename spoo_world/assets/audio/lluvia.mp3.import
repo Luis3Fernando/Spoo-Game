@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lluvia.mp3-36005cf2f45a6c2937df11dee866f887.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/lluvia.mp3"
+dest_files=[ "res://.import/lluvia.mp3-36005cf2f45a6c2937df11dee866f887.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

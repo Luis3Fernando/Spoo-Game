@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/catarata.mp3-42019783d09f6a53d32821b21f5e88f7.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/catarata.mp3"
+dest_files=[ "res://.import/catarata.mp3-42019783d09f6a53d32821b21f5e88f7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

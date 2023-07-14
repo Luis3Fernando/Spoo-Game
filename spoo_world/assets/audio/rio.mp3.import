@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/rio.mp3-648d1619e686e215a5224851709c1324.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/rio.mp3"
+dest_files=[ "res://.import/rio.mp3-648d1619e686e215a5224851709c1324.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

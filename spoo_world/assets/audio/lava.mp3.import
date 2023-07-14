@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lava.mp3-b6f33a043ffb5c02ee953cc99167aab7.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/lava.mp3"
+dest_files=[ "res://.import/lava.mp3-b6f33a043ffb5c02ee953cc99167aab7.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
