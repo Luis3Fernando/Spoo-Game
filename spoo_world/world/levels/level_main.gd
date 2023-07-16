@@ -20,7 +20,7 @@ func _on_Button_pressed():
 	get_tree().change_scene(new_scene_path)
 
 func _on_Button2_pressed():
-	var new_scene_path = "res://spoo_world/world/levels/level2.tscn"  # Ruta a la nueva escena
+	var new_scene_path = "res://spoo_world/world/levels/level2/level2.tscn"  # Ruta a la nueva escena
 	get_tree().change_scene(new_scene_path)
 
 func _on_Button3_pressed():

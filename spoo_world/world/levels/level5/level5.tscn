@@ -392,7 +392,7 @@ scale = Vector2( 1.7, 1.7 )
 shape = SubResource( 13 )
 
 [node name="points" type="Sprite" parent="."]
-position = Vector2( 911, 62 )
+position = Vector2( 918, 59 )
 scale = Vector2( 0.828205, 0.82381 )
 texture = ExtResource( 5 )
 __meta__ = {
