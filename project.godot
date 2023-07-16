@@ -13,9 +13,21 @@ _global_script_classes=[ {
 "class": "Admin",
 "language": "GDScript",
 "path": "res://spoo_world/assets/script/admin.gd"
+}, {
+"base": "Object",
+"class": "Alumno",
+"language": "GDScript",
+"path": "res://spoo_world/world/crud/Alumno.gd"
+}, {
+"base": "Node",
+"class": "Db_Estudiante",
+"language": "GDScript",
+"path": "res://spoo_world/world/crud/Db_Estudiantes.gd"
 } ]
 _global_script_class_icons={
-"Admin": ""
+"Admin": "",
+"Alumno": "",
+"Db_Estudiante": ""
 }
 
 [application]

@@ -1,17 +1,14 @@
 extends Node2D
 
-var students = [
-	"Luis Flores Torres",
-	"Ana González Vega",
-	"Diego Rodríguez Paredes",
-	"Valentina Pérez Ramos",
-	"Carlos Torres Silva",
-	"Isabella Vargas López",
-	"Sebastián Sánchez Huamaní",
-	"Camila Díaz Castro",
-	"Javier Silva Mendoza",
-	"Lucía Chávez Quispe"
-]
+var db_prueba = preload("res://spoo_world/world/crud/prueba.gd")
+
+var miPrueba = db_prueba.new()
+miPrueba.nombre = "Juan"
+var nombreObtenido = miPrueba.getNombre()
+print(nombreObtenido)  # Imprimirá "Juan"
+
+
+var students = []
 
 var numHijos
 
