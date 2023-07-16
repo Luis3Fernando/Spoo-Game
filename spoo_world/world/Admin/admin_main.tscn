@@ -140,7 +140,7 @@ align = 1
 valign = 1
 
 [connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="Sprite/Button2" to="." method="_on_ButtonProgress_pressed"]
+[connection signal="pressed" from="Sprite/Button2" to="." method="_on_Button2_pressed"]
 [connection signal="pressed" from="Sprite/Button3" to="." method="_on_ButtonAdd_pressed"]
 [connection signal="pressed" from="Sprite/Button4" to="." method="_on_ButtonEdit_pressed"]
 [connection signal="pressed" from="Sprite/Button5" to="." method="_on_ButtonDelete_pressed"]
