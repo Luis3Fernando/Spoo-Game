@@ -1,8 +1,13 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://spoo_world/assets/icon/arrow_1.png" type="Texture" id=1]
 [ext_resource path="res://spoo_world/assets/img/Fondo.png" type="Texture" id=2]
 [ext_resource path="res://spoo_world/world/Admin/admin_main.gd" type="Script" id=3]
+[ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=4]
+
+[sub_resource type="DynamicFont" id=1]
+size = 70
+font_data = ExtResource( 4 )
 
 [node name="admin_main" type="Node2D"]
 script = ExtResource( 3 )
@@ -28,7 +33,7 @@ margin_right = -261.496
 margin_bottom = 295.226
 rect_pivot_offset = Vector2( 301.354, -80.305 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "PROGRESOR"
+text = "PROGRESO"
 icon_align = 1
 
 [node name="Label" type="Label" parent="Sprite/Button2"]
@@ -113,12 +118,13 @@ align = 1
 valign = 1
 
 [node name="Label2" type="Label" parent="Sprite"]
-margin_left = -109.858
-margin_top = -181.449
-margin_right = 69.1417
-margin_bottom = -131.449
+margin_left = -303.37
+margin_top = -208.386
+margin_right = 301.63
+margin_bottom = -120.386
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_fonts/font = SubResource( 1 )
 text = "ADMINISTRADOR"
 align = 1
 valign = 1
@@ -134,3 +140,7 @@ align = 1
 valign = 1
 
 [connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Sprite/Button2" to="." method="_on_ButtonProgress_pressed"]
+[connection signal="pressed" from="Sprite/Button3" to="." method="_on_ButtonAdd_pressed"]
+[connection signal="pressed" from="Sprite/Button4" to="." method="_on_ButtonEdit_pressed"]
+[connection signal="pressed" from="Sprite/Button5" to="." method="_on_ButtonDelete_pressed"]
