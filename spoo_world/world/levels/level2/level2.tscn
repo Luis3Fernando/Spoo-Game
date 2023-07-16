@@ -60,11 +60,17 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Button" type="Button" parent="."]
-margin_left = 1022.0
-margin_top = 442.0
-margin_right = 1166.0
-margin_bottom = 474.0
+[node name="clear" type="Button" parent="."]
+margin_left = 1095.0
+margin_top = 255.0
+margin_right = 1195.0
+margin_bottom = 355.0
+
+[node name="validation" type="Button" parent="."]
+margin_left = 1097.0
+margin_top = 379.0
+margin_right = 1197.0
+margin_bottom = 479.0
 
 [node name="lienzo" type="Node2D" parent="."]
 position = Vector2( -48, -39 )
@@ -87,4 +93,5 @@ script = ExtResource( 9 )
 [connection signal="pressed" from="music" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="music" to="." method="_on_music_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="Button" to="lienzo" method="_on_Button_pressed"]
+[connection signal="pressed" from="clear" to="lienzo" method="_on_clear_pressed"]
+[connection signal="pressed" from="validation" to="lienzo" method="_on_validation_pressed"]

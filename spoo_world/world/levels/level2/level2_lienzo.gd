@@ -6,8 +6,9 @@ onready var _draw_area = get_tree().get_root().get_node("level2/lienzo/AreaDibuj
 var _pressed = false
 var _current_line: Line2D
 
+var _drawn_patterns = []  # Lista para almacenar los patrones dibujados
 
-func _input(event: InputEvent) -> void:
+func _input(event: InputEvent) -> void:	
 	if event is InputEventMouseButton:
 		_pressed = event.pressed
 		
@@ -29,3 +30,33 @@ func _input(event: InputEvent) -> void:
 		# Verificar si el punto está dentro del área de dibujo (ColorRect)
 		if rect.has_point(local_position):
 			_current_line.add_point(local_position)
+
+func store_pattern() -> void:
+	# Almacena el patrón dibujado en la lista _drawn_patterns
+	_drawn_patterns.append(_current_line.points)
+	
+	# Vaciar los puntos de la línea para poder dibujar un nuevo patrón
+	_current_line = Line2D.new()
+	
+func recognize_patterns() -> void:
+	# Aquí implementarías el reconocimiento de patrones utilizando algún algoritmo
+	# o técnica de aprendizaje automático. Puedes comparar los patrones almacenados en
+	# _drawn_patterns con un conjunto de datos de entrenamiento que contenga ejemplos
+	# de cada número para determinar qué número ha sido dibujado por el usuario.
+
+	# Por simplicidad, simplemente imprimiré los puntos de cada patrón almacenado
+	for pattern in _drawn_patterns:
+		print("Pattern:", pattern)
+
+func clear_pattern():
+	# Limpia la lista de patrones dibujados después de realizar el reconocimiento
+	_drawn_patterns.clear()
+
+
+func _on_validation_pressed():
+	store_pattern()
+	recognize_patterns()
+
+
+func _on_clear_pressed():
+	clear_pattern()
