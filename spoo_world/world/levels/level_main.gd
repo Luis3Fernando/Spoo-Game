@@ -34,3 +34,8 @@ func _on_Button4_pressed():
 func _on_Button5_pressed():
 	var new_scene_path = "res://spoo_world/world/levels/level5/level5.tscn"  # Ruta a la nueva escena
 	get_tree().change_scene(new_scene_path)
+
+
+func _on_ButtonAtras_pressed():
+	var new_scene_path = "res://spoo_world/world/inicio.tscn"  # Ruta a la nueva escena
+	get_tree().change_scene(new_scene_path)
