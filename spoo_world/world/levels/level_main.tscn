@@ -93,3 +93,4 @@ texture = ExtResource( 3 )
 [connection signal="pressed" from="Sprite/Button3" to="." method="_on_Button3_pressed"]
 [connection signal="pressed" from="Sprite/Button4" to="." method="_on_Button4_pressed"]
 [connection signal="pressed" from="Sprite/Button5" to="." method="_on_Button5_pressed"]
+[connection signal="pressed" from="Sprite/Button6" to="." method="_on_ButtonAtras_pressed"]
