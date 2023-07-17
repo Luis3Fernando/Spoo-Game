@@ -1,9 +1,5 @@
 extends Node2D
 
-var pruebaa = preload("res://spoo_world/world/crud/prueba.gd").instance()
-var nueva_prueba = pruebaa.new()
-nueva_prueba.setNombre("juan")
-print(nueva_prueba.getNombre())
 var students = []
 
 var numHijos
@@ -12,7 +8,12 @@ var colorNormal = Color(0.2, 0.5, 0.8)  # Ejemplo: Azul claro
 var colorHover = Color(0.4, 0.7, 1.0)  # Ejemplo: Azul claro más brillante
 var colorPressed = Color(0.1, 0.3, 0.6)  # Ejemplo: Azul oscuro
  
+func Lista_Estudiantes():
+	var list = Db_Estudiante.new()
+	students = list.obtener_estudiantes()
+
 func _ready():	
+	Lista_Estudiantes()
 	#for i in range(len(students)):
 	#	var object_student = Button.new()
 	#	#add_child(object_student)
@@ -24,7 +25,7 @@ func _ready():
 	for i in range(len(students)):
 		var object_student = Button.new()
 		#add_child(object_student)
-		object_student.text = "           "+str(i+1)+"                                                                                             "+ students[i]
+		object_student.text = "           "+str(i+1)+"                                                                                             "+ students[i].nombreCompleto
 		object_student.icon = load("res://spoo_world/assets/icon/arrow_50.png")
 		object_student.align = Button.ALIGN_LEFT
 		object_student.icon_align = Button.ALIGN_RIGHT

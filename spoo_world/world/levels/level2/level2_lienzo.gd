@@ -49,6 +49,7 @@ func recognize_patterns() -> void:
 		print("Pattern:", pattern)
 
 func clear_pattern():
+	store_pattern()
 	# Limpia la lista de patrones dibujados después de realizar el reconocimiento
 	_drawn_patterns.clear()
 

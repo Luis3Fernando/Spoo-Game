@@ -10,7 +10,6 @@ var puntos = {
 	"level4": 0,
 	"level5": 0
 }
-
 func _init():
 	# Constructor
 	nombreCompleto = ""

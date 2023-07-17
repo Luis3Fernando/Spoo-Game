@@ -1,8 +1,13 @@
 extends Node
 
 class_name Db_Estudiante
+
 var rutaArchivo: String = ProjectSettings.globalize_path("user://datos_alumnos.json")
-var listaEstudiantes: Array = [
+var listaEstudiantes: Array = []
+
+func _init():
+	# Constructor
+	listaEstudiantes = [
 	{
 		"nombreCompleto": "Juan Pérez",
 		"puntos": {
@@ -41,8 +46,8 @@ func obtener_estudiantes() -> Array:
 # Función para crear un nuevo estudiante
 func crear_estudiante(nombre: String):
 	var nuevoEstudiante = Alumno.new()
+	Alumno.nombreCompleto = nombre
 	listaEstudiantes.append(nuevoEstudiante)
-
 # Función para guardar los estudiantes en un archivo
 func guardar_estudiantes():
 	var datosGuardados: Array = []

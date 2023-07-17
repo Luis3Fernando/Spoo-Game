@@ -15,19 +15,37 @@ _global_script_classes=[ {
 "path": "res://spoo_world/assets/script/admin.gd"
 }, {
 "base": "Object",
+"class": "Administrador",
+"language": "GDScript",
+"path": "res://spoo_world/world/crud/Administrador.gd"
+}, {
+"base": "Object",
 "class": "Alumno",
 "language": "GDScript",
 "path": "res://spoo_world/world/crud/Alumno.gd"
 }, {
 "base": "Node",
+"class": "Db_Administrador",
+"language": "GDScript",
+"path": "res://spoo_world/world/crud/Db_Administrador.gd"
+}, {
+"base": "Node",
 "class": "Db_Estudiante",
 "language": "GDScript",
 "path": "res://spoo_world/world/crud/Db_Estudiantes.gd"
+}, {
+"base": "Object",
+"class": "Prueba",
+"language": "GDScript",
+"path": "res://spoo_world/world/crud/prueba.gd"
 } ]
 _global_script_class_icons={
 "Admin": "",
+"Administrador": "",
 "Alumno": "",
-"Db_Estudiante": ""
+"Db_Administrador": "",
+"Db_Estudiante": "",
+"Prueba": ""
 }
 
 [application]
