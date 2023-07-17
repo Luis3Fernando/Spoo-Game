@@ -12,7 +12,7 @@ var puntos = {
 }
 func _init():
 	# Constructor
-	nombreCompleto = ""
+	nombreCompleto = "none"
 
 func obtenerPuntos(nivel: String) -> int:
 	return puntos[nivel]

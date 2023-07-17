@@ -1,10 +1,13 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://spoo_world/assets/icon/arrow_1.png" type="Texture" id=1]
 [ext_resource path="res://spoo_world/assets/img/Fondo.png" type="Texture" id=2]
 [ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=3]
 [ext_resource path="res://spoo_world/assets/img/amarillo.png" type="Texture" id=4]
 [ext_resource path="res://spoo_world/world/Admin/add.gd" type="Script" id=5]
+
+[sub_resource type="StyleBoxFlat" id=3]
+bg_color = Color( 0.8, 0.8, 0.8, 1 )
 
 [sub_resource type="Theme" id=1]
 
@@ -30,7 +33,7 @@ margin_top = -191.217
 margin_right = 355.231
 margin_bottom = 344.783
 size_flags_stretch_ratio = 0.0
-color = Color( 0.925781, 0.713378, 0.440289, 1 )
+color = Color( 0.0901961, 0.0901961, 0.0901961, 1 )
 
 [node name="JUGAR" type="Button" parent="Sprite/Panel"]
 anchor_left = 0.5
@@ -39,7 +42,9 @@ margin_left = -51.8745
 margin_top = 422.585
 margin_right = 46.1255
 margin_bottom = 472.585
+custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.027451, 0.027451, 0.027451, 1 )
+custom_styles/disabled = SubResource( 3 )
 text = "AÑADIR"
 icon = ExtResource( 4 )
 flat = true
@@ -51,7 +56,7 @@ margin_left = 173.0
 margin_top = 254.0
 margin_right = 268.0
 margin_bottom = 274.0
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Password:"
 
 [node name="Password2" type="TextEdit" parent="Sprite/Panel/Password"]
@@ -67,7 +72,7 @@ margin_left = 173.678
 margin_top = 139.523
 margin_right = 268.678
 margin_bottom = 159.523
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Usuario:"
 
 [node name="Usuario" type="TextEdit" parent="Sprite/Panel/Usuario2"]
@@ -78,43 +83,36 @@ margin_bottom = 65.7377
 custom_constants/line_spacing = 8
 custom_constants/completion_lines = -3
 
-[node name="Label" type="Label" parent="Sprite/Panel"]
+[node name="Student" type="Label" parent="Sprite/Panel"]
 margin_left = 210.823
 margin_top = 365.37
 margin_right = 250.823
 margin_bottom = 379.37
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Estudiante"
 
-[node name="Button" type="Button" parent="Sprite/Panel/Label"]
-anchor_left = 1.879
-anchor_top = -26.063
-anchor_right = 1.879
-anchor_bottom = -26.063
-margin_left = -165.046
-margin_top = 359.863
-margin_right = -141.046
-margin_bottom = 382.863
+[node name="c_student" type="CheckBox" parent="Sprite/Panel/Student"]
+margin_left = 3.01263
+margin_top = 17.064
+margin_right = 27.0126
+margin_bottom = 41.064
 
-[node name="Label2" type="Label" parent="Sprite/Panel"]
+[node name="administrator" type="Label" parent="Sprite/Panel"]
 margin_left = 398.557
 margin_top = 366.374
 margin_right = 489.557
 margin_bottom = 380.374
-custom_colors/font_color = Color( 0, 0, 0, 1 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
 text = "Administrador"
 
-[node name="Button" type="Button" parent="Sprite/Panel/Label2"]
-anchor_left = 1.879
-anchor_top = -26.063
-anchor_right = 1.879
-anchor_bottom = -26.063
-margin_left = -205.122
-margin_top = 359.863
-margin_right = -181.122
-margin_bottom = 382.863
+[node name="c_administrator" type="CheckBox" parent="Sprite/Panel/administrator"]
+margin_left = -2.00763
+margin_top = 20.0751
+margin_right = 21.9924
+margin_bottom = 44.0751
+shortcut_in_tooltip = false
 
-[node name="Button" type="Button" parent="Sprite"]
+[node name="atras" type="Button" parent="Sprite"]
 margin_left = -603.859
 margin_top = -365.872
 margin_right = -466.859
@@ -136,4 +134,7 @@ text = "ANADIR"
 align = 1
 valign = 1
 
-[connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Sprite/Panel/JUGAR" to="." method="_on_JUGAR_pressed"]
+[connection signal="toggled" from="Sprite/Panel/Student/c_student" to="." method="_on_c_student_toggled"]
+[connection signal="toggled" from="Sprite/Panel/administrator/c_administrator" to="." method="_on_c_administrator_toggled"]
+[connection signal="pressed" from="Sprite/atras" to="." method="_on_Button_pressed"]

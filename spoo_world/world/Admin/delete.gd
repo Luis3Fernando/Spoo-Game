@@ -1,19 +1,21 @@
 extends Node2D
 
+var students = []
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
+func Lista_Estudiantes():
+	var list =Db_Estudiante.new()
+	students = list.obtener_estudiantes()
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
-
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+	Lista_Estudiantes()
+	for i in range(len(students)):
+		var object_student = Button.new()
+		object_student.text = "           "+str(i+1)+"                                                                                             "+ students[i].nombreCompleto+"                                      "+"/20"
+		object_student.icon = load("res://spoo_world/assets/icon/moneda_50.png")
+		object_student.align = Button.ALIGN_LEFT
+		object_student.icon_align = Button.ALIGN_RIGHT
+		get_tree().get_root().get_node("delete/ScrollContainer/VBoxContainer").add_child(object_student)
+		#$VBoxContainer.add_child(object_student)
 
 
 func _on_Button_pressed():

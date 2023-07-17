@@ -25,10 +25,12 @@ func _init():
 func obtener_adminsitradores() -> Array:
 	return listaAdministradores
 
-func crear_admin(nombre: String):
+func crear_admin(nombre: String, password: String):
 	var nuevo = Administrador.new()
-	Administrador.nombreCompleto = nombre
+	nuevo.nombreCompleto = nombre
+	nuevo.contra = password
 	listaAdministradores.append(nuevo)
+	guardar_adminsitradores()
 
 func guardar_adminsitradores():
 	var datosGuardados: Array = []	
