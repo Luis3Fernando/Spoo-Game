@@ -23,8 +23,7 @@ font_data = ExtResource( 1 )
 script = ExtResource( 2 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 640.5, 400.5 )
-scale = Vector2( 0.996094, 0.99625 )
+position = Vector2( 640, 400 )
 texture = ExtResource( 4 )
 
 [node name="Panel" type="ColorRect" parent="Sprite"]
@@ -38,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="guardar" type="Button" parent="Sprite/Panel"]
+[node name="actualizar" type="Button" parent="Sprite/Panel"]
 anchor_left = 0.5
 anchor_right = 0.5
 margin_left = -51.8745
@@ -48,7 +47,7 @@ margin_bottom = 472.585
 custom_colors/font_color_disabled = Color( 0, 0, 0, 1 )
 custom_colors/font_color = Color( 0.027451, 0.027451, 0.027451, 1 )
 custom_styles/disabled = SubResource( 1 )
-text = "GUARDAR"
+text = "ACTUALIZAR"
 icon = ExtResource( 3 )
 flat = true
 icon_align = 1
@@ -57,40 +56,18 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Password" type="Label" parent="Sprite/Panel"]
-margin_left = 173.0
-margin_top = 254.0
-margin_right = 268.0
-margin_bottom = 274.0
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Password:"
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Password2" type="TextEdit" parent="Sprite/Panel/Password"]
-margin_left = -2.33337
-margin_top = 27.054
-margin_right = 323.667
-margin_bottom = 67.054
-custom_constants/line_spacing = 8
-custom_constants/completion_lines = -3
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Usuario2" type="Label" parent="Sprite/Panel"]
+[node name="apellido" type="Label" parent="Sprite/Panel"]
 margin_left = 173.678
 margin_top = 139.523
 margin_right = 268.678
 margin_bottom = 159.523
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Usuario:"
+text = "Nombre:"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Usuario" type="TextEdit" parent="Sprite/Panel/Usuario2"]
+[node name="apellido_input" type="TextEdit" parent="Sprite/Panel/apellido"]
 margin_left = -2.32941
 margin_top = 25.7377
 margin_right = 319.671
@@ -101,64 +78,34 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="Student" type="Label" parent="Sprite/Panel"]
-margin_left = 210.823
-margin_top = 365.37
-margin_right = 250.823
-margin_bottom = 379.37
+[node name="nombre" type="Label" parent="Sprite/Panel"]
+margin_left = 173.0
+margin_top = 254.0
+margin_right = 268.0
+margin_bottom = 274.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Estudiante"
+text = "Apellido:"
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="c_student" type="CheckBox" parent="Sprite/Panel/Student"]
-margin_left = 3.01263
-margin_top = 17.064
-margin_right = 27.0126
-margin_bottom = 41.064
+[node name="nombre_input" type="TextEdit" parent="Sprite/Panel/nombre"]
+margin_left = -2.33337
+margin_top = 27.054
+margin_right = 323.667
+margin_bottom = 67.054
+custom_constants/line_spacing = 8
+custom_constants/completion_lines = -3
 __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[node name="administrator" type="Label" parent="Sprite/Panel"]
-margin_left = 398.557
-margin_top = 366.374
-margin_right = 489.557
-margin_bottom = 380.374
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Administrador"
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="c_administrator" type="CheckBox" parent="Sprite/Panel/administrator"]
-margin_left = -2.00763
-margin_top = 20.0751
-margin_right = 21.9924
-margin_bottom = 44.0751
-shortcut_in_tooltip = false
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="atras" type="Button" parent="Sprite"]
-margin_left = -603.859
-margin_top = -365.872
-margin_right = -466.859
-margin_bottom = -197.872
-icon = ExtResource( 5 )
-flat = true
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Label" type="Label" parent="Sprite"]
+[node name="Label" type="Label" parent="."]
 anchor_right = 1.008
-margin_left = -309.71
-margin_top = -340.778
-margin_right = -973.95
-margin_bottom = -252.778
+margin_left = 518.0
+margin_top = 61.0
+margin_right = 795.0
+margin_bottom = 149.0
 theme = SubResource( 2 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
@@ -170,4 +117,16 @@ __meta__ = {
 "_edit_use_anchors_": true
 }
 
-[connection signal="pressed" from="Sprite/atras" to="." method="_on_atras_pressed"]
+[node name="atras" type="Button" parent="."]
+margin_left = 38.9998
+margin_top = 36.0
+margin_right = 176.0
+margin_bottom = 204.0
+icon = ExtResource( 5 )
+flat = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[connection signal="pressed" from="Sprite/Panel/actualizar" to="." method="_on_actualizar_pressed"]
+[connection signal="pressed" from="atras" to="." method="_on_atras_pressed"]

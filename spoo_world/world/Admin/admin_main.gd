@@ -11,7 +11,7 @@ func _on_Button2_pressed():
 
 
 func _on_ButtonEdit_pressed():
-	get_tree().change_scene("res://spoo_world/world/Admin/edit_main.tscn")
+	get_tree().change_scene("res://spoo_world/world/Admin/edit_student.tscn")
 
 func _on_ButtonDelete_pressed():
 	get_tree().change_scene("res://spoo_world/world/Admin/delete.tscn")

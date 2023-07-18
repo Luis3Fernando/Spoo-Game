@@ -50,8 +50,21 @@ func _on_Button_pressed():
 func asignar_eventos():
 	for i in range(1,numHijos):
 		var boton = get_tree().get_root().get_node("inicio/ScrollContainer/VBoxContainer").get_child(i)
-		boton.connect("pressed", self, "_on_BotonPresionado")
+		boton.connect("pressed", self, "_on_BotonPresionado", [boton.text])
 
-func _on_BotonPresionado():
-	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn" 
-	get_tree().change_scene(new_scene_path)
+func _on_BotonPresionado(nombre):
+	var nombreC = obtener_nombre_del_texto(nombre)
+	crear_nueva_escena(nombreC)
+	
+func crear_nueva_escena(nombre_completo):
+	var nueva_escena = load("res://spoo_world/world/levels/level_main.tscn").instance()
+	nueva_escena.inicializar(nombre_completo)
+	get_parent().add_child(nueva_escena)
+	
+func obtener_nombre_del_texto(texto: String) -> String:
+	var texto_sin_numero
+	var texto_base = texto.substr(20, texto.length())
+	#var texto_base1 = texto_base.substr(0, texto_base.length()-20)
+	var texto_sin_laterales = texto_base.strip_edges()
+		
+	return texto_sin_laterales

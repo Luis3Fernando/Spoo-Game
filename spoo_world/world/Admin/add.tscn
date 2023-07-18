@@ -23,7 +23,7 @@ font_data = ExtResource( 3 )
 script = ExtResource( 5 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 640.5, 400.5 )
+position = Vector2( 637, 398 )
 scale = Vector2( 0.996094, 0.99625 )
 texture = ExtResource( 2 )
 
@@ -39,8 +39,10 @@ __meta__ = {
 }
 
 [node name="JUGAR" type="Button" parent="Sprite/Panel"]
-anchor_left = 0.5
-anchor_right = 0.5
+anchor_left = 0.383369
+anchor_top = -0.0149821
+anchor_right = 0.583368
+anchor_bottom = -0.00192238
 margin_left = -51.8745
 margin_top = 422.585
 margin_right = 46.1255
@@ -63,7 +65,7 @@ margin_top = 254.0
 margin_right = 268.0
 margin_bottom = 274.0
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Password:"
+text = "Apellidos:"
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -85,7 +87,7 @@ margin_top = 139.523
 margin_right = 268.678
 margin_bottom = 159.523
 custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Usuario:"
+text = "Nombres:"
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -97,47 +99,6 @@ margin_right = 319.671
 margin_bottom = 65.7377
 custom_constants/line_spacing = 8
 custom_constants/completion_lines = -3
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="Student" type="Label" parent="Sprite/Panel"]
-margin_left = 210.823
-margin_top = 365.37
-margin_right = 250.823
-margin_bottom = 379.37
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Estudiante"
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="c_student" type="CheckBox" parent="Sprite/Panel/Student"]
-margin_left = 3.01263
-margin_top = 17.064
-margin_right = 27.0126
-margin_bottom = 41.064
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="administrator" type="Label" parent="Sprite/Panel"]
-margin_left = 398.557
-margin_top = 366.374
-margin_right = 489.557
-margin_bottom = 380.374
-custom_colors/font_color = Color( 1, 1, 1, 1 )
-text = "Administrador"
-__meta__ = {
-"_edit_use_anchors_": true
-}
-
-[node name="c_administrator" type="CheckBox" parent="Sprite/Panel/administrator"]
-margin_left = -2.00763
-margin_top = 20.0751
-margin_right = 21.9924
-margin_bottom = 44.0751
-shortcut_in_tooltip = false
 __meta__ = {
 "_edit_use_anchors_": true
 }
@@ -171,6 +132,4 @@ __meta__ = {
 }
 
 [connection signal="pressed" from="Sprite/Panel/JUGAR" to="." method="_on_JUGAR_pressed"]
-[connection signal="toggled" from="Sprite/Panel/Student/c_student" to="." method="_on_c_student_toggled"]
-[connection signal="toggled" from="Sprite/Panel/administrator/c_administrator" to="." method="_on_c_administrator_toggled"]
 [connection signal="pressed" from="Sprite/atras" to="." method="_on_Button_pressed"]

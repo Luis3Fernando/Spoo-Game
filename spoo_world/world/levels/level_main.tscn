@@ -64,7 +64,7 @@ position = Vector2( 285, 128 )
 scale = Vector2( 1.23205, 1.07143 )
 texture = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="Sprite2"]
+[node name="estudiante" type="Label" parent="Sprite2"]
 margin_left = -36.0
 margin_top = -6.0
 margin_right = 38.0
@@ -76,7 +76,7 @@ position = Vector2( 1024, 136 )
 scale = Vector2( 1.57179, 1.07143 )
 texture = ExtResource( 1 )
 
-[node name="Label" type="Label" parent="Sprite3"]
+[node name="total_levels" type="Label" parent="Sprite3"]
 margin_left = 17.1778
 margin_top = -7.46665
 margin_right = 50.1778

@@ -1,19 +1,20 @@
 extends Node2D
 
+var nombre_completo
+var student
+var completados
+onready var label_student = $Sprite2/estudiante
+onready var label_levels = $Sprite3/total_levels
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = "text"
-
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	label_student.text = student.nombreCompleto
+	label_levels.text = str(completados)+" /5"
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func inicializar(parametro1):
+	nombre_completo = parametro1
+	var objeto = Db_Estudiante.new()
+	student = objeto.obtener_student(nombre_completo)
+	completados = objeto.contar_niveles_completados(student.completados)
 
 func _on_Button_pressed():
 	var new_scene_path = "res://spoo_world/world/levels/level1.tscn"  # Ruta a la nueva escena
