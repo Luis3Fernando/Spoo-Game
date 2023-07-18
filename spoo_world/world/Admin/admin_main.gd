@@ -1,6 +1,5 @@
 extends Node2D
-#jbojnkñl
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	pass 
 
@@ -12,7 +11,7 @@ func _on_Button2_pressed():
 
 
 func _on_ButtonEdit_pressed():
-	get_tree().change_scene("res://spoo_world/world/Admin/edit.tscn")
+	get_tree().change_scene("res://spoo_world/world/Admin/edit_main.tscn")
 
 func _on_ButtonDelete_pressed():
 	get_tree().change_scene("res://spoo_world/world/Admin/delete.tscn")

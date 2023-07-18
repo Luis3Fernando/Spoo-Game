@@ -4,13 +4,8 @@ class_name Db_Estudiante
 
 var rutaArchivo: String
 var listaEstudiantes: Array = []
-
 func _init():
-	# Constructor
-	listaEstudiantes = [Alumno.new(), Alumno.new()]
-	
-	# Obtener el directorio actual de trabajo
-	var rutaArchivo = ProjectSettings.globalize_path("res://data/datos_alumnos.json")
+	rutaArchivo = ProjectSettings.globalize_path("user://datos_alumnos.json")
 
 func obtener_estudiantes() -> Array:
 	cargar_estudiantes()
@@ -20,7 +15,8 @@ func obtener_estudiantes() -> Array:
 func crear_estudiante(nombre: String):
 	var nuevoEstudiante = Alumno.new()
 	nuevoEstudiante.nombreCompleto = nombre
-	listaEstudiantes.append(nuevoEstudiante)
+	var lista=obtener_estudiantes()
+	lista.append(nuevoEstudiante)
 	
 	guardar_estudiantes()
 # Función para guardar los estudiantes en un archivo
@@ -29,7 +25,14 @@ func guardar_estudiantes():
 	
 	for estudiante in listaEstudiantes:
 		var datosEstudiante = {
-			"nombreCompleto": estudiante.nombreCompleto
+			"nombreCompleto": estudiante.nombreCompleto,
+			"puntos": {
+				"level1": estudiante.puntos["level1"],
+				"level2": estudiante.puntos["level2"],
+				"level3": estudiante.puntos["level3"],
+				"level4": estudiante.puntos["level4"],
+				"level5": estudiante.puntos["level5"]
+			}
 		}
 		datosGuardados.append(datosEstudiante)
 	
@@ -42,11 +45,6 @@ func guardar_estudiantes():
 		print("Datos guardados en el archivo JSON.")
 	else:
 		print("Error al abrir el archivo para escritura.")
-		
-	#if file.open(rutaArchivo, File.WRITE) == OK:
-	#	var datosEnTexto = JSON.print(datosGuardados)
-	#	file.store_string(datosEnTexto)
-	#	file.close()
 
 # Función para cargar los estudiantes desde un archivo
 func cargar_estudiantes():
@@ -54,12 +52,25 @@ func cargar_estudiantes():
 	if file.open(rutaArchivo, File.READ) == OK:
 		var datosEnTexto = file.get_as_text()
 		file.close()
+		print("Datos leídos del archivo")
+		
+		var parsed_data = parse_json(datosEnTexto)
+		print(parsed_data)
+		if parsed_data != null:
+			for datosEstudiante in parsed_data:
+				var nombre_completo = datosEstudiante["nombreCompleto"]
+				var puntos = datosEstudiante["puntos"]
+				var data_student = Alumno.new()
+				data_student.nombreCompleto = nombre_completo
+				data_student.puntos = puntos
+				listaEstudiantes.append(data_student)
+		
+			print("Estudiantes cargados")
+		else:
+			print("Error al analizar los datos JSON.")
+	else:
+		print("Error al abrir el archivo para lectura.")
 
-		var datosGuardados = JSON.parse(datosEnTexto)
-		if datosGuardados != null:
-			for datosEstudiante in datosGuardados:
-				#var nuevoEstudiante = Alumno.new()
-				listaEstudiantes.append(datosEstudiante)
 
 # Función para actualizar el nombre de un estudiante
 func actualizar_nombre_estudiante(nombreActual: String, nuevoNombre: String):
@@ -69,9 +80,12 @@ func actualizar_nombre_estudiante(nombreActual: String, nuevoNombre: String):
 			break
 
 # Función para eliminar un estudiante de la lista
-func eliminar_estudiante(nombre: String):
+func eliminar_estudiante(nombre_eliminar: String):
+	cargar_estudiantes()
+	var student
 	for i in range(listaEstudiantes.size()):
-		var estudiante = listaEstudiantes[i]
-		if estudiante.nombreCompleto == nombre:
+		student = listaEstudiantes[i]
+		if student.nombreCompleto == nombre_eliminar:
 			listaEstudiantes.remove(i)
 			break
+	guardar_estudiantes()
