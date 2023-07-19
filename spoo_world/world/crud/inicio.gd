@@ -54,12 +54,12 @@ func asignar_eventos():
 
 func _on_BotonPresionado(nombre):
 	var nombreC = obtener_nombre_del_texto(nombre)
-	crear_nueva_escena(nombreC)
+	var objeto = Db_Estudiante.new()
+	var student = objeto.obtener_student(nombreC)
+	Singleton.student = student
 	
-func crear_nueva_escena(nombre_completo):
-	var nueva_escena = load("res://spoo_world/world/levels/level_main.tscn").instance()
-	nueva_escena.inicializar(nombre_completo)
-	get_parent().add_child(nueva_escena)
+	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn" 
+	get_tree().change_scene(new_scene_path)
 	
 func obtener_nombre_del_texto(texto: String) -> String:
 	var texto_sin_numero

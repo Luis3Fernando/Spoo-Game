@@ -6,11 +6,9 @@ onready var input_nombre = $Sprite/Panel/apellido/apellido_input
 onready var input_apellido = $Sprite/Panel/nombre/nombre_input
 
 func _ready():
+	array_nombre = separar_apellidos(Singleton.student.nombreCompleto)
 	input_nombre.text = array_nombre[0]
 	input_apellido.text = array_nombre[1]+" "+array_nombre[2]
-	
-func inicializar(parametro1):
-	array_nombre = separar_apellidos(parametro1)
 
 func separar_apellidos(nombre_completo: String) -> Array:
 	var partes = nombre_completo.split(" ") 
