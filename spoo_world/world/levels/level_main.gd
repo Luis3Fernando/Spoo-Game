@@ -15,7 +15,7 @@ func _ready():
 	label_levels.text = str(completados)+" /5"
 
 func _on_Button_pressed():
-	var new_scene_path = "res://spoo_world/world/levels/level1.tscn"  # Ruta a la nueva escena
+	var new_scene_path = "res://spoo_world/world/levels/level1/level1.tscn"  # Ruta a la nueva escena
 	get_tree().change_scene(new_scene_path)
 
 func _on_Button2_pressed():
@@ -23,11 +23,11 @@ func _on_Button2_pressed():
 	get_tree().change_scene(new_scene_path)
 
 func _on_Button3_pressed():
-	var new_scene_path = "res://spoo_world/world/levels/level3.tscn"  # Ruta a la nueva escena
+	var new_scene_path = "res://spoo_world/world/levels/level3/level3.tscn"  # Ruta a la nueva escena
 	get_tree().change_scene(new_scene_path)
 
 func _on_Button4_pressed():
-	var new_scene_path = "res://spoo_world/world/levels/level4.tscn"  # Ruta a la nueva escena
+	var new_scene_path = "res://spoo_world/world/levels/level4/level4.tscn"  # Ruta a la nueva escena
 	get_tree().change_scene(new_scene_path)
 
 func _on_Button5_pressed():

@@ -3,7 +3,7 @@
 [ext_resource path="res://spoo_world/assets/audio/level1.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
 [ext_resource path="res://spoo_world/assets/img/FondoPrueba.png" type="Texture" id=3]
-[ext_resource path="res://spoo_world/world/levels/level1.gd" type="Script" id=4]
+[ext_resource path="res://spoo_world/world/levels/level1/level1.gd" type="Script" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=6]
 
