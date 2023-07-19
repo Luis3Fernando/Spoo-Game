@@ -54,6 +54,10 @@ config/name="SpooGame"
 run/main_scene="res://spoo_world/world/Intro.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Singleton="*res://singleton.gd"
+
 [display]
 
 window/size/width=1280

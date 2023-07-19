@@ -2,6 +2,8 @@ extends Node2D
 
 var points=0
 
+var student
+
 var count1 = 0
 var count2 = 0
 var count3 = 0
@@ -105,12 +107,6 @@ func generar_valores_cuadros():
 		print("ganaste")
 		var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
 		get_tree().change_scene(new_scene_path)
-
-#retroceder
-func _on_back_pressed():
-	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
-	get_tree().change_scene(new_scene_path)
-
 
 #reiniciar el juego
 func _on_limite_body_entered(body):
@@ -284,3 +280,7 @@ func _on_music_pressed():
 	else:
 		audioPlayer.play()
 	pass # Replace with function body.
+
+func _on_back_pressed():
+	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
+	get_tree().change_scene(new_scene_path)

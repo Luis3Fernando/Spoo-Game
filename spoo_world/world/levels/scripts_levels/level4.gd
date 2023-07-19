@@ -6,6 +6,8 @@ var Mensaje: Label
 var number1: int
 var number2: int
 
+var student
+
 func _ready():
 	# Creamos los labels para mostrar los números
 	numeroIzqLabel = Label.new()
@@ -158,11 +160,6 @@ func _on_button_mayor_pressed():
 	generateNumbers()
 
 
-func _on_Button_pressed():
-	get_tree().change_scene("res://spoo_world/world/levels/level_main.tscn")
-	pass
-
-
 func _on_music_pressed():
 	var audioPlayer = get_node("AudioFondo") 
 	if audioPlayer.playing:
@@ -170,3 +167,7 @@ func _on_music_pressed():
 	else:
 		audioPlayer.play()
 	pass # Replace with function body.
+
+func _on_Button_pressed():
+	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
+	get_tree().change_scene(new_scene_path)

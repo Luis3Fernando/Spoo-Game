@@ -1,7 +1,7 @@
 extends Node2D
 
 func _ready():
-	pass 
+	pass
 
 func _on_Button_pressed():
 	get_tree().change_scene("res://spoo_world/world/Admin/Login.tscn")
@@ -15,7 +15,6 @@ func _on_ButtonEdit_pressed():
 
 func _on_ButtonDelete_pressed():
 	get_tree().change_scene("res://spoo_world/world/Admin/delete.tscn")
-
 
 func _on_ButtonAdd_pressed():
 	get_tree().change_scene("res://spoo_world/world/Admin/add.tscn")
