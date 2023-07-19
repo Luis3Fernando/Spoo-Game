@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://spoo_world/world/levels/level5/spoo_level5.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/world/levels/level5/level5.gd" type="Script" id=2]
@@ -19,6 +19,7 @@
 [ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=18]
 [ext_resource path="res://spoo_world/assets/audio/level5.mp3" type="AudioStream" id=19]
+[ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=20]
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 6 )
@@ -416,20 +417,19 @@ wait_time = 0.72
 position = Vector2( 624, 953 )
 shape = SubResource( 20 )
 
-[node name="music" type="Button" parent="."]
-margin_left = 1160.0
-margin_top = 113.0
-margin_right = 1226.0
-margin_bottom = 186.0
-focus_mode = 0
-enabled_focus_mode = 0
-icon = ExtResource( 18 )
-flat = true
-expand_icon = true
-
 [node name="AudioFondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 19 )
 autoplay = true
+
+[node name="TButton_Music" type="TextureButton" parent="."]
+margin_left = 1159.0
+margin_top = 113.0
+margin_right = 1219.0
+margin_bottom = 174.0
+toggle_mode = true
+texture_normal = ExtResource( 18 )
+texture_pressed = ExtResource( 20 )
+expand = true
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="button_up" from="play" to="spoo" method="_on_play_button_up"]
@@ -454,4 +454,4 @@ autoplay = true
 [connection signal="body_entered" from="coin3" to="." method="_on_coin3_body_entered"]
 [connection signal="timeout" from="Timer" to="spoo" method="_on_Timer_timeout"]
 [connection signal="body_exited" from="abajo" to="." method="_on_abajo_body_exited"]
-[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]

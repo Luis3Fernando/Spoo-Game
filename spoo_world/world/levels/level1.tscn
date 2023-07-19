@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level1.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
@@ -7,10 +7,6 @@
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=6]
 
-[sub_resource type="StyleBoxTexture" id=1]
-texture = ExtResource( 6 )
-region_rect = Rect2( 0, 0, 370, 350 )
-
 [node name="level1" type="Node2D"]
 script = ExtResource( 4 )
 
@@ -18,17 +14,6 @@ script = ExtResource( 4 )
 position = Vector2( 641, 399.5 )
 scale = Vector2( 2.552, 2.84643 )
 texture = ExtResource( 3 )
-
-[node name="music" type="Button" parent="."]
-margin_left = 1143.0
-margin_top = 33.0
-margin_right = 1227.0
-margin_bottom = 107.0
-focus_mode = 0
-custom_styles/hover = SubResource( 1 )
-icon = ExtResource( 2 )
-flat = true
-expand_icon = true
 
 [node name="AudioFondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
@@ -45,7 +30,16 @@ icon = ExtResource( 5 )
 flat = true
 expand_icon = true
 
-[connection signal="pressed" from="music" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
-[connection signal="pressed" from="back" to="." method="_on_Button_pressed"]
+[node name="TButton_Music" type="TextureButton" parent="."]
+margin_left = 1152.0
+margin_top = 23.0
+margin_right = 1238.0
+margin_bottom = 102.0
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 6 )
+expand = true
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
