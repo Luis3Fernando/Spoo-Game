@@ -2,7 +2,7 @@
 
 [ext_resource path="res://spoo_world/assets/audio/level1.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
-[ext_resource path="res://spoo_world/assets/img/FondoPrueba.png" type="Texture" id=3]
+[ext_resource path="res://spoo_world/assets/img/paisajes/level1-1.jpg" type="Texture" id=3]
 [ext_resource path="res://spoo_world/world/levels/level1/level1.gd" type="Script" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=6]
@@ -11,8 +11,8 @@
 script = ExtResource( 4 )
 
 [node name="Sprite" type="Sprite" parent="."]
-position = Vector2( 641, 399.5 )
-scale = Vector2( 2.552, 2.84643 )
+position = Vector2( 640, 400 )
+scale = Vector2( 0.633663, 0.633914 )
 texture = ExtResource( 3 )
 
 [node name="AudioFondo" type="AudioStreamPlayer" parent="."]
@@ -21,10 +21,10 @@ volume_db = 2.496
 autoplay = true
 
 [node name="back" type="Button" parent="."]
-margin_left = 7.0
-margin_top = 9.0
-margin_right = 81.0
-margin_bottom = 95.0
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 90.0
+margin_bottom = 102.0
 focus_mode = 0
 icon = ExtResource( 5 )
 flat = true
