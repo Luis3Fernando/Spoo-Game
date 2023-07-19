@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=1]
 [ext_resource path="res://spoo_world/assets/img/paisaje2.png" type="Texture" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=7]
 [ext_resource path="res://spoo_world/assets/img/draw_space.jpg" type="Texture" id=8]
 [ext_resource path="res://spoo_world/world/levels/level2/level2_Trazo.gd" type="Script" id=9]
+[ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=10]
 
 [node name="level2" type="Node2D"]
 script = ExtResource( 4 )
@@ -17,17 +18,6 @@ script = ExtResource( 4 )
 position = Vector2( 640, 400 )
 scale = Vector2( 1.33333, 1.48148 )
 texture = ExtResource( 2 )
-
-[node name="music" type="Button" parent="."]
-margin_left = 1145.0
-margin_top = 31.0
-margin_right = 1236.0
-margin_bottom = 112.0
-focus_mode = 0
-enabled_focus_mode = 0
-icon = ExtResource( 1 )
-flat = true
-expand_icon = true
 
 [node name="AudioFondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 3 )
@@ -90,8 +80,17 @@ script = ExtResource( 9 )
 
 [node name="Lines" type="Node2D" parent="lienzo"]
 
-[connection signal="pressed" from="music" to="." method="_on_Button_pressed"]
-[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
+[node name="TButton_Music" type="TextureButton" parent="."]
+margin_left = 1158.0
+margin_top = 33.0
+margin_right = 1233.0
+margin_bottom = 110.0
+toggle_mode = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 10 )
+expand = true
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="clear" to="lienzo" method="_on_clear_pressed"]
 [connection signal="pressed" from="validation" to="lienzo" method="_on_validation_pressed"]
+[connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]

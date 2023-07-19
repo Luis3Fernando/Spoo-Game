@@ -160,14 +160,14 @@ func _on_button_mayor_pressed():
 	generateNumbers()
 
 
-func _on_music_pressed():
+func _on_Button_pressed():
+	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
+	get_tree().change_scene(new_scene_path)
+
+
+func _on_TButton_Music_pressed():
 	var audioPlayer = get_node("AudioFondo") 
 	if audioPlayer.playing:
 		audioPlayer.stop()
 	else:
-		audioPlayer.play()
-	pass # Replace with function body.
-
-func _on_Button_pressed():
-	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
-	get_tree().change_scene(new_scene_path)
+		audioPlayer.play(audioPlayer.get_playback_position())
