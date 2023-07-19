@@ -1,0 +1,80 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://spoo_world/assets/audio/level3.mp3" type="AudioStream" id=1]
+[ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
+[ext_resource path="res://spoo_world/assets/img/paisajes/level3-1.png" type="Texture" id=3]
+[ext_resource path="res://spoo_world/world/levels/level3/level3.gd" type="Script" id=4]
+[ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero1.png" type="Texture" id=6]
+
+[node name="level3" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="fondo" type="Sprite" parent="."]
+position = Vector2( 640, 400 )
+scale = Vector2( 1.28128, 1.28205 )
+texture = ExtResource( 3 )
+
+[node name="music" type="Button" parent="."]
+margin_left = 1141.0
+margin_top = 26.0
+margin_right = 1243.0
+margin_bottom = 113.0
+focus_mode = 0
+mouse_filter = 1
+enabled_focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
+
+[node name="AudioFondo" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 1 )
+volume_db = -1.0
+autoplay = true
+
+[node name="back" type="Button" parent="."]
+margin_left = 7.0
+margin_top = 9.0
+margin_right = 81.0
+margin_bottom = 96.0
+focus_mode = 0
+mouse_filter = 1
+icon = ExtResource( 5 )
+flat = true
+expand_icon = true
+
+[node name="area_dibujo" type="ColorRect" parent="."]
+margin_left = 424.0
+margin_top = 120.0
+margin_right = 872.0
+margin_bottom = 664.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="numero1" type="Polygon2D" parent="."]
+position = Vector2( -80, -24 )
+scale = Vector2( 1.04167, 1.08333 )
+polygon = PoolVector2Array( 768, 192, 768, 576, 668.16, 576, 668.16, 324.923, 629.76, 354.462, 576, 296, 696, 192 )
+
+[node name="numero1_img" type="Sprite" parent="."]
+position = Vector2( 628, 400 )
+scale = Vector2( 0.327869, 0.365619 )
+texture = ExtResource( 6 )
+
+[node name="lines" type="Node2D" parent="."]
+
+[node name="comprobar" type="Button" parent="."]
+margin_left = 1088.0
+margin_top = 512.0
+margin_right = 1192.0
+margin_bottom = 576.0
+
+[node name="limpiar" type="Button" parent="."]
+margin_left = 1088.0
+margin_top = 384.0
+margin_right = 1192.0
+margin_bottom = 448.0
+
+[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="comprobar" to="." method="_on_comprobar_pressed"]
+[connection signal="pressed" from="limpiar" to="." method="_on_limpiar_pressed"]
