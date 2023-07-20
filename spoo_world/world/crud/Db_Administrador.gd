@@ -7,7 +7,7 @@ var administrador = {}
 
 func _init():
 	administrador = {
-		"user": "admin",
-		"password": "admin"
+		"user": "Admin",
+		"password": "Admin"
 	}
 

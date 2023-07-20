@@ -2,7 +2,7 @@
 
 [ext_resource path="res://spoo_world/assets/typography/Spooky Monster.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://spoo_world/world/Admin/edit_user.gd" type="Script" id=2]
-[ext_resource path="res://spoo_world/assets/img/amarillo.png" type="Texture" id=3]
+[ext_resource path="res://spoo_world/assets/icon/button_bg.png" type="Texture" id=3]
 [ext_resource path="res://spoo_world/assets/img/Fondo.png" type="Texture" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_1.png" type="Texture" id=5]
 
@@ -97,6 +97,10 @@ __meta__ = {
 }
 
 [node name="nombre" type="Label" parent="Sprite/Panel"]
+anchor_left = -0.000339688
+anchor_top = 0.00227049
+anchor_right = 0.0452485
+anchor_bottom = 0.00973317
 margin_left = 173.0
 margin_top = 254.0
 margin_right = 268.0
