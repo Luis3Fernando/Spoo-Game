@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=22 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level3.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
@@ -6,11 +6,20 @@
 [ext_resource path="res://spoo_world/world/levels/level3/level3.gd" type="Script" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=6]
+[ext_resource path="res://spoo_world/assets/audio/cinco.wav" type="AudioStream" id=7]
+[ext_resource path="res://spoo_world/assets/audio/ocho.wav" type="AudioStream" id=8]
+[ext_resource path="res://spoo_world/assets/audio/seis.wav" type="AudioStream" id=9]
+[ext_resource path="res://spoo_world/assets/audio/siete.wav" type="AudioStream" id=10]
+[ext_resource path="res://spoo_world/assets/audio/uno.wav" type="AudioStream" id=11]
+[ext_resource path="res://spoo_world/assets/audio/cuatro.wav" type="AudioStream" id=12]
+[ext_resource path="res://spoo_world/assets/audio/dos.wav" type="AudioStream" id=13]
+[ext_resource path="res://spoo_world/assets/audio/nueve.wav" type="AudioStream" id=14]
 [ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=15]
 [ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Abierto.png" type="Texture" id=16]
 [ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Cerrado.png" type="Texture" id=17]
 [ext_resource path="res://spoo_world/assets/icon/arrow_start.png" type="Texture" id=18]
 [ext_resource path="res://spoo_world/assets/icon/restart.png" type="Texture" id=19]
+[ext_resource path="res://spoo_world/assets/audio/trees.wav" type="AudioStream" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -153,6 +162,33 @@ toggle_mode = true
 texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 6 )
 expand = true
+
+[node name="AudioUno" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[node name="AudioDos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 13 )
+
+[node name="AudioTres" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+
+[node name="AudioCuatro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 12 )
+
+[node name="AudioCinco" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 7 )
+
+[node name="AudioSeis" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+
+[node name="AudioSiete" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 10 )
+
+[node name="AudioOcho" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 8 )
+
+[node name="AudioNueve" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 14 )
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="verificar" to="." method="_on_verificar_pressed"]
