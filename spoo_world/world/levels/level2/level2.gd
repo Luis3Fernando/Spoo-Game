@@ -55,39 +55,58 @@ func mostrar_numero(numero:int):
 			numero1.visible = true
 			img_n1.visible = true
 			base_poligono = numero1
+			var audioPlayer= get_node("AudioUno")
+			audioPlayer.play()
 		2:
 			numero2.visible = true
 			img_n2.visible = true
 			base_poligono = numero2
+			var audioPlayer= get_node("AudioDos")
+			audioPlayer.play()
 		3:
 			numero3.visible = true
 			img_n3.visible = true
 			base_poligono = numero3
+			var audioPlayer= get_node("AudioTres")
+			audioPlayer.play()
 		4:
 			numero4.visible = true
 			img_n4.visible = true
 			base_poligono = numero4
+			var audioPlayer= get_node("AudioCuatro")
+			audioPlayer.play()
 		5:
 			numero5.visible = true
 			img_n5.visible = true
 			base_poligono = numero5
+			var audioPlayer= get_node("AudioCinco")
+			audioPlayer.play()
 		
 		6:
 			numero6.visible = true
 			img_n6.visible = true
 			base_poligono = numero6
+			var audioPlayer= get_node("AudioSeis")
+			audioPlayer.play()
+			
 		7:
 			numero7.visible = true
 			img_n7.visible = true
 			base_poligono = numero7
+			var audioPlayer= get_node("AudioSiete")
+			audioPlayer.play()
 		8:
 			numero8.visible = true
 			img_n8.visible = true
 			base_poligono = numero8
+			var audioPlayer= get_node("AudioOcho")
+			audioPlayer.play()
 		9:
 			numero9.visible = true
 			img_n9.visible = true
 			base_poligono = numero9
+			var audioPlayer= get_node("AudioNueve")
+			audioPlayer.play()
 		_:
 			numero3.visible = true
 			img_n3.visible = true

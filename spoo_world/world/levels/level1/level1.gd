@@ -43,8 +43,11 @@ func _on_back_pressed():
 	get_tree().change_scene(new_scene_path)
 
 func mostrar_bloques(cantidad: int):
+
 	match cantidad:
-		1:
+		1: 
+			var audioPlayer= get_node("AudioUno")
+			audioPlayer.play()
 			madera2.visible = false
 			madera3.visible = false
 			madera4.visible = false
@@ -54,6 +57,8 @@ func mostrar_bloques(cantidad: int):
 			madera8.visible = false
 			
 		2:
+			var audioPlayer= get_node("AudioDos")
+			audioPlayer.play()
 			madera3.visible = false
 			madera4.visible = false
 			madera5.visible = false
@@ -61,25 +66,38 @@ func mostrar_bloques(cantidad: int):
 			madera7.visible = false
 			madera8.visible = false
 		3:
+			var audioPlayer= get_node("AudioTres")
+			audioPlayer.play()
 			madera4.visible = false
 			madera5.visible = false
 			madera6.visible = false
 			madera7.visible = false
 			madera8.visible = false
 		4:
+			var audioPlayer= get_node("AudioCuatro")
+			audioPlayer.play()
 			madera5.visible = false
 			madera6.visible = false
 			madera7.visible = false
 			madera8.visible = false
 		5:
+			var audioPlayer= get_node("AudioCinco")
+			audioPlayer.play()
 			madera6.visible = false
 			madera7.visible = false
 			madera8.visible = false
-		6:
+		6: 
+			var audioPlayer= get_node("AudioSeis")
+			audioPlayer.play()
 			madera7.visible = false
 			madera8.visible = false
 		7:
+			var audioPlayer= get_node("AudioSiete")
+			audioPlayer.play()
 			madera8.visible = false
+		8:
+			var audioPlayer= get_node("AudioOcho")
+			audioPlayer.play()
 		_:
 			print("Cantidad no reconocida")
 
@@ -94,6 +112,8 @@ func _on_space2_pressed():
 	if space2.pressed:
 		numero_seleccionado = 2
 		space1.pressed= true
+		var audioPlayer= get_node("AudioDos")
+		audioPlayer.play()
 	else:
 		numero_seleccionado = 1
 		space3.pressed = false
@@ -114,6 +134,8 @@ func _on_space1_pressed():
 		space6.pressed = false
 		space7.pressed = false
 		space8.pressed = false
+		var audioPlayer= get_node("AudioUno")
+		audioPlayer.play()
 	
 	else:
 		numero_seleccionado = 0
@@ -131,6 +153,8 @@ func _on_space3_pressed():
 		numero_seleccionado = 3
 		space1.pressed= true
 		space2.pressed = true
+		var audioPlayer= get_node("AudioTres")
+		audioPlayer.play()
 	else:
 		numero_seleccionado = 2
 		space4.pressed = false
@@ -146,7 +170,9 @@ func _on_space4_pressed():
 		numero_seleccionado = 4
 		space1.pressed= true
 		space2.pressed = true
-		space3.pressed = true		
+		space3.pressed = true
+		var audioPlayer= get_node("AudioCuatro")
+		audioPlayer.play()
 	else:
 		numero_seleccionado = 3
 		space5.pressed = false
@@ -163,6 +189,8 @@ func _on_space5_pressed():
 		space2.pressed = true
 		space3.pressed = true
 		space4.pressed = true
+		var audioPlayer= get_node("AudioCinco")
+		audioPlayer.play()
 		
 	else:
 		numero_seleccionado = 4
@@ -180,6 +208,8 @@ func _on_space6_pressed():
 		space3.pressed = true
 		space4.pressed = true
 		space5.pressed = true
+		var audioPlayer= get_node("AudioSeis")
+		audioPlayer.play()
 		
 	else:
 		numero_seleccionado = 5
@@ -197,6 +227,8 @@ func _on_space7_pressed():
 		space4.pressed = true
 		space5.pressed = true
 		space6.pressed = true
+		var audioPlayer= get_node("AudioSiete")
+		audioPlayer.play()
 		
 	else:
 		numero_seleccionado = 6
@@ -213,11 +245,12 @@ func _on_space8_pressed():
 		space4.pressed = true
 		space5.pressed = true
 		space6.pressed = true
-		space7.pressed = true		
+		space7.pressed = true
+		var audioPlayer= get_node("AudioOcho")
+		audioPlayer.play()	
 	
 	else:
 		numero_seleccionado = 7
-
 
 func _on_final_body_entered(body):
 	tocar +=1

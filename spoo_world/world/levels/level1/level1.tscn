@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=2]
+[gd_scene load_steps=35 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level1.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
@@ -16,6 +16,14 @@
 [ext_resource path="res://spoo_world/assets/icon/Rectangle50.png" type="Texture" id=14]
 [ext_resource path="res://spoo_world/world/levels/level1/level1_final.gd" type="Script" id=15]
 [ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=16]
+[ext_resource path="res://spoo_world/assets/audio/uno.wav" type="AudioStream" id=17]
+[ext_resource path="res://spoo_world/assets/audio/cuatro.wav" type="AudioStream" id=18]
+[ext_resource path="res://spoo_world/assets/audio/dos.wav" type="AudioStream" id=19]
+[ext_resource path="res://spoo_world/assets/audio/trees.wav" type="AudioStream" id=20]
+[ext_resource path="res://spoo_world/assets/audio/cinco.wav" type="AudioStream" id=21]
+[ext_resource path="res://spoo_world/assets/audio/ocho.wav" type="AudioStream" id=22]
+[ext_resource path="res://spoo_world/assets/audio/seis.wav" type="AudioStream" id=23]
+[ext_resource path="res://spoo_world/assets/audio/siete.wav" type="AudioStream" id=24]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 640, 12 )
@@ -362,6 +370,33 @@ margin_right = 24.0
 margin_bottom = 14.0
 text = "0/20"
 
+<<<<<<< HEAD
+=======
+[node name="AudioUno" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 17 )
+
+[node name="AudioDos" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 19 )
+
+[node name="AudioTres" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 20 )
+
+[node name="AudioCuatro" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 18 )
+
+[node name="AudioCinco" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 21 )
+
+[node name="AudioSeis" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 23 )
+
+[node name="AudioSiete" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 24 )
+
+[node name="AudioOcho" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 22 )
+
+>>>>>>> 9b2b90df61b7dc8f494f553bd933425f1a707288
 [connection signal="pressed" from="back" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
