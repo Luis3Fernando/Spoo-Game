@@ -1,18 +1,35 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level1.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
-[ext_resource path="res://spoo_world/assets/img/paisajes/level1-1.jpg" type="Texture" id=3]
+[ext_resource path="res://spoo_world/assets/img/paisajes/level3-1.png" type="Texture" id=3]
 [ext_resource path="res://spoo_world/world/levels/level1/level1.gd" type="Script" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=6]
+[ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Cerrado.png" type="Texture" id=7]
+[ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Abierto.png" type="Texture" id=8]
+[ext_resource path="res://spoo_world/world/levels/level1/level1_spoo.gd" type="Script" id=9]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ), ExtResource( 8 ) ],
+"loop": true,
+"name": "parpadear",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 68.125, 112.925 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 640, 12 )
 
 [node name="level1" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="Sprite" type="Sprite" parent="."]
+[node name="fondo" type="Sprite" parent="."]
 position = Vector2( 640, 400 )
-scale = Vector2( 0.633663, 0.633914 )
+scale = Vector2( 1.28128, 1.28205 )
 texture = ExtResource( 3 )
 
 [node name="AudioFondo" type="AudioStreamPlayer" parent="."]
@@ -40,6 +57,39 @@ texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 6 )
 expand = true
 
+[node name="spoo" type="KinematicBody2D" parent="."]
+position = Vector2( 640, 400 )
+scale = Vector2( 0.633663, 0.633914 )
+script = ExtResource( 9 )
+
+[node name="animation_spoo" type="AnimatedSprite" parent="spoo"]
+position = Vector2( -719.625, 378.6 )
+scale = Vector2( 0.12, 0.12 )
+frames = SubResource( 1 )
+animation = "parpadear"
+frame = 2
+
+[node name="cuerpo" type="CollisionShape2D" parent="spoo"]
+position = Vector2( -719.625, 378.6 )
+shape = SubResource( 2 )
+
+[node name="Area2D" type="Area2D" parent="."]
+position = Vector2( 32, 728 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2( 608, -4 )
+shape = SubResource( 3 )
+
+[node name="Button" type="Button" parent="."]
+margin_left = 1080.0
+margin_top = 296.0
+margin_right = 1208.0
+margin_bottom = 352.0
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
