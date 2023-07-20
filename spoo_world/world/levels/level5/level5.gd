@@ -16,6 +16,7 @@ var iteration = 1
 var valores = [count1, count2, count3, count4, count5, count6, count7, 0]
 
 func _ready():
+	Singleton.stay = 5
 	generar_valores_cuadros()
 	print(valores)
 	for i in range (7):
@@ -104,6 +105,9 @@ func generar_valores_cuadros():
 				valores[j] = i
 				j+=1
 	else:
+		var puntos_oficial = int((15*points)/20)
+		if !student.completados["level5"]:
+			student.puntos["level5"] +=puntos_oficial
 		var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
 		get_tree().change_scene(new_scene_path)
 
@@ -284,3 +288,19 @@ func _on_TButton_Music_pressed():
 	else:
 		audioPlayer.play(audioPlayer.get_playback_position())
 
+
+
+func _on_borde_v_body_entered(body):
+	$spoo.reset_game()
+	$coin1.visible = true
+	$coin2.visible = true
+	$coin3.visible = true
+	$b1.reset_position()
+	$b2.reset_position()
+	$b3.reset_position()
+	$b4.reset_position()
+	$b5.reset_position()
+	$b6.reset_position()
+	$b7.reset_position()
+	iteration+=1
+	_ready()

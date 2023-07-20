@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://spoo_world/world/levels/level5/spoo_level5.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/world/levels/level5/level5.gd" type="Script" id=2]
@@ -72,6 +72,9 @@ font_data = ExtResource( 17 )
 
 [sub_resource type="RectangleShape2D" id=20]
 extents = Vector2( 624, 47 )
+
+[sub_resource type="RectangleShape2D" id=22]
+extents = Vector2( 35.375, 396 )
 
 [node name="level5" type="Node2D"]
 script = ExtResource( 2 )
@@ -422,6 +425,12 @@ texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 20 )
 expand = true
 
+[node name="borde_v" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="borde_v"]
+position = Vector2( 1316, 406 )
+shape = SubResource( 22 )
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="button_up" from="play" to="spoo" method="_on_play_button_up"]
 [connection signal="pressed" from="play" to="spoo" method="_on_play_pressed"]
@@ -445,3 +454,4 @@ expand = true
 [connection signal="timeout" from="Timer" to="spoo" method="_on_Timer_timeout"]
 [connection signal="body_exited" from="abajo" to="." method="_on_abajo_body_exited"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
+[connection signal="body_entered" from="borde_v" to="." method="_on_borde_v_body_entered"]

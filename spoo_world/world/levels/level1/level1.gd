@@ -23,12 +23,15 @@ onready var madera7 = $madera7/Sprite
 onready var madera8 = $madera8/Sprite
 
 onready var label = $puntos/puntos_l
+onready var spoo = $spoo
+
+var tocar = 0
 
 func _ready():
 	Singleton.stay = 1
 	student = Singleton.student
 	Singleton.rondas1 +=1
-	label.text = str(student.puntos["level1"]/10)+"/20   ronda: "+str(Singleton.rondas1)
+	label.text = str(student.puntos["level1"])+"/20   ronda: "+str(Singleton.rondas1)
 	animacion.play("parpadear")
 	var rng = RandomNumberGenerator.new()
 	rng.randomize()
@@ -217,13 +220,14 @@ func _on_space8_pressed():
 
 
 func _on_final_body_entered(body):
+	tocar +=1
 	if numero_seleccionado == numero_entero_aleatorio:
-		if Singleton.rondas1<=20 and !student.completados["level1"]:
-			student.puntos["level1"] +=2
+		if Singleton.rondas1<=20 and !student.completados["level1"] and tocar==1:
+			student.puntos["level1"]+=2
 		Singleton.showSceneWithDelay("res://spoo_world/world/modal/bien.tscn", "res://spoo_world/world/levels/level1/level1.tscn")
 	else:
-		if Singleton.rondas1<=20 and !student.completados["level1"]:
+		if Singleton.rondas1<=20 and !student.completados["level1"] and tocar==1:
 			student.puntos["level1"] +=1
 		Singleton.showSceneWithDelay("res://spoo_world/world/modal/mal.tscn", "res://spoo_world/world/levels/level1/level1.tscn")
-	
+	spoo.moving = false
 	#get_tree().change_scene("res://spoo_world/world/levels/level1/level1.tscn")

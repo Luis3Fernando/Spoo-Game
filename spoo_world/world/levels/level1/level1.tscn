@@ -340,7 +340,7 @@ shape = SubResource( 12 )
 script = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="final"]
-position = Vector2( 1160, 336 )
+position = Vector2( 1200, 336 )
 shape = SubResource( 13 )
 
 [node name="comenzar" type="TextureButton" parent="."]
@@ -362,8 +362,8 @@ margin_right = 24.0
 margin_bottom = 14.0
 text = "0/20"
 
-[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
 [connection signal="pressed" from="space1" to="." method="_on_space1_pressed"]
 [connection signal="pressed" from="space2" to="." method="_on_space2_pressed"]
