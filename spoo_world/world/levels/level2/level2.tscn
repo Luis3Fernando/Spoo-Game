@@ -1,6 +1,6 @@
-[gd_scene load_steps=21 format=2]
+[gd_scene load_steps=22 format=2]
 
-[ext_resource path="res://spoo_world/assets/audio/level3.mp3" type="AudioStream" id=1]
+[ext_resource path="res://spoo_world/assets/audio/level2.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
 [ext_resource path="res://spoo_world/assets/img/numeros/numero3.png" type="Texture" id=3]
 [ext_resource path="res://spoo_world/world/levels/level2/level2.gd" type="Script" id=4]
@@ -19,6 +19,7 @@
 [ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Cerrado.png" type="Texture" id=17]
 [ext_resource path="res://spoo_world/assets/icon/arrow_start.png" type="Texture" id=18]
 [ext_resource path="res://spoo_world/assets/icon/restart.png" type="Texture" id=19]
+[ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=20]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -36,21 +37,9 @@ position = Vector2( 640, 400 )
 scale = Vector2( 1.33333, 1.48148 )
 texture = ExtResource( 9 )
 
-[node name="music" type="Button" parent="."]
-margin_left = 1141.0
-margin_top = 26.0
-margin_right = 1243.0
-margin_bottom = 113.0
-focus_mode = 0
-mouse_filter = 1
-enabled_focus_mode = 0
-icon = ExtResource( 2 )
-flat = true
-expand_icon = true
-
 [node name="AudioFondo" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 1 )
-volume_db = -1.0
+volume_db = 2.496
 autoplay = true
 
 [node name="back" type="Button" parent="."]
@@ -99,7 +88,6 @@ texture = ExtResource( 10 )
 [node name="numero3" type="Polygon2D" parent="."]
 visible = false
 position = Vector2( 6.10352e-05, 0 )
-scale = Vector2( 1, 1 )
 color = Color( 0.780392, 0.780392, 0.780392, 1 )
 polygon = PoolVector2Array( 544, 192, 544, 240, 664, 240, 696, 272, 696, 328, 656, 352, 592, 352, 592, 408, 672, 408, 688, 448, 688, 504, 656, 552, 544, 552, 544, 608, 688, 608, 760, 544, 760, 448, 736, 384, 768, 344, 768, 264, 720, 192 )
 
@@ -219,7 +207,17 @@ expand = true
 
 [node name="lines" type="Node2D" parent="."]
 
-[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
+[node name="TButton_Music" type="TextureButton" parent="."]
+margin_left = 1149.0
+margin_top = 38.0
+margin_right = 1226.0
+margin_bottom = 117.0
+toggle_mode = true
+texture_normal = ExtResource( 2 )
+texture_pressed = ExtResource( 20 )
+expand = true
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="verificar" to="." method="_on_verificar_pressed"]
 [connection signal="pressed" from="vaciar" to="." method="_on_vaciar_pressed"]
+[connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]

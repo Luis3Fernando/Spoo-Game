@@ -95,13 +95,6 @@ func _input(event):
 			_drawn_patterns.append(click_position)
 			_current_line.add_point(local_position)
 
-func _on_music_pressed():
-	var audioPlayer = get_node("AudioFondo") 
-	if audioPlayer.playing:
-		audioPlayer.stop()
-	else:
-		audioPlayer.play()
-
 func _on_back_pressed():
 	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
 	get_tree().change_scene(new_scene_path)
@@ -155,3 +148,11 @@ func _on_vaciar_pressed():
 	_current_line.clear_points()
 	for child in _lines.get_children():
 		child.queue_free()
+
+
+func _on_TButton_Music_pressed():
+	var audioPlayer = get_node("AudioFondo") 
+	if audioPlayer.playing:
+		audioPlayer.stop()
+	else:
+		audioPlayer.play(audioPlayer.get_playback_position())
