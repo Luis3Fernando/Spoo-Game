@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=2]
+[gd_scene load_steps=37 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level1.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
@@ -24,6 +24,7 @@
 [ext_resource path="res://spoo_world/assets/audio/ocho.wav" type="AudioStream" id=22]
 [ext_resource path="res://spoo_world/assets/audio/seis.wav" type="AudioStream" id=23]
 [ext_resource path="res://spoo_world/assets/audio/siete.wav" type="AudioStream" id=24]
+[ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=25]
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 640, 12 )
@@ -56,6 +57,10 @@ extents = Vector2( 10, 316.5 )
 extents = Vector2( 78.25, 368 )
 
 [sub_resource type="Theme" id=5]
+
+[sub_resource type="DynamicFont" id=14]
+size = 18
+font_data = ExtResource( 25 )
 
 [node name="level1" type="Node2D"]
 script = ExtResource( 4 )
@@ -348,7 +353,7 @@ shape = SubResource( 12 )
 script = ExtResource( 15 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="final"]
-position = Vector2( 1200, 336 )
+position = Vector2( 1160, 336 )
 shape = SubResource( 13 )
 
 [node name="comenzar" type="TextureButton" parent="."]
@@ -361,17 +366,17 @@ texture_normal = ExtResource( 10 )
 expand = true
 
 [node name="puntos" type="Sprite" parent="."]
-position = Vector2( 656, 64 )
+position = Vector2( 659.25, 64 )
+scale = Vector2( 1.03333, 1 )
 texture = ExtResource( 16 )
 
 [node name="puntos_l" type="Label" parent="puntos"]
-margin_left = -16.0
-margin_right = 24.0
-margin_bottom = 14.0
+margin_left = -56.0
+margin_top = -8.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 14 )
 text = "0/20"
 
-<<<<<<< HEAD
-=======
 [node name="AudioUno" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 17 )
 
@@ -396,7 +401,6 @@ stream = ExtResource( 24 )
 [node name="AudioOcho" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
 
->>>>>>> 9b2b90df61b7dc8f494f553bd933425f1a707288
 [connection signal="pressed" from="back" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]

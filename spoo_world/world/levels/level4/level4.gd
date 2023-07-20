@@ -18,6 +18,27 @@ onready var numeroIzqButton = $ColorRect/numero_iz
 onready var numeroDerButton =$ColorRect2/numero_der
 onready var label = $points/label_point
 
+
+onready var aveDer1 = $aveIzq_1
+onready var aveDer2 = $aveIzq_2
+onready var aveDer3 = $aveIzq_3
+onready var aveDer4 = $aveIzq_4
+onready var aveDer5 = $aveIzq_5
+onready var aveDer6 = $aveIzq_6
+onready var aveDer7 = $aveIzq_7
+onready var aveDer8 = $aveIzq_8
+onready var aveDer9 = $aveIzq_9
+
+onready var aveIzq1 = $aveDer_1
+onready var aveIzq2 = $aveDer_2
+onready var aveIzq3 = $aveDer_3
+onready var aveIzq4 = $aveDer_4
+onready var aveIzq5 = $aveDer_5
+onready var aveIzq6 = $aveDer_6
+onready var aveIzq7 = $aveDer_7
+onready var aveIzq8 = $aveDer_8
+onready var aveIzq9 = $aveDer_9
+
 func _ready():
 	Singleton.stay = 4
 	student = Singleton.student
@@ -64,6 +85,134 @@ func generateNumbers():
 	number2 = rand_range(1, 9)
 	numeroIzqButton.text = str(number1)
 	numeroDerButton.text = str(number2)
+	
+	mostrar_aves_der(number2)
+	mostrar_aves_izq(number1)
+
+func mostrar_aves_der(cantidad: int):
+
+	match cantidad:
+		1: 
+			aveDer1.visible = true
+			
+		2:
+			aveDer1.visible = true
+			aveDer2.visible = true
+		3:
+			aveDer1.visible = true
+			aveDer2.visible = true
+			aveDer3.visible = true
+		4:
+			aveDer1.visible = true
+			aveDer2.visible = true
+			aveDer3.visible = true
+			aveDer4.visible = true
+		5:
+			aveDer1.visible = true
+			aveDer2.visible = true
+			aveDer3.visible = true
+			aveDer4.visible = true
+			aveDer5.visible = true
+		6: 
+			aveDer1.visible = true
+			aveDer2.visible = true
+			aveDer3.visible = true
+			aveDer4.visible = true
+			aveDer5.visible = true
+			aveDer6.visible = true
+		7:
+			aveDer1.visible = true
+			aveDer2.visible = true
+			aveDer3.visible = true
+			aveDer4.visible = true
+			aveDer5.visible = true
+			aveDer6.visible = true
+			aveDer7.visible = true
+		8:
+			aveDer1.visible = true
+			aveDer2.visible = true
+			aveDer3.visible = true
+			aveDer4.visible = true
+			aveDer5.visible = true
+			aveDer6.visible = true
+			aveDer7.visible = true
+			aveDer8.visible = true
+			
+		9:
+			aveDer1.visible = true
+			aveDer2.visible = true
+			aveDer3.visible = true
+			aveDer4.visible = true
+			aveDer5.visible = true
+			aveDer6.visible = true
+			aveDer7.visible = true
+			aveDer8.visible = true
+			aveDer9.visible = true
+		_:
+			print("Cantidad no reconocida")
+
+func mostrar_aves_izq(cantidad: int):
+
+	match cantidad:
+		1: 
+			aveIzq1.visible = true
+			
+		2:
+			aveIzq1.visible = true
+			aveIzq2.visible = true
+		3:
+			aveIzq1.visible = true
+			aveIzq2.visible = true
+			aveIzq3.visible = true
+		4:
+			aveIzq1.visible = true
+			aveIzq2.visible = true
+			aveIzq3.visible = true
+			aveIzq4.visible = true
+		5:
+			aveIzq1.visible = true
+			aveIzq2.visible = true
+			aveIzq3.visible = true
+			aveIzq4.visible = true
+			aveIzq5.visible = true
+		6: 
+			aveIzq1.visible = true
+			aveIzq2.visible = true
+			aveIzq3.visible = true
+			aveIzq4.visible = true
+			aveIzq5.visible = true
+			aveIzq6.visible = true
+		7:
+			aveIzq1.visible = true
+			aveIzq2.visible = true
+			aveIzq3.visible = true
+			aveIzq4.visible = true
+			aveIzq5.visible = true
+			aveIzq6.visible = true
+			aveIzq7.visible = true
+		8:
+			aveIzq1.visible = true
+			aveIzq2.visible = true
+			aveIzq3.visible = true
+			aveIzq4.visible = true
+			aveIzq5.visible = true
+			aveIzq6.visible = true
+			aveIzq7.visible = true
+			aveIzq8.visible = true
+			
+		9:
+			aveIzq1.visible = true
+			aveIzq2.visible = true
+			aveIzq3.visible = true
+			aveIzq4.visible = true
+			aveIzq5.visible = true
+			aveIzq6.visible = true
+			aveIzq7.visible = true
+			aveIzq8.visible = true
+			aveIzq9.visible = true
+		_:
+			print("Cantidad no reconocida")
+
 
 func obtenerImagenParaNumero(numero: int) -> Texture:
 	var imagenes: Dictionary = {

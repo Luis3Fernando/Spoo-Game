@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://spoo_world/assets/typography/Spooky Monster.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://spoo_world/assets/typography/Lemonade Bold Demo.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://spoo_world/world/Admin/edit_student.gd" type="Script" id=2]
 [ext_resource path="res://spoo_world/assets/img/Fondo.png" type="Texture" id=3]
 [ext_resource path="res://spoo_world/assets/icon/arrow_1.png" type="Texture" id=4]
@@ -35,7 +35,7 @@ margin_bottom = 221.0
 custom_colors/font_outline_modulate = Color( 0, 0, 0, 1 )
 custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 1 )
-text = "Estudiantes"
+text = "ESTUDIANTES"
 
 [node name="ScrollContainer" type="ScrollContainer" parent="."]
 margin_left = 129.0

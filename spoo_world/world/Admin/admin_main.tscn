@@ -1,18 +1,13 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://spoo_world/assets/icon/arrow_1.png" type="Texture" id=1]
 [ext_resource path="res://spoo_world/assets/img/Fondo.png" type="Texture" id=2]
 [ext_resource path="res://spoo_world/world/Admin/admin_main.gd" type="Script" id=3]
-[ext_resource path="res://spoo_world/assets/typography/Spooky Monster.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://spoo_world/assets/typography/Lemonade Bold Demo.ttf" type="DynamicFontData" id=4]
 [ext_resource path="res://spoo_world/assets/img/ajustes.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=2]
 size = 30
-extra_spacing_char = 2
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=3]
-size = 20
 extra_spacing_char = 2
 font_data = ExtResource( 4 )
 
@@ -21,28 +16,13 @@ size = 30
 extra_spacing_char = 2
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=5]
-size = 20
-extra_spacing_char = 2
-font_data = ExtResource( 4 )
-
 [sub_resource type="DynamicFont" id=6]
 size = 30
 extra_spacing_char = 2
 font_data = ExtResource( 4 )
 
-[sub_resource type="DynamicFont" id=7]
-size = 20
-extra_spacing_char = 2
-font_data = ExtResource( 4 )
-
 [sub_resource type="DynamicFont" id=8]
 size = 30
-extra_spacing_char = 2
-font_data = ExtResource( 4 )
-
-[sub_resource type="DynamicFont" id=9]
-size = 20
 extra_spacing_char = 2
 font_data = ExtResource( 4 )
 
@@ -79,21 +59,10 @@ margin_right = -261.496
 margin_bottom = 295.226
 rect_pivot_offset = Vector2( 301.354, -80.305 )
 custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_color_pressed = Color( 0, 0, 0, 1 )
 custom_fonts/font = SubResource( 2 )
 text = "PROGRESO"
 icon_align = 1
-
-[node name="Label" type="Label" parent="Sprite/Button2"]
-margin_left = 4.03152
-margin_top = -26.4295
-margin_right = 60.0315
-margin_bottom = -6.4295
-rect_pivot_offset = Vector2( 210.646, -55.9085 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 3 )
-text = "Progreso"
-align = 3
-valign = 2
 
 [node name="Button3" type="Button" parent="Sprite"]
 margin_left = -210.646
@@ -102,19 +71,8 @@ margin_right = -16.6457
 margin_bottom = 297.243
 custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 4 )
-text = "AÑADIR"
+text = "AGREGAR"
 icon_align = 1
-
-[node name="Label" type="Label" parent="Sprite/Button3"]
-margin_left = 6.64599
-margin_top = -22.243
-margin_right = 65.646
-margin_bottom = -5.24299
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 5 )
-text = "Añadir"
-align = 3
-valign = 2
 
 [node name="Button4" type="Button" parent="Sprite"]
 margin_left = 37.2913
@@ -125,17 +83,6 @@ custom_colors/font_color = Color( 1, 1, 1, 1 )
 custom_fonts/font = SubResource( 6 )
 text = "EDITAR"
 icon_align = 1
-
-[node name="Label" type="Label" parent="Sprite/Button4"]
-margin_left = 7.70868
-margin_top = -25.243
-margin_right = 67.7087
-margin_bottom = -5.24298
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 7 )
-text = "Editar"
-align = 3
-valign = 2
 
 [node name="Button5" type="Button" parent="Sprite"]
 margin_left = 285.229
@@ -148,17 +95,6 @@ custom_fonts/font = SubResource( 8 )
 text = "ELIMINAR"
 clip_text = true
 icon_align = 1
-
-[node name="Label" type="Label" parent="Sprite/Button5"]
-margin_left = 6.61755
-margin_top = -21.3063
-margin_right = 82.6176
-margin_bottom = -4.30627
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = SubResource( 9 )
-text = "Eliminar"
-align = 3
-valign = 2
 
 [node name="Label" type="Label" parent="Sprite"]
 margin_left = -133.0

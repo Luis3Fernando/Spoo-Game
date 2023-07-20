@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://spoo_world/world/levels/level4/level4.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/assets/img/paisajes/level4.jpg" type="Texture" id=2]
@@ -9,6 +9,8 @@
 [ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=7]
 [ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=8]
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=9]
+[ext_resource path="res://spoo_world/assets/icon/ave.png" type="Texture" id=10]
+[ext_resource path="res://spoo_world/assets/icon/ave_iz.png" type="Texture" id=11]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
@@ -26,8 +28,24 @@ region_rect = Rect2( 0, 0, 50, 70 )
 extents = Vector2( 35, 67.5 )
 
 [sub_resource type="DynamicFont" id=5]
-size = 25
+size = 13
 font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=7]
+size = 60
+font_data = ExtResource( 7 )
+
+[sub_resource type="DynamicFont" id=8]
+size = 60
+font_data = ExtResource( 7 )
+
+[sub_resource type="SpriteFrames" id=6]
+animations = [ {
+"frames": [  ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
 
 [node name="level4" type="Node2D"]
 script = ExtResource( 1 )
@@ -66,43 +84,51 @@ stream = ExtResource( 5 )
 autoplay = true
 
 [node name="points" type="Sprite" parent="."]
-position = Vector2( 871.375, 59 )
-scale = Vector2( 1.30641, 0.82381 )
+position = Vector2( 667.312, 83.375 )
+scale = Vector2( 1.56603, 1.00238 )
 texture = ExtResource( 8 )
 
 [node name="label_point" type="Label" parent="points"]
-margin_left = -41.0526
-margin_top = -12.1387
-margin_right = 53.9474
-margin_bottom = 19.8613
+margin_left = -56.3927
+margin_top = -11.348
+margin_right = 38.6073
+margin_bottom = 20.652
 custom_fonts/font = SubResource( 5 )
 text = "0 / 15"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 229.0
-margin_top = 217.0
-margin_right = 356.0
-margin_bottom = 362.0
+margin_left = 417.0
+margin_top = 241.0
+margin_right = 544.0
+margin_bottom = 386.0
 color = Color( 0.160784, 0.14902, 0.192157, 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="numero_iz" type="Label" parent="ColorRect"]
-margin_left = 30.0
+margin_left = 40.0
 margin_top = 42.0
-margin_right = 92.0
+margin_right = 102.0
 margin_bottom = 103.0
+custom_fonts/font = SubResource( 7 )
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-margin_left = 885.0
-margin_top = 201.0
-margin_right = 1012.0
-margin_bottom = 346.0
+margin_left = 715.0
+margin_top = 241.0
+margin_right = 842.0
+margin_bottom = 386.0
 color = Color( 0.160784, 0.14902, 0.192157, 1 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="numero_der" type="Label" parent="ColorRect2"]
 margin_left = 32.0
 margin_top = 42.0
 margin_right = 106.0
 margin_bottom = 117.0
+custom_fonts/font = SubResource( 8 )
 
 [node name="TButton_Music" type="TextureButton" parent="."]
 margin_left = 1179.0
@@ -113,6 +139,117 @@ toggle_mode = true
 texture_normal = ExtResource( 6 )
 texture_pressed = ExtResource( 9 )
 expand = true
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 6 )
+
+[node name="aveIzq_1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1053, 89 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveIzq_2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1130, 185 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveIzq_3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 992, 233 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveIzq_4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1193, 325 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveIzq_5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1034, 370 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveIzq_6" type="Sprite" parent="."]
+visible = false
+position = Vector2( 1143, 480 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveIzq_7" type="Sprite" parent="."]
+visible = false
+position = Vector2( 901, 499 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveIzq_8" type="Sprite" parent="."]
+visible = false
+position = Vector2( 896, 119 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveIzq_9" type="Sprite" parent="."]
+visible = false
+position = Vector2( 997, 574 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 10 )
+
+[node name="aveDer_1" type="Sprite" parent="."]
+visible = false
+position = Vector2( 384, 136 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="aveDer_2" type="Sprite" parent="."]
+visible = false
+position = Vector2( 240, 98 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="aveDer_3" type="Sprite" parent="."]
+visible = false
+position = Vector2( 137, 230 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="aveDer_4" type="Sprite" parent="."]
+visible = false
+position = Vector2( 288, 279 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="aveDer_5" type="Sprite" parent="."]
+visible = false
+position = Vector2( 137, 407 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="aveDer_6" type="Sprite" parent="."]
+visible = false
+position = Vector2( 317, 423 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="aveDer_9" type="Sprite" parent="."]
+visible = false
+position = Vector2( 124, 633 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="aveDer_7" type="Sprite" parent="."]
+visible = false
+position = Vector2( 213, 531 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
+
+[node name="aveDer_8" type="Sprite" parent="."]
+visible = false
+position = Vector2( 338, 602 )
+scale = Vector2( 0.3, 0.3 )
+texture = ExtResource( 11 )
 
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]

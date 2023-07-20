@@ -1,13 +1,13 @@
 [gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://spoo_world/assets/typography/Spooky Monster.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://spoo_world/assets/typography/Lemonade Bold Demo.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://spoo_world/world/Admin/edit_user.gd" type="Script" id=2]
 [ext_resource path="res://spoo_world/assets/icon/button_bg.png" type="Texture" id=3]
 [ext_resource path="res://spoo_world/assets/img/Fondo.png" type="Texture" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_1.png" type="Texture" id=5]
 
 [sub_resource type="DynamicFont" id=4]
-size = 30
+size = 27
 extra_spacing_char = 2
 font_data = ExtResource( 1 )
 
@@ -74,6 +74,10 @@ __meta__ = {
 }
 
 [node name="apellido" type="Label" parent="Sprite/Panel"]
+anchor_left = 0.000133806
+anchor_top = -0.0248246
+anchor_right = 0.0133691
+anchor_bottom = 0.0124888
 margin_left = 173.678
 margin_top = 139.523
 margin_right = 268.678
@@ -86,10 +90,10 @@ __meta__ = {
 }
 
 [node name="apellido_input" type="TextEdit" parent="Sprite/Panel/apellido"]
-margin_left = -2.32941
-margin_top = 25.7377
-margin_right = 319.671
-margin_bottom = 65.7377
+margin_left = -2.42038
+margin_top = 39.0437
+margin_right = 319.58
+margin_bottom = 79.0437
 custom_constants/line_spacing = 8
 custom_constants/completion_lines = -3
 __meta__ = {
@@ -97,10 +101,10 @@ __meta__ = {
 }
 
 [node name="nombre" type="Label" parent="Sprite/Panel"]
-anchor_left = -0.000339688
-anchor_top = 0.00227049
-anchor_right = 0.0452485
-anchor_bottom = 0.00973317
+anchor_left = 0.0011309
+anchor_top = -0.0350429
+anchor_right = 0.0467191
+anchor_bottom = 0.00227049
 margin_left = 173.0
 margin_top = 254.0
 margin_right = 268.0
@@ -113,10 +117,10 @@ __meta__ = {
 }
 
 [node name="nombre_input" type="TextEdit" parent="Sprite/Panel/nombre"]
-margin_left = -2.33337
-margin_top = 27.054
-margin_right = 323.667
-margin_bottom = 67.054
+margin_left = -3.33337
+margin_top = 47.054
+margin_right = 322.667
+margin_bottom = 87.054
 custom_constants/line_spacing = 8
 custom_constants/completion_lines = -3
 __meta__ = {

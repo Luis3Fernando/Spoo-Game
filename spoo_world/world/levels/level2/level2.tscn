@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=2]
+[gd_scene load_steps=33 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level2.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
@@ -29,6 +29,11 @@
 [ext_resource path="res://spoo_world/assets/audio/dos.wav" type="AudioStream" id=27]
 [ext_resource path="res://spoo_world/assets/audio/nueve.wav" type="AudioStream" id=28]
 [ext_resource path="res://spoo_world/assets/audio/trees.wav" type="AudioStream" id=29]
+[ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=30]
+
+[sub_resource type="DynamicFont" id=2]
+size = 18
+font_data = ExtResource( 30 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -187,9 +192,11 @@ __meta__ = {
 }
 
 [node name="puntos_l" type="Label" parent="puntos"]
-margin_left = -16.0
-margin_right = 24.0
-margin_bottom = 14.0
+margin_left = -53.7324
+margin_top = -8.0
+margin_right = 2.26764
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 2 )
 text = "0/20"
 
 [node name="spoo" type="AnimatedSprite" parent="."]
