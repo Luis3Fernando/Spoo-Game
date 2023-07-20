@@ -104,7 +104,6 @@ func generar_valores_cuadros():
 				valores[j] = i
 				j+=1
 	else:
-		print("ganaste")
 		var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
 		get_tree().change_scene(new_scene_path)
 

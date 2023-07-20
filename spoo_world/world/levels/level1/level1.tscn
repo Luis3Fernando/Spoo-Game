@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=27 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level1.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
@@ -9,6 +9,16 @@
 [ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Cerrado.png" type="Texture" id=7]
 [ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Abierto.png" type="Texture" id=8]
 [ext_resource path="res://spoo_world/world/levels/level1/level1_spoo.gd" type="Script" id=9]
+[ext_resource path="res://spoo_world/assets/icon/arrow_start.png" type="Texture" id=10]
+[ext_resource path="res://spoo_world/assets/icon/block_madera 1.png" type="Texture" id=11]
+[ext_resource path="res://spoo_world/assets/icon/carretilla.png" type="Texture" id=12]
+[ext_resource path="res://spoo_world/assets/icon/Rectangle50_active.png" type="Texture" id=13]
+[ext_resource path="res://spoo_world/assets/icon/Rectangle50.png" type="Texture" id=14]
+[ext_resource path="res://spoo_world/world/levels/level1/level1_final.gd" type="Script" id=15]
+[ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=16]
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 640, 12 )
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -21,8 +31,23 @@ animations = [ {
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 68.125, 112.925 )
 
-[sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 640, 12 )
+[sub_resource type="PhysicsMaterial" id=9]
+
+[sub_resource type="RectangleShape2D" id=8]
+extents = Vector2( 40, 40 )
+
+[sub_resource type="PhysicsMaterial" id=10]
+
+[sub_resource type="RectangleShape2D" id=11]
+extents = Vector2( 72, 13 )
+
+[sub_resource type="RectangleShape2D" id=12]
+extents = Vector2( 10, 316.5 )
+
+[sub_resource type="RectangleShape2D" id=13]
+extents = Vector2( 78.25, 368 )
+
+[sub_resource type="Theme" id=5]
 
 [node name="level1" type="Node2D"]
 script = ExtResource( 4 )
@@ -57,10 +82,107 @@ texture_normal = ExtResource( 2 )
 texture_pressed = ExtResource( 6 )
 expand = true
 
+[node name="piso" type="StaticBody2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="piso"]
+position = Vector2( 640, 724 )
+shape = SubResource( 3 )
+
+[node name="space1" type="TextureButton" parent="."]
+margin_left = 984.0
+margin_top = 600.0
+margin_right = 1064.0
+margin_bottom = 680.0
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="space2" type="TextureButton" parent="."]
+margin_left = 984.0
+margin_top = 520.0
+margin_right = 1064.0
+margin_bottom = 600.0
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="space3" type="TextureButton" parent="."]
+margin_left = 984.0
+margin_top = 440.0
+margin_right = 1064.0
+margin_bottom = 520.0
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="space4" type="TextureButton" parent="."]
+margin_left = 984.0
+margin_top = 360.0
+margin_right = 1064.0
+margin_bottom = 440.0
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="space5" type="TextureButton" parent="."]
+margin_left = 984.0
+margin_top = 280.0
+margin_right = 1064.0
+margin_bottom = 360.0
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="space6" type="TextureButton" parent="."]
+margin_left = 984.0
+margin_top = 200.0
+margin_right = 1064.0
+margin_bottom = 280.0
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="space7" type="TextureButton" parent="."]
+margin_left = 984.0
+margin_top = 120.0
+margin_right = 1064.0
+margin_bottom = 200.0
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
+[node name="space8" type="TextureButton" parent="."]
+margin_left = 984.0
+margin_top = 40.0
+margin_right = 1064.0
+margin_bottom = 120.0
+toggle_mode = true
+shortcut_in_tooltip = false
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+expand = true
+
 [node name="spoo" type="KinematicBody2D" parent="."]
-position = Vector2( 640, 400 )
+position = Vector2( 568, 400 )
 scale = Vector2( 0.633663, 0.633914 )
 script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
 
 [node name="animation_spoo" type="AnimatedSprite" parent="spoo"]
 position = Vector2( -719.625, 378.6 )
@@ -73,23 +195,183 @@ frame = 2
 position = Vector2( -719.625, 378.6 )
 shape = SubResource( 2 )
 
-[node name="Area2D" type="Area2D" parent="."]
-position = Vector2( 32, 728 )
+[node name="madera1" type="RigidBody2D" parent="."]
+position = Vector2( 320, 632 )
+physics_material_override = SubResource( 9 )
+gravity_scale = 9.8
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2( 608, -4 )
-shape = SubResource( 3 )
+[node name="Sprite" type="Sprite" parent="madera1"]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 11 )
 
-[node name="Button" type="Button" parent="."]
-margin_left = 1080.0
-margin_top = 296.0
-margin_right = 1208.0
-margin_bottom = 352.0
+[node name="CollisionShape2D" type="CollisionShape2D" parent="madera1"]
+shape = SubResource( 8 )
 
-[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
+[node name="madera2" type="RigidBody2D" parent="."]
+position = Vector2( 320, 544 )
+physics_material_override = SubResource( 9 )
+gravity_scale = 9.8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="madera2"]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="madera2"]
+shape = SubResource( 8 )
+
+[node name="madera3" type="RigidBody2D" parent="."]
+position = Vector2( 320, 456 )
+physics_material_override = SubResource( 9 )
+gravity_scale = 9.8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="madera3"]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="madera3"]
+shape = SubResource( 8 )
+
+[node name="madera4" type="RigidBody2D" parent="."]
+position = Vector2( 320, 368 )
+physics_material_override = SubResource( 9 )
+gravity_scale = 9.8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="madera4"]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="madera4"]
+shape = SubResource( 8 )
+
+[node name="madera5" type="RigidBody2D" parent="."]
+position = Vector2( 320, 272 )
+physics_material_override = SubResource( 9 )
+gravity_scale = 9.8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="madera5"]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="madera5"]
+shape = SubResource( 8 )
+
+[node name="madera6" type="RigidBody2D" parent="."]
+position = Vector2( 320, 184 )
+physics_material_override = SubResource( 9 )
+gravity_scale = 9.8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="madera6"]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="madera6"]
+shape = SubResource( 8 )
+
+[node name="madera7" type="RigidBody2D" parent="."]
+position = Vector2( 320, 88 )
+physics_material_override = SubResource( 9 )
+gravity_scale = 9.8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="madera7"]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="madera7"]
+shape = SubResource( 8 )
+
+[node name="madera8" type="RigidBody2D" parent="."]
+position = Vector2( 320, 0 )
+physics_material_override = SubResource( 9 )
+gravity_scale = 9.8
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="madera8"]
+scale = Vector2( 0.26, 0.26 )
+texture = ExtResource( 11 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="madera8"]
+shape = SubResource( 8 )
+
+[node name="carretilla" type="RigidBody2D" parent="."]
+position = Vector2( 320, 688 )
+mass = 500.0
+physics_material_override = SubResource( 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="carretilla"]
+position = Vector2( 0, -4 )
+scale = Vector2( 0.26, 0.216216 )
+texture = ExtResource( 12 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="carretilla"]
+position = Vector2( 0, 3 )
+shape = SubResource( 11 )
+
+[node name="pared" type="CollisionShape2D" parent="carretilla"]
+position = Vector2( -64, -331.5 )
+shape = SubResource( 12 )
+
+[node name="final" type="Area2D" parent="."]
+script = ExtResource( 15 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="final"]
+position = Vector2( 1160, 336 )
+shape = SubResource( 13 )
+
+[node name="comenzar" type="TextureButton" parent="."]
+margin_left = 616.0
+margin_top = 288.0
+margin_right = 736.0
+margin_bottom = 384.0
+theme = SubResource( 5 )
+texture_normal = ExtResource( 10 )
+expand = true
+
+[node name="puntos" type="Sprite" parent="."]
+position = Vector2( 656, 64 )
+texture = ExtResource( 16 )
+
+[node name="puntos_l" type="Label" parent="puntos"]
+margin_left = -16.0
+margin_right = 24.0
+margin_bottom = 14.0
+text = "0/20"
+
 [connection signal="pressed" from="back" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
-[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="space1" to="." method="_on_space1_pressed"]
+[connection signal="pressed" from="space2" to="." method="_on_space2_pressed"]
+[connection signal="pressed" from="space3" to="." method="_on_space3_pressed"]
+[connection signal="pressed" from="space4" to="." method="_on_space4_pressed"]
+[connection signal="pressed" from="space5" to="." method="_on_space5_pressed"]
+[connection signal="pressed" from="space6" to="." method="_on_space6_pressed"]
+[connection signal="pressed" from="space7" to="." method="_on_space7_pressed"]
+[connection signal="pressed" from="space8" to="." method="_on_space8_pressed"]
+[connection signal="body_entered" from="final" to="." method="_on_final_body_entered"]
+[connection signal="pressed" from="comenzar" to="spoo" method="_on_comenzar_pressed"]

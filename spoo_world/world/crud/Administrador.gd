@@ -2,23 +2,23 @@ class_name Administrador
 
 extends Object
 
-var nombreCompleto: String
-var contra: String
+var user: String
+var password: String
 
 func _init():
 	# Constructor
-	nombreCompleto = ""
-	contra = ""
+	user = ""
+	password = ""
 
 func setNombreCompleto(nuevo_nombre: String):
-	nombreCompleto = nuevo_nombre
+	user = nuevo_nombre
 
 func getNombreCompleto() -> String:
-	return nombreCompleto
+	return user
 
 func setContra(nueva_contra: String):
-	contra = nueva_contra
+	password = nueva_contra
 
 func getContra() -> String:
-	return contra
+	return password
 

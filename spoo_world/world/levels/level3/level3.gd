@@ -2,14 +2,74 @@ extends Node2D
 
 var student
 
-onready var base_poligono = $numero1
+var base_poligono
 onready var _lines := $lines
 onready var _draw_area := $area_dibujo
+
+onready var animation = $spoo
 var _current_line : Line2D
-var _drawn_patterns = [] 
+var _drawn_patterns = []
+var numero_entero_aleatorio 
+var numeros = [1,2,3,4,5,6,7,8,9]
+
+onready var numero1 = $numero1
+onready var numero2 = $numero2
+onready var numero3 = $numero3
+onready var numero4 = $numero4
+onready var numero5 = $numero5
+onready var numero6 = $numero6
+onready var numero7 = $numero7
+onready var numero8 = $numero8
+onready var numero9 = $numero9
+
+onready var label = $puntos/puntos_l
 
 func _ready():
-	pass # Replace with function body.
+	Singleton.stay = 3
+	student = Singleton.student
+	animation.play("parpadear")
+	Singleton.rondas3+=1
+	label.text = str(student.puntos["level3"])+"/20   ronda: "+str(Singleton.rondas3)
+	var rng = RandomNumberGenerator.new()
+	rng.randomize()
+	var numero_entero_aleatorio = rng.randi_range(1, 9)
+	
+	mostrar_numero(numero_entero_aleatorio)
+
+func mostrar_numero(numero:int):
+	match numero:
+		1:
+			numero1.visible = true
+			base_poligono = numero1
+		2:
+			numero2.visible = true
+			base_poligono = numero2
+		3:
+			numero3.visible = true
+			base_poligono = numero3
+		4:
+			numero4.visible = true
+			base_poligono = numero4
+		5:
+			numero5.visible = true
+			base_poligono = numero5
+		
+		6:
+			numero6.visible = true
+			base_poligono = numero6
+		7:
+			numero7.visible = true
+			base_poligono = numero7
+		8:
+			numero8.visible = true
+			base_poligono = numero8
+		9:
+			numero9.visible = true
+			base_poligono = numero9
+		_:
+			numero3.visible = true
+			base_poligono = numero3
+
 
 func _input(event):
 	if event is InputEventScreenTouch:
@@ -70,21 +130,27 @@ func in_polygon(point: Vector2, polygon: Polygon2D):
 		var vertex_global = polygon.to_global(vertex)
 		print(vertex_global)
 
-
-func _on_comprobar_pressed():
+func _on_verificar_pressed():
 	var bandera
 	for point in _drawn_patterns:
 		bandera = is_point_inside_polygon(point, base_poligono)
 		if !bandera:
-			print("no esta bien")
 			break
 	
 	if bandera:
-		print("todo esta bien")
+		if Singleton.rondas3<=20 and !student.completados["level3"]:
+			student.puntos["level3"] +=2
+		_on_vaciar_pressed()
+		Singleton.showSceneWithDelay("res://spoo_world/world/modal/bien.tscn", "res://spoo_world/world/levels/level3/level3.tscn")
+	
+	else:
+		if Singleton.rondas3<=20 and !student.completados["level3"]:
+			student.puntos["level3"] +=0
+		Singleton.rondas3-=1
+		Singleton.showSceneWithDelay("res://spoo_world/world/modal/mal.tscn", "res://spoo_world/world/levels/level3/level3.tscn")
+		
 
-
-func _on_limpiar_pressed():
-	base_poligono.visible=false
+func _on_vaciar_pressed():
 	_drawn_patterns.clear()
 	_current_line.clear_points()
 	for child in _lines.get_children():

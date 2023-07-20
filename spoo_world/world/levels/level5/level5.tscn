@@ -1,4 +1,4 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=36 format=2]
 
 [ext_resource path="res://spoo_world/world/levels/level5/spoo_level5.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/world/levels/level5/level5.gd" type="Script" id=2]
@@ -63,9 +63,6 @@ extents = Vector2( 38.5, 13.75 )
 
 [sub_resource type="RectangleShape2D" id=11]
 extents = Vector2( 28.5, 57.5 )
-
-[sub_resource type="RectangleShape2D" id=12]
-extents = Vector2( 27.25, 424.25 )
 
 [sub_resource type="CircleShape2D" id=13]
 
@@ -338,12 +335,6 @@ texture = ExtResource( 7 )
 position = Vector2( 97.5, 403.5 )
 shape = SubResource( 11 )
 
-[node name="limite" type="Area2D" parent="."]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="limite"]
-position = Vector2( 1282, 398.25 )
-shape = SubResource( 12 )
-
 [node name="coin1" type="Area2D" parent="."]
 position = Vector2( 2, -10 )
 __meta__ = {
@@ -448,7 +439,6 @@ expand = true
 [connection signal="body_entered" from="b6/Area2D_b6" to="." method="_on_Area2D_b6_body_entered"]
 [connection signal="pressed" from="b7/Button7" to="." method="_on_Button7_pressed"]
 [connection signal="body_entered" from="b7/Area2D_b7" to="." method="_on_Area2D_b7_body_entered"]
-[connection signal="body_entered" from="limite" to="." method="_on_limite_body_entered"]
 [connection signal="body_entered" from="coin1" to="." method="_on_coin1_body_entered"]
 [connection signal="body_entered" from="coin2" to="." method="_on_coin2_body_entered"]
 [connection signal="body_entered" from="coin3" to="." method="_on_coin3_body_entered"]

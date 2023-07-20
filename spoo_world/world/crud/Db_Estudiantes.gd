@@ -87,6 +87,17 @@ func actualizar_nombre_estudiante(nombreActual: String, nuevoNombre: String):
 			estudiante.nombreCompleto = nuevoNombre
 			break
 	guardar_estudiantes()
+
+# Función para actualizar estudiante
+func actualizar_estudiante(nombreActual: String, student1):
+	cargar_estudiantes()
+	var student
+	for i in range(listaEstudiantes.size()):
+		student = listaEstudiantes[i]
+		if student.nombreCompleto == nombreActual:
+			listaEstudiantes[i] = student1
+			break
+	guardar_estudiantes()
 	
 # Función para eliminar un estudiante de la lista
 func eliminar_estudiante(nombre_eliminar: String):
@@ -112,5 +123,13 @@ func contar_niveles_completados(completados: Dictionary) -> int:
 	for nivel in completados.keys():
 		if completados[nivel]:
 			contador += 1
+
+	return contador
+	
+func contar_progreso(puntos: Dictionary)->int:
+	var contador = 0
+
+	for nivel in puntos.keys():
+		contador = contador+puntos[nivel]
 
 	return contador

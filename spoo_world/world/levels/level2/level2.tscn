@@ -1,96 +1,225 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=21 format=2]
 
-[ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=1]
-[ext_resource path="res://spoo_world/assets/img/paisaje2.png" type="Texture" id=2]
-[ext_resource path="res://spoo_world/assets/audio/level2.mp3" type="AudioStream" id=3]
+[ext_resource path="res://spoo_world/assets/audio/level3.mp3" type="AudioStream" id=1]
+[ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero3.png" type="Texture" id=3]
 [ext_resource path="res://spoo_world/world/levels/level2/level2.gd" type="Script" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
-[ext_resource path="res://spoo_world/world/levels/level2/level2_lienzo.gd" type="Script" id=6]
-[ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=7]
-[ext_resource path="res://spoo_world/assets/img/draw_space.jpg" type="Texture" id=8]
-[ext_resource path="res://spoo_world/world/levels/level2/level2_Trazo.gd" type="Script" id=9]
-[ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=10]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero1.png" type="Texture" id=6]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero6.png" type="Texture" id=7]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero4.png" type="Texture" id=8]
+[ext_resource path="res://spoo_world/assets/img/paisaje2.png" type="Texture" id=9]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero2.png" type="Texture" id=10]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero7.png" type="Texture" id=11]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero5.png" type="Texture" id=12]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero8.png" type="Texture" id=13]
+[ext_resource path="res://spoo_world/assets/img/numeros/numero9.png" type="Texture" id=14]
+[ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=15]
+[ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Abierto.png" type="Texture" id=16]
+[ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Cerrado.png" type="Texture" id=17]
+[ext_resource path="res://spoo_world/assets/icon/arrow_start.png" type="Texture" id=18]
+[ext_resource path="res://spoo_world/assets/icon/restart.png" type="Texture" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "parpadear",
+"speed": 5.0
+} ]
 
 [node name="level2" type="Node2D"]
 script = ExtResource( 4 )
 
-[node name="fondo_principal" type="Sprite" parent="."]
+[node name="fondo" type="Sprite" parent="."]
 position = Vector2( 640, 400 )
 scale = Vector2( 1.33333, 1.48148 )
-texture = ExtResource( 2 )
+texture = ExtResource( 9 )
+
+[node name="music" type="Button" parent="."]
+margin_left = 1141.0
+margin_top = 26.0
+margin_right = 1243.0
+margin_bottom = 113.0
+focus_mode = 0
+mouse_filter = 1
+enabled_focus_mode = 0
+icon = ExtResource( 2 )
+flat = true
+expand_icon = true
 
 [node name="AudioFondo" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 3 )
-volume_db = 2.0
+stream = ExtResource( 1 )
+volume_db = -1.0
 autoplay = true
 
 [node name="back" type="Button" parent="."]
 margin_left = 7.0
 margin_top = 9.0
-margin_right = 78.0
-margin_bottom = 88.0
+margin_right = 81.0
+margin_bottom = 96.0
 focus_mode = 0
-enabled_focus_mode = 0
+mouse_filter = 1
 icon = ExtResource( 5 )
 flat = true
 expand_icon = true
 
-[node name="conteo" type="Sprite" parent="."]
-position = Vector2( 1035, 69 )
+[node name="area_dibujo" type="ColorRect" parent="."]
+margin_left = 424.0
+margin_top = 120.0
+margin_right = 872.0
+margin_bottom = 664.0
+color = Color( 0.937255, 0.937255, 0.937255, 1 )
+
+[node name="numero1" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( -88.0019, -15.9994 )
+scale = Vector2( 1.04167, 1.08333 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 768, 192, 768, 330.552, 768, 576, 668.16, 576, 668.16, 324.923, 629.76, 354.462, 576, 296, 696, 192 )
+
+[node name="numero1_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 619.998, 400.001 )
+scale = Vector2( 0.327869, 0.365619 )
+texture = ExtResource( 6 )
+
+[node name="numero2" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( -8, 8 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 552, 192, 552, 280, 600, 280, 608, 232, 672, 232, 688, 296, 688, 360, 552, 504, 552, 600, 728, 600, 728, 552, 624, 552, 624, 512, 752, 384, 752, 288, 736, 224, 688, 184, 584, 184 )
+
+[node name="Numero2_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 632, 400 )
+scale = Vector2( 0.355128, 0.355128 )
+texture = ExtResource( 10 )
+
+[node name="numero3" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 6.10352e-05, 0 )
+scale = Vector2( 1, 1 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 544, 192, 544, 240, 664, 240, 696, 272, 696, 328, 656, 352, 592, 352, 592, 408, 672, 408, 688, 448, 688, 504, 656, 552, 544, 552, 544, 608, 688, 608, 760, 544, 760, 448, 736, 384, 768, 344, 768, 264, 720, 192 )
+
+[node name="Numero3_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 648, 400 )
+scale = Vector2( 0.391935, 0.363235 )
+texture = ExtResource( 3 )
+
+[node name="numero4" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 0, 3.05176e-05 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 528, 200, 592, 200, 592, 376, 672, 376, 672, 200, 744, 200, 744, 592, 680, 592, 680, 432, 528, 432 )
+
+[node name="Numero4_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 636, 396 )
+scale = Vector2( 0.377823, 0.361958 )
+texture = ExtResource( 8 )
+
+[node name="numero5" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 0, 16 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 728, 184, 728, 232, 600, 232, 600, 352, 720, 352, 760, 408, 760, 528, 704, 592, 544, 592, 544, 544, 664, 544, 704, 504, 704, 424, 680, 408, 536, 408, 536, 192 )
+
+[node name="Numero5_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 646.9, 406.55 )
+scale = Vector2( 0.35438, 0.356262 )
+texture = ExtResource( 12 )
+
+[node name="numero6" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( -3.94067, 4.57764e-05 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 600, 192, 656, 192, 704, 208, 736, 232, 752, 248, 720, 272, 680, 240, 640, 232, 608, 248, 592, 272, 568, 312, 568, 392, 600, 360, 640, 360, 680, 360, 720, 384, 752, 416, 768, 496, 768, 496, 728, 576, 640, 608, 576, 584, 544, 544, 520, 496, 520, 416, 520, 328, 520, 264, 576, 208 )
+
+[node name="Numero6_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 628.059, 390.142 )
+scale = Vector2( 0.35438, 0.374914 )
 texture = ExtResource( 7 )
+
+[node name="numero7" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 24, 0 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 496, 192, 496, 240, 600, 240, 624, 256, 624, 368, 560, 368, 560, 408, 624, 408, 624, 600, 672, 600, 672, 416, 728, 416, 728, 376, 728, 376, 672, 376, 672, 256, 672, 216, 640, 192 )
+
+[node name="Numero7_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 632, 400 )
+scale = Vector2( 0.384473, 0.364022 )
+texture = ExtResource( 11 )
+
+[node name="numero8" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 8, 0 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 592, 600, 648, 600, 688, 592, 720, 560, 728, 520, 728, 456, 720, 424, 704, 408, 688, 400, 720, 376, 736, 328, 736, 272, 720, 232, 688, 208, 640, 200, 600, 200, 560, 208, 528, 240, 520, 288, 520, 328, 520, 368, 544, 384, 568, 392, 528, 424, 520, 456, 520, 504, 520, 544, 544, 576 )
+
+[node name="Numero8_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 633.175, 397.95 )
+scale = Vector2( 0.354007, 0.331501 )
+texture = ExtResource( 13 )
+
+[node name="numero9" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 0, -16 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 696, 600, 736, 600, 728, 248, 712, 224, 680, 208, 608, 208, 560, 240, 536, 280, 536, 328, 544, 376, 568, 408, 608, 424, 632, 424, 688, 416 )
+
+[node name="Numero9_img" type="Sprite" parent="."]
+visible = false
+position = Vector2( 632, 392 )
+scale = Vector2( 0.340476, 0.339142 )
+texture = ExtResource( 14 )
+
+[node name="puntos" type="Sprite" parent="."]
+position = Vector2( 1012.75, 72 )
+scale = Vector2( 1.27949, 1 )
+texture = ExtResource( 15 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="Label" type="Label" parent="conteo"]
-margin_right = 40.0
+[node name="puntos_l" type="Label" parent="puntos"]
+margin_left = -16.0
+margin_right = 24.0
 margin_bottom = 14.0
-text = "HOOOLa"
-__meta__ = {
-"_edit_use_anchors_": true
-}
+text = "0/20"
 
-[node name="clear" type="Button" parent="."]
-margin_left = 1095.0
-margin_top = 255.0
-margin_right = 1195.0
-margin_bottom = 355.0
+[node name="spoo" type="AnimatedSprite" parent="."]
+position = Vector2( 128, 664 )
+scale = Vector2( 0.11, 0.11 )
+frames = SubResource( 1 )
+animation = "parpadear"
 
-[node name="validation" type="Button" parent="."]
-margin_left = 1097.0
-margin_top = 379.0
-margin_right = 1197.0
-margin_bottom = 479.0
-
-[node name="lienzo" type="Node2D" parent="."]
-position = Vector2( -48, -39 )
-script = ExtResource( 6 )
-
-[node name="AreaDibujo" type="TextureRect" parent="lienzo"]
-margin_left = 394.0
-margin_top = 95.0
-margin_right = 950.0
-margin_bottom = 784.0
-texture = ExtResource( 8 )
-
-[node name="trazo" type="Node2D" parent="lienzo/AreaDibujo"]
-visible = false
-position = Vector2( -2, 1 )
-script = ExtResource( 9 )
-
-[node name="Lines" type="Node2D" parent="lienzo"]
-
-[node name="TButton_Music" type="TextureButton" parent="."]
-margin_left = 1158.0
-margin_top = 33.0
-margin_right = 1233.0
-margin_bottom = 110.0
-toggle_mode = true
-texture_normal = ExtResource( 1 )
-texture_pressed = ExtResource( 10 )
+[node name="verificar" type="TextureButton" parent="."]
+margin_left = 1008.0
+margin_top = 296.0
+margin_right = 1144.0
+margin_bottom = 416.0
+texture_normal = ExtResource( 18 )
 expand = true
 
+[node name="vaciar" type="TextureButton" parent="."]
+margin_left = 1024.0
+margin_top = 512.0
+margin_right = 1120.0
+margin_bottom = 616.0
+texture_normal = ExtResource( 19 )
+expand = true
+
+[node name="lines" type="Node2D" parent="."]
+
+[connection signal="pressed" from="music" to="." method="_on_music_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="clear" to="lienzo" method="_on_clear_pressed"]
-[connection signal="pressed" from="validation" to="lienzo" method="_on_validation_pressed"]
-[connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
+[connection signal="pressed" from="verificar" to="." method="_on_verificar_pressed"]
+[connection signal="pressed" from="vaciar" to="." method="_on_vaciar_pressed"]

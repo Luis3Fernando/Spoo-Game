@@ -57,6 +57,11 @@ func _on_BotonPresionado(nombre):
 	var objeto = Db_Estudiante.new()
 	var student = objeto.obtener_student(nombreC)
 	Singleton.student = student
+	Singleton.rondas1 = 0
+	Singleton.rondas2 = 0
+	Singleton.rondas3 = 0
+	Singleton.rondas4 = 0
+	Singleton.rondas5 = 0
 	
 	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn" 
 	get_tree().change_scene(new_scene_path)

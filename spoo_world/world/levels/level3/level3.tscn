@@ -1,18 +1,30 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level3.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
-[ext_resource path="res://spoo_world/assets/img/paisajes/level3-1.png" type="Texture" id=3]
+[ext_resource path="res://spoo_world/assets/img/paisajes/level3.jpg" type="Texture" id=3]
 [ext_resource path="res://spoo_world/world/levels/level3/level3.gd" type="Script" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
-[ext_resource path="res://spoo_world/assets/img/numeros/numero1.png" type="Texture" id=6]
+[ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=15]
+[ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Abierto.png" type="Texture" id=16]
+[ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Cerrado.png" type="Texture" id=17]
+[ext_resource path="res://spoo_world/assets/icon/arrow_start.png" type="Texture" id=18]
+[ext_resource path="res://spoo_world/assets/icon/restart.png" type="Texture" id=19]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "parpadear",
+"speed": 5.0
+} ]
 
 [node name="level3" type="Node2D"]
 script = ExtResource( 4 )
 
 [node name="fondo" type="Sprite" parent="."]
 position = Vector2( 640, 400 )
-scale = Vector2( 1.28128, 1.28205 )
+scale = Vector2( 0.926194, 0.925926 )
 texture = ExtResource( 3 )
 
 [node name="music" type="Button" parent="."]
@@ -48,33 +60,102 @@ margin_left = 424.0
 margin_top = 120.0
 margin_right = 872.0
 margin_bottom = 664.0
-color = Color( 0, 0, 0, 1 )
+color = Color( 0.937255, 0.937255, 0.937255, 1 )
 
 [node name="numero1" type="Polygon2D" parent="."]
-position = Vector2( -80, -24 )
+visible = false
+position = Vector2( -88.0019, -15.9994 )
 scale = Vector2( 1.04167, 1.08333 )
-polygon = PoolVector2Array( 768, 192, 768, 576, 668.16, 576, 668.16, 324.923, 629.76, 354.462, 576, 296, 696, 192 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 768, 192, 768, 330.552, 768, 576, 668.16, 576, 668.16, 324.923, 629.76, 354.462, 576, 296, 696, 192 )
 
-[node name="numero1_img" type="Sprite" parent="."]
-position = Vector2( 628, 400 )
-scale = Vector2( 0.327869, 0.365619 )
-texture = ExtResource( 6 )
+[node name="numero2" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( -8, 8 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 552, 192, 552, 280, 600, 280, 608, 232, 672, 232, 688, 296, 688, 360, 552, 504, 552, 600, 728, 600, 728, 552, 624, 552, 624, 512, 752, 384, 752, 288, 736, 224, 688, 184, 584, 184 )
+
+[node name="numero3" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 6.10352e-05, 0 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 544, 192, 544, 240, 664, 240, 696, 272, 696, 328, 656, 352, 592, 352, 592, 408, 672, 408, 688, 448, 688, 504, 656, 552, 544, 552, 544, 608, 688, 608, 760, 544, 760, 448, 736, 384, 768, 344, 768, 264, 720, 192 )
+
+[node name="numero4" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 0, 3.05176e-05 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 528, 200, 592, 200, 592, 376, 672, 376, 672, 200, 744, 200, 744, 592, 680, 592, 680, 432, 528, 432 )
+
+[node name="numero5" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 0, 16 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 728, 184, 728, 232, 600, 232, 600, 352, 720, 352, 760, 408, 760, 528, 704, 592, 544, 592, 544, 544, 664, 544, 704, 504, 704, 424, 680, 408, 536, 408, 536, 192 )
+
+[node name="numero6" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( -3.94067, 4.57764e-05 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 600, 192, 656, 192, 704, 208, 736, 232, 752, 248, 720, 272, 680, 240, 640, 232, 608, 248, 592, 272, 568, 312, 568, 392, 600, 360, 640, 360, 680, 360, 720, 384, 752, 416, 768, 496, 768, 496, 728, 576, 640, 608, 576, 584, 544, 544, 520, 496, 520, 416, 520, 328, 520, 264, 576, 208 )
+
+[node name="numero7" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 24, 0 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 496, 192, 496, 240, 600, 240, 624, 256, 624, 368, 560, 368, 560, 408, 624, 408, 624, 600, 672, 600, 672, 416, 728, 416, 728, 376, 728, 376, 672, 376, 672, 256, 672, 216, 640, 192 )
+
+[node name="numero8" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 8, 0 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 592, 600, 648, 600, 688, 592, 720, 560, 728, 520, 728, 456, 720, 424, 704, 408, 688, 400, 720, 376, 736, 328, 736, 272, 720, 232, 688, 208, 640, 200, 600, 200, 560, 208, 528, 240, 520, 288, 520, 328, 520, 368, 544, 384, 568, 392, 528, 424, 520, 456, 520, 504, 520, 544, 544, 576 )
+
+[node name="numero9" type="Polygon2D" parent="."]
+visible = false
+position = Vector2( 0, -16 )
+color = Color( 0.780392, 0.780392, 0.780392, 1 )
+polygon = PoolVector2Array( 696, 600, 736, 600, 728, 248, 712, 224, 680, 208, 608, 208, 560, 240, 536, 280, 536, 328, 544, 376, 568, 408, 608, 424, 632, 424, 688, 416 )
+
+[node name="puntos" type="Sprite" parent="."]
+position = Vector2( 1012.75, 72 )
+scale = Vector2( 1.27949, 1 )
+texture = ExtResource( 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="puntos_l" type="Label" parent="puntos"]
+margin_left = -16.0
+margin_right = 24.0
+margin_bottom = 14.0
+text = "0/20"
+
+[node name="spoo" type="AnimatedSprite" parent="."]
+position = Vector2( 160, 544 )
+scale = Vector2( 0.11, 0.11 )
+frames = SubResource( 1 )
+animation = "parpadear"
+
+[node name="verificar" type="TextureButton" parent="."]
+margin_left = 1008.0
+margin_top = 296.0
+margin_right = 1144.0
+margin_bottom = 416.0
+texture_normal = ExtResource( 18 )
+expand = true
+
+[node name="vaciar" type="TextureButton" parent="."]
+margin_left = 1024.0
+margin_top = 512.0
+margin_right = 1120.0
+margin_bottom = 616.0
+texture_normal = ExtResource( 19 )
+expand = true
 
 [node name="lines" type="Node2D" parent="."]
 
-[node name="comprobar" type="Button" parent="."]
-margin_left = 1088.0
-margin_top = 512.0
-margin_right = 1192.0
-margin_bottom = 576.0
-
-[node name="limpiar" type="Button" parent="."]
-margin_left = 1088.0
-margin_top = 384.0
-margin_right = 1192.0
-margin_bottom = 448.0
-
 [connection signal="pressed" from="music" to="." method="_on_music_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
-[connection signal="pressed" from="comprobar" to="." method="_on_comprobar_pressed"]
-[connection signal="pressed" from="limpiar" to="." method="_on_limpiar_pressed"]
+[connection signal="pressed" from="verificar" to="." method="_on_verificar_pressed"]
+[connection signal="pressed" from="vaciar" to="." method="_on_vaciar_pressed"]

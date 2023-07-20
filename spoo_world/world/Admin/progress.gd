@@ -9,8 +9,10 @@ func Lista_Estudiantes():
 func _ready():
 	Lista_Estudiantes()
 	for i in range(len(students)):
+		var objeto =Db_Estudiante.new()
+		var progreso = objeto.contar_progreso(students[i].puntos) 
 		var object_student = Button.new()
-		object_student.text = "           "+str(i+1)+"                                                                                             "+ students[i].nombreCompleto+"                                      "+"/20"
+		object_student.text = "           "+str(i+1)+"                                                                                             "+ students[i].nombreCompleto+"                                      "+str(progreso/10)+"%"
 		object_student.icon = load("res://spoo_world/assets/icon/moneda_50.png")
 		object_student.align = Button.ALIGN_LEFT
 		object_student.icon_align = Button.ALIGN_RIGHT
