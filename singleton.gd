@@ -73,4 +73,3 @@ func recargar():
 				get_tree().change_scene(scene_reload)
 		_:
 			pass
-

@@ -1,21 +1,44 @@
 extends Node2D
-var usuario = "admin"
-var password = "admin"
+
+var objeto
+var admin
+var password = ""
 
 onready var usuario_input = $Panel/Usuario2/Usuario
 onready var password_input = $Panel/Password/Password2
 
 func _ready():
-	#password_input.secret = true
-	pass
+	objeto = Db_Administrador.new()
+	admin = objeto.obtener_administrador()
 
 func _on_JUGAR_pressed():	
-	if usuario_input.text == usuario and password_input.text == password:
+	print(password)
+	if usuario_input.text == admin["user"] and password.strip_edges() == admin["password"]:
 		get_tree().change_scene("res://spoo_world/world/Admin/admin_main.tscn")
 	
 	usuario_input.text = ""
 	password_input.text = ""
+	password = ""
 
 
 func _on_back_pressed():
 	get_tree().change_scene("res://spoo_world/world/inicio.tscn")
+
+
+func _on_Password2_text_changed():
+	var texto = password_input.text
+	var arreglo = string_a_array(texto)
+	password = password + arreglo[0]
+	password_input.text = ""
+	for i in range(arreglo.size()):
+		password_input.text = password_input.text +"*"
+func string_a_array(palabra: String) -> Array:
+	var array_de_caracteres = []
+	if palabra.empty():
+		array_de_caracteres.append(" ")
+		
+	else:
+		for i in range(palabra.length()):
+			array_de_caracteres.append(palabra[i])
+		
+	return array_de_caracteres
