@@ -10,6 +10,7 @@ func _init():
 	
 func obtener_administrador():
 	cargar_administrador()
+	guardar_administrador()
 	return administrador
 
 func cargar_administrador():
@@ -28,7 +29,10 @@ func cargar_administrador():
 					"password": "admin"
 			}
 	else:
-		print("Error al abrir el archivo para lectura.")
+		administrador = {
+					"user": "admin",
+					"password": "admin"
+			}
 		
 func guardar_administrador():	
 	var file = File.new()		
