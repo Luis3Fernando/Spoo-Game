@@ -12,7 +12,6 @@ func _ready():
 	admin = objeto.obtener_administrador()
 
 func _on_JUGAR_pressed():	
-	print(password)
 	if usuario_input.text == admin["user"] and password.strip_edges() == admin["password"]:
 		get_tree().change_scene("res://spoo_world/world/Admin/admin_main.tscn")
 	
