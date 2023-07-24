@@ -42,7 +42,6 @@ onready var aveIzq9 = $aveDer_9
 func _ready():
 	Singleton.stay = 4
 	student = Singleton.student
-	#animation.play("parpadear")
 	Singleton.rondas4+=1
 	label.text = str(student.puntos["level4"])+"/20   ronda: "+str(Singleton.rondas4)
 	# Creación de los botones
