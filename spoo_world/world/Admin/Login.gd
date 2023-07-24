@@ -13,6 +13,8 @@ func _ready():
 
 func _on_JUGAR_pressed():	
 	if usuario_input.text == admin["user"] and password.strip_edges() == admin["password"]:
+		var audio= get_node("AudioBoton")
+		audio.play()
 		get_tree().change_scene("res://spoo_world/world/Admin/admin_main.tscn")
 	
 	usuario_input.text = ""
@@ -21,6 +23,8 @@ func _on_JUGAR_pressed():
 
 
 func _on_back_pressed():
+	var audio1= get_node("AudioBoton")
+	audio1.play()
 	get_tree().change_scene("res://spoo_world/world/inicio.tscn")
 
 
