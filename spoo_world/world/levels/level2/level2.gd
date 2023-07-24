@@ -111,6 +111,8 @@ func mostrar_numero(numero:int):
 			numero3.visible = true
 			img_n3.visible = true
 			base_poligono = numero3
+			var audioPlayer= get_node("AudioTres")
+			audioPlayer.play()
 
 
 func _input(event):

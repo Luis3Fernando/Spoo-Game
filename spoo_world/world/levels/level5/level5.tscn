@@ -287,18 +287,24 @@ custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 
 [node name="points" type="Sprite" parent="."]
-position = Vector2( 368, 59 )
-scale = Vector2( 2.29744, 0.82381 )
+position = Vector2( 368, 55.125 )
+scale = Vector2( 2.29744, 0.897619 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
+[node name="points2" type="Sprite" parent="."]
+position = Vector2( 232, 56 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+hframes = 6
+
 [node name="label_point" type="Label" parent="."]
-margin_left = 224.0
-margin_top = 48.0
-margin_right = 319.0
-margin_bottom = 80.0
+margin_left = 256.0
+margin_top = 40.0
+margin_right = 351.0
+margin_bottom = 72.0
 custom_fonts/font = SubResource( 21 )
 text = "0 / 15"
 
@@ -343,7 +349,7 @@ shape = SubResource( 22 )
 position = Vector2( 1032, 312 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 27 )
-frame = 10
+frame = 13
 playing = true
 
 [node name="LianasNight1" type="Sprite" parent="."]
@@ -775,6 +781,7 @@ __meta__ = {
 scale = Vector2( 0.06, 0.06 )
 frames = SubResource( 43 )
 animation = "ojos"
+frame = 6
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spoo1"]
