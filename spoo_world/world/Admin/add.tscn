@@ -113,8 +113,6 @@ margin_right = 268.678
 margin_bottom = 159.523
 custom_fonts/font = SubResource( 4 )
 text = "Nombres:"
-autowrap = true
-uppercase = true
 __meta__ = {
 "_edit_use_anchors_": true
 }

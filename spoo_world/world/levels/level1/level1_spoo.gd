@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-const SPEED = 200.0
+const SPEED = 250.0
 var motion = Vector2.ZERO
 const PUSH_FORCE = 300.0  
 var moving = false

@@ -1,25 +1,32 @@
-[gd_scene load_steps=37 format=2]
+[gd_scene load_steps=56 format=2]
 
-[ext_resource path="res://spoo_world/world/levels/level5/spoo_level5.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/world/levels/level5/level5.gd" type="Script" id=2]
-[ext_resource path="res://spoo_world/world/levels/level5/b1.gd" type="Script" id=3]
-[ext_resource path="res://spoo_world/assets/icon/moneda.png" type="Texture" id=4]
+[ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Cerrado.png" type="Texture" id=3]
+[ext_resource path="res://spoo_world/assets/icon/moneda2.png" type="Texture" id=4]
 [ext_resource path="res://spoo_world/assets/icon/label.png" type="Texture" id=5]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=6]
-[ext_resource path="res://spoo_world/assets/icon/spoo.png" type="Texture" id=7]
 [ext_resource path="res://spoo_world/assets/icon/block_night.png" type="Texture" id=8]
 [ext_resource path="res://spoo_world/assets/img/fondo_level5.png" type="Texture" id=9]
-[ext_resource path="res://spoo_world/assets/icon/playbutton.png" type="Texture" id=10]
-[ext_resource path="res://spoo_world/world/levels/level5/b2.gd" type="Script" id=11]
-[ext_resource path="res://spoo_world/world/levels/level5/b3.gd" type="Script" id=12]
-[ext_resource path="res://spoo_world/world/levels/level5/b4.gd" type="Script" id=13]
-[ext_resource path="res://spoo_world/world/levels/level5/b5.gd" type="Script" id=14]
-[ext_resource path="res://spoo_world/world/levels/level5/b6.gd" type="Script" id=15]
-[ext_resource path="res://spoo_world/world/levels/level5/b7.gd" type="Script" id=16]
+[ext_resource path="res://spoo_world/assets/icon/kitty/kitty1.png" type="Texture" id=10]
 [ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=17]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=18]
 [ext_resource path="res://spoo_world/assets/audio/level5.mp3" type="AudioStream" id=19]
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=20]
+[ext_resource path="res://spoo_world/assets/icon/arrow_start.png" type="Texture" id=21]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch.png" type="Texture" id=22]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch-63.png" type="Texture" id=23]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch-68.png" type="Texture" id=24]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch-65.png" type="Texture" id=25]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch-64.png" type="Texture" id=26]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch-61.png" type="Texture" id=27]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch-62.png" type="Texture" id=28]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch-67.png" type="Texture" id=29]
+[ext_resource path="res://spoo_world/assets/icon/bloque touch/bloque_touch-66.png" type="Texture" id=30]
+[ext_resource path="res://spoo_world/assets/icon/kitty/kitty2.png" type="Texture" id=31]
+[ext_resource path="res://spoo_world/assets/icon/lianas_night1.png" type="Texture" id=32]
+[ext_resource path="res://spoo_world/assets/typography/SPOOKY MONSTER .ttf" type="DynamicFontData" id=33]
+[ext_resource path="res://spoo_world/assets/img/spoo/Derecho_Abierto.png" type="Texture" id=34]
+[ext_resource path="res://spoo_world/world/levels/level5/spoo1.gd" type="Script" id=35]
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 6 )
@@ -33,39 +40,6 @@ region_rect = Rect2( 0, 0, 50, 70 )
 texture = ExtResource( 6 )
 region_rect = Rect2( 0, 0, 50, 70 )
 
-[sub_resource type="StyleBoxTexture" id=7]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 230, 230 )
-
-[sub_resource type="StyleBoxTexture" id=8]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 230, 230 )
-
-[sub_resource type="StyleBoxTexture" id=9]
-texture = ExtResource( 10 )
-region_rect = Rect2( 0, 0, 230, 230 )
-
-[sub_resource type="StyleBoxTexture" id=15]
-texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 200, 200 )
-
-[sub_resource type="StyleBoxTexture" id=16]
-
-[sub_resource type="StyleBoxTexture" id=17]
-texture = ExtResource( 8 )
-region_rect = Rect2( 0, 0, 200, 200 )
-
-[sub_resource type="RectangleShape2D" id=18]
-extents = Vector2( 41, 43.625 )
-
-[sub_resource type="RectangleShape2D" id=19]
-extents = Vector2( 38.5, 13.75 )
-
-[sub_resource type="RectangleShape2D" id=11]
-extents = Vector2( 28.5, 57.5 )
-
-[sub_resource type="CircleShape2D" id=13]
-
 [sub_resource type="DynamicFont" id=21]
 size = 25
 font_data = ExtResource( 17 )
@@ -75,6 +49,224 @@ extents = Vector2( 624, 47 )
 
 [sub_resource type="RectangleShape2D" id=22]
 extents = Vector2( 35.375, 396 )
+
+[sub_resource type="SpriteFrames" id=27]
+animations = [ {
+"frames": [ ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 10 ), ExtResource( 31 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CircleShape2D" id=28]
+radius = 16.0
+
+[sub_resource type="Animation" id=29]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=30]
+resource_name = "coin"
+length = 0.7
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=31]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=32]
+resource_name = "coin"
+length = 0.7
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=33]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "coin"
+length = 0.7
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=35]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=36]
+resource_name = "coin"
+length = 0.7
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="Animation" id=37]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=38]
+resource_name = "coin"
+length = 0.7
+loop = true
+step = 0.12
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.12, 0.24, 0.36, 0.48, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5 ]
+}
+
+[sub_resource type="RectangleShape2D" id=42]
+extents = Vector2( 36, 4 )
+
+[sub_resource type="SpriteFrames" id=23]
+animations = [ {
+"frames": [ ExtResource( 22 ), ExtResource( 27 ), ExtResource( 28 ), ExtResource( 23 ), ExtResource( 26 ), ExtResource( 30 ), ExtResource( 25 ), ExtResource( 29 ), ExtResource( 24 ), ExtResource( 29 ), ExtResource( 30 ), ExtResource( 26 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 28 ), ExtResource( 27 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="DynamicFont" id=26]
+size = 30
+font_data = ExtResource( 33 )
+
+[sub_resource type="RectangleShape2D" id=24]
+extents = Vector2( 44.25, 44 )
+
+[sub_resource type="RectangleShape2D" id=46]
+extents = Vector2( 44, 4 )
+
+[sub_resource type="RectangleShape2D" id=41]
+extents = Vector2( 42.5, 44.5 )
+
+[sub_resource type="DynamicFont" id=39]
+size = 30
+font_data = ExtResource( 33 )
+
+[sub_resource type="PhysicsMaterial" id=45]
+bounce = 0.01
+
+[sub_resource type="SpriteFrames" id=43]
+animations = [ {
+"frames": [ ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 34 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "ojos",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=44]
+extents = Vector2( 32, 50 )
 
 [node name="level5" type="Node2D"]
 script = ExtResource( 2 )
@@ -94,316 +286,24 @@ custom_styles/hover = SubResource( 4 )
 custom_styles/pressed = SubResource( 5 )
 custom_styles/normal = SubResource( 6 )
 
-[node name="play" type="Button" parent="."]
-margin_left = 1155.0
-margin_top = 35.0
-margin_right = 1225.0
-margin_bottom = 105.0
-focus_mode = 0
-custom_styles/hover = SubResource( 7 )
-custom_styles/pressed = SubResource( 8 )
-custom_styles/normal = SubResource( 9 )
-enabled_focus_mode = 0
-
-[node name="b1" type="KinematicBody2D" parent="."]
-position = Vector2( 22, 435 )
-script = ExtResource( 3 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Button1" type="Button" parent="b1"]
-margin_right = 152.0
-margin_bottom = 151.0
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/normal = SubResource( 17 )
-
-[node name="Label" type="Label" parent="b1/Button1"]
-margin_left = 67.0
-margin_top = 73.0
-margin_right = 107.0
-margin_bottom = 87.0
-text = "0"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b1"]
-position = Vector2( 75, 80.625 )
-shape = SubResource( 18 )
-
-[node name="Area2D_b1" type="Area2D" parent="b1"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b1/Area2D_b1"]
-position = Vector2( 73, 23.75 )
-shape = SubResource( 19 )
-
-[node name="b2" type="KinematicBody2D" parent="."]
-position = Vector2( 201, 427 )
-script = ExtResource( 11 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Button2" type="Button" parent="b2"]
-margin_right = 152.0
-margin_bottom = 151.0
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/normal = SubResource( 17 )
-
-[node name="Label" type="Label" parent="b2/Button2"]
-margin_left = 67.0
-margin_top = 73.0
-margin_right = 107.0
-margin_bottom = 87.0
-text = "0"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b2"]
-position = Vector2( 75, 80.625 )
-shape = SubResource( 18 )
-
-[node name="Area2D_b2" type="Area2D" parent="b2"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b2/Area2D_b2"]
-position = Vector2( 73.5, 36 )
-shape = SubResource( 19 )
-
-[node name="b3" type="KinematicBody2D" parent="."]
-position = Vector2( 390, 441 )
-script = ExtResource( 12 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Button3" type="Button" parent="b3"]
-margin_right = 152.0
-margin_bottom = 151.0
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/normal = SubResource( 17 )
-
-[node name="Label" type="Label" parent="b3/Button3"]
-margin_left = 67.0
-margin_top = 73.0
-margin_right = 107.0
-margin_bottom = 87.0
-text = "0"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b3"]
-position = Vector2( 75, 80.625 )
-shape = SubResource( 18 )
-
-[node name="Area2D_b3" type="Area2D" parent="b3"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b3/Area2D_b3"]
-position = Vector2( 73.5, 36 )
-shape = SubResource( 19 )
-
-[node name="b4" type="KinematicBody2D" parent="."]
-position = Vector2( 559, 437 )
-script = ExtResource( 13 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Button4" type="Button" parent="b4"]
-margin_right = 152.0
-margin_bottom = 151.0
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/normal = SubResource( 17 )
-
-[node name="Label" type="Label" parent="b4/Button4"]
-margin_left = 67.0
-margin_top = 73.0
-margin_right = 107.0
-margin_bottom = 87.0
-text = "0"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b4"]
-position = Vector2( 75, 80.625 )
-shape = SubResource( 18 )
-
-[node name="Area2D_b4" type="Area2D" parent="b4"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b4/Area2D_b4"]
-position = Vector2( 73.5, 36 )
-shape = SubResource( 19 )
-
-[node name="b5" type="KinematicBody2D" parent="."]
-position = Vector2( 747, 455 )
-script = ExtResource( 14 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Button5" type="Button" parent="b5"]
-margin_right = 152.0
-margin_bottom = 151.0
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/normal = SubResource( 17 )
-
-[node name="Label" type="Label" parent="b5/Button5"]
-margin_left = 67.0
-margin_top = 73.0
-margin_right = 107.0
-margin_bottom = 87.0
-text = "0"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b5"]
-position = Vector2( 75, 80.625 )
-shape = SubResource( 18 )
-
-[node name="Area2D_b5" type="Area2D" parent="b5"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b5/Area2D_b5"]
-position = Vector2( 73.5, 36 )
-shape = SubResource( 19 )
-
-[node name="b6" type="KinematicBody2D" parent="."]
-position = Vector2( 923, 423 )
-script = ExtResource( 15 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Button6" type="Button" parent="b6"]
-margin_right = 152.0
-margin_bottom = 151.0
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/normal = SubResource( 17 )
-
-[node name="Label" type="Label" parent="b6/Button6"]
-margin_left = 67.0
-margin_top = 73.0
-margin_right = 107.0
-margin_bottom = 87.0
-text = "0"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b6"]
-position = Vector2( 75, 80.625 )
-shape = SubResource( 18 )
-
-[node name="Area2D_b6" type="Area2D" parent="b6"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b6/Area2D_b6"]
-position = Vector2( 73.5, 36 )
-shape = SubResource( 19 )
-
-[node name="b7" type="KinematicBody2D" parent="."]
-position = Vector2( 1114, 437 )
-script = ExtResource( 16 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Button7" type="Button" parent="b7"]
-margin_right = 152.0
-margin_bottom = 151.0
-custom_styles/hover = SubResource( 15 )
-custom_styles/pressed = SubResource( 16 )
-custom_styles/normal = SubResource( 17 )
-
-[node name="Label" type="Label" parent="b7/Button7"]
-margin_left = 67.0
-margin_top = 73.0
-margin_right = 107.0
-margin_bottom = 87.0
-text = "0"
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b7"]
-position = Vector2( 75, 80.625 )
-shape = SubResource( 18 )
-
-[node name="Area2D_b7" type="Area2D" parent="b7"]
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="b7/Area2D_b7"]
-position = Vector2( 73.5, 36 )
-shape = SubResource( 19 )
-
-[node name="spoo" type="KinematicBody2D" parent="."]
-position = Vector2( 0, -47 )
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="personaje" type="Sprite" parent="spoo"]
-position = Vector2( 97, 405 )
-scale = Vector2( 0.8125, 0.805 )
-texture = ExtResource( 7 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="spoo"]
-position = Vector2( 97.5, 403.5 )
-shape = SubResource( 11 )
-
-[node name="coin1" type="Area2D" parent="."]
-position = Vector2( 2, -10 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="coin1"]
-position = Vector2( 273, 448 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coin1"]
-position = Vector2( 273, 449 )
-scale = Vector2( 1.7, 1.7 )
-shape = SubResource( 13 )
-
-[node name="coin2" type="Area2D" parent="."]
-position = Vector2( 359, -2 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="coin2"]
-position = Vector2( 273, 448 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coin2"]
-position = Vector2( 273, 449 )
-scale = Vector2( 1.7, 1.7 )
-shape = SubResource( 13 )
-
-[node name="coin3" type="Area2D" parent="."]
-position = Vector2( 725, -15 )
-__meta__ = {
-"_edit_group_": true
-}
-
-[node name="Sprite" type="Sprite" parent="coin3"]
-position = Vector2( 273, 448 )
-scale = Vector2( 0.2, 0.2 )
-texture = ExtResource( 4 )
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="coin3"]
-position = Vector2( 273, 449 )
-scale = Vector2( 1.7, 1.7 )
-shape = SubResource( 13 )
-
 [node name="points" type="Sprite" parent="."]
-position = Vector2( 918, 59 )
-scale = Vector2( 0.828205, 0.82381 )
+position = Vector2( 368, 59 )
+scale = Vector2( 2.29744, 0.82381 )
 texture = ExtResource( 5 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="label_point" type="Label" parent="points"]
-margin_left = -41.0526
-margin_top = -12.1387
-margin_right = 53.9474
-margin_bottom = 19.8613
+[node name="label_point" type="Label" parent="."]
+margin_left = 224.0
+margin_top = 48.0
+margin_right = 319.0
+margin_bottom = 80.0
 custom_fonts/font = SubResource( 21 )
 text = "0 / 15"
 
 [node name="Timer" type="Timer" parent="."]
-wait_time = 0.72
+wait_time = 1.2
 
 [node name="abajo" type="Area2D" parent="."]
 
@@ -416,13 +316,21 @@ stream = ExtResource( 19 )
 autoplay = true
 
 [node name="TButton_Music" type="TextureButton" parent="."]
-margin_left = 1159.0
-margin_top = 113.0
-margin_right = 1219.0
-margin_bottom = 174.0
+margin_left = 1196.0
+margin_top = 21.0
+margin_right = 1256.0
+margin_bottom = 82.0
 toggle_mode = true
 texture_normal = ExtResource( 18 )
 texture_pressed = ExtResource( 20 )
+expand = true
+
+[node name="start" type="TextureButton" parent="."]
+margin_left = 632.0
+margin_top = 133.0
+margin_right = 739.0
+margin_bottom = 227.0
+texture_normal = ExtResource( 21 )
 expand = true
 
 [node name="borde_v" type="Area2D" parent="."]
@@ -431,27 +339,466 @@ expand = true
 position = Vector2( 1316, 406 )
 shape = SubResource( 22 )
 
+[node name="kitty" type="AnimatedSprite" parent="."]
+position = Vector2( 1032, 312 )
+scale = Vector2( 0.5, 0.5 )
+frames = SubResource( 27 )
+frame = 10
+playing = true
+
+[node name="LianasNight1" type="Sprite" parent="."]
+position = Vector2( 1024, 328 )
+scale = Vector2( 1.00195, 0.939918 )
+texture = ExtResource( 32 )
+
+[node name="moneda1" type="Area2D" parent="."]
+visible = false
+position = Vector2( 0, -8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="moneda1"]
+position = Vector2( 280, 424 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+flip_h = true
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda1"]
+position = Vector2( 280, 424 )
+shape = SubResource( 28 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="moneda1"]
+autoplay = "coin"
+anims/RESET = SubResource( 29 )
+anims/coin = SubResource( 30 )
+
+[node name="moneda2" type="Area2D" parent="."]
+visible = false
+position = Vector2( 184, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="moneda2"]
+position = Vector2( 280, 424 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+flip_h = true
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda2"]
+position = Vector2( 280, 424 )
+shape = SubResource( 28 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="moneda2"]
+autoplay = "coin"
+anims/RESET = SubResource( 31 )
+anims/coin = SubResource( 32 )
+
+[node name="moneda3" type="Area2D" parent="."]
+visible = false
+position = Vector2( 352, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="moneda3"]
+position = Vector2( 280, 424 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+flip_h = true
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda3"]
+position = Vector2( 280, 424 )
+shape = SubResource( 28 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="moneda3"]
+autoplay = "coin"
+anims/RESET = SubResource( 33 )
+anims/coin = SubResource( 34 )
+
+[node name="moneda4" type="Area2D" parent="."]
+visible = false
+position = Vector2( 528, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="moneda4"]
+position = Vector2( 280, 424 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+flip_h = true
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda4"]
+position = Vector2( 280, 424 )
+shape = SubResource( 28 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="moneda4"]
+autoplay = "coin"
+anims/RESET = SubResource( 35 )
+anims/coin = SubResource( 36 )
+
+[node name="moneda5" type="Area2D" parent="."]
+visible = false
+position = Vector2( 712, 8 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="moneda5"]
+position = Vector2( 280, 424 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 4 )
+flip_h = true
+hframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="moneda5"]
+position = Vector2( 280, 424 )
+shape = SubResource( 28 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="moneda5"]
+autoplay = "coin"
+anims/RESET = SubResource( 37 )
+anims/coin = SubResource( 38 )
+
+[node name="bloque_r1" type="RigidBody2D" parent="."]
+position = Vector2( 288, 504 )
+mass = 10.0
+gravity_scale = 0.0
+linear_damp = 0.0
+angular_damp = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="area_b1" type="Area2D" parent="bloque_r1"]
+
+[node name="base" type="CollisionShape2D" parent="bloque_r1/area_b1"]
+position = Vector2( -4, -60 )
+shape = SubResource( 42 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bloque_r1"]
+scale = Vector2( 0.78, 0.77375 )
+frames = SubResource( 23 )
+frame = 14
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="bloque_r1"]
+margin_left = -32.0
+margin_top = -8.0
+margin_right = 32.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 26 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bloque_r1"]
+position = Vector2( -4.25, 4 )
+shape = SubResource( 24 )
+
+[node name="b_b1" type="TextureButton" parent="bloque_r1"]
+margin_left = -40.0
+margin_top = -16.0
+margin_right = 40.0
+margin_bottom = 48.0
+
+[node name="bloque_s" type="StaticBody2D" parent="bloque_r1"]
+position = Vector2( -272, -504 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bloque_r1/bloque_s"]
+position = Vector2( 268, 460 )
+shape = SubResource( 46 )
+
+[node name="bloque_r2" type="RigidBody2D" parent="."]
+position = Vector2( 464, 520 )
+mass = 10.0
+gravity_scale = 0.0
+linear_damp = 0.0
+angular_damp = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="area_b2" type="Area2D" parent="bloque_r2"]
+
+[node name="base" type="CollisionShape2D" parent="bloque_r2/area_b2"]
+position = Vector2( -4, -60 )
+shape = SubResource( 42 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bloque_r2"]
+scale = Vector2( 0.78, 0.77375 )
+frames = SubResource( 23 )
+frame = 1
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="bloque_r2"]
+margin_left = -32.0
+margin_top = -8.0
+margin_right = 32.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 26 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bloque_r2"]
+position = Vector2( -4.25, 4 )
+shape = SubResource( 24 )
+
+[node name="b_b2" type="TextureButton" parent="bloque_r2"]
+margin_left = -40.0
+margin_top = -16.0
+margin_right = 40.0
+margin_bottom = 48.0
+
+[node name="bloque_s" type="StaticBody2D" parent="bloque_r2"]
+position = Vector2( -272, -504 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bloque_r2/bloque_s"]
+position = Vector2( 268, 460 )
+shape = SubResource( 46 )
+
+[node name="bloque_r3" type="RigidBody2D" parent="."]
+position = Vector2( 640, 520 )
+mass = 10.0
+gravity_scale = 0.0
+linear_damp = 0.0
+angular_damp = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="area_b3" type="Area2D" parent="bloque_r3"]
+
+[node name="base" type="CollisionShape2D" parent="bloque_r3/area_b3"]
+position = Vector2( -4, -60 )
+shape = SubResource( 42 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bloque_r3"]
+scale = Vector2( 0.78, 0.77375 )
+frames = SubResource( 23 )
+frame = 1
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="bloque_r3"]
+margin_left = -32.0
+margin_top = -8.0
+margin_right = 32.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 26 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bloque_r3"]
+position = Vector2( -4.25, 4 )
+shape = SubResource( 24 )
+
+[node name="b_b3" type="TextureButton" parent="bloque_r3"]
+margin_left = -40.0
+margin_top = -16.0
+margin_right = 40.0
+margin_bottom = 48.0
+
+[node name="bloque_s" type="StaticBody2D" parent="bloque_r3"]
+position = Vector2( -272, -504 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bloque_r3/bloque_s"]
+position = Vector2( 268, 460 )
+shape = SubResource( 46 )
+
+[node name="bloque_r4" type="RigidBody2D" parent="."]
+position = Vector2( 816, 528 )
+mass = 10.0
+gravity_scale = 0.0
+linear_damp = 0.0
+angular_damp = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="area_b4" type="Area2D" parent="bloque_r4"]
+
+[node name="base" type="CollisionShape2D" parent="bloque_r4/area_b4"]
+position = Vector2( -4, -60 )
+shape = SubResource( 42 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bloque_r4"]
+scale = Vector2( 0.78, 0.77375 )
+frames = SubResource( 23 )
+frame = 12
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="bloque_r4"]
+margin_left = -32.0
+margin_top = -8.0
+margin_right = 32.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 26 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bloque_r4"]
+position = Vector2( -4.25, 4 )
+shape = SubResource( 24 )
+
+[node name="b_b4" type="TextureButton" parent="bloque_r4"]
+margin_left = -40.0
+margin_top = -16.0
+margin_right = 40.0
+margin_bottom = 48.0
+
+[node name="bloque_s" type="StaticBody2D" parent="bloque_r4"]
+position = Vector2( -272, -504 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bloque_r4/bloque_s"]
+position = Vector2( 268, 460 )
+shape = SubResource( 46 )
+
+[node name="bloque_r5" type="RigidBody2D" parent="."]
+position = Vector2( 1000, 520 )
+mass = 10.0
+gravity_scale = 0.0
+linear_damp = 0.0
+angular_damp = 0.0
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="area_b5" type="Area2D" parent="bloque_r5"]
+
+[node name="base" type="CollisionShape2D" parent="bloque_r5/area_b5"]
+position = Vector2( -4, -60 )
+shape = SubResource( 42 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="bloque_r5"]
+scale = Vector2( 0.78, 0.77375 )
+frames = SubResource( 23 )
+frame = 3
+speed_scale = 2.0
+
+[node name="Label" type="Label" parent="bloque_r5"]
+margin_left = -32.0
+margin_top = -8.0
+margin_right = 32.0
+margin_bottom = 38.0
+custom_fonts/font = SubResource( 26 )
+text = "10"
+align = 1
+valign = 1
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="bloque_r5"]
+position = Vector2( -4.25, 4 )
+shape = SubResource( 24 )
+
+[node name="b_b5" type="TextureButton" parent="bloque_r5"]
+margin_left = -40.0
+margin_top = -16.0
+margin_right = 40.0
+margin_bottom = 48.0
+
+[node name="bloque_s" type="StaticBody2D" parent="bloque_r5"]
+position = Vector2( -272, -504 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="bloque_r5/bloque_s"]
+position = Vector2( 268, 460 )
+shape = SubResource( 46 )
+
+[node name="b0" type="StaticBody2D" parent="."]
+position = Vector2( -160, 224 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="b0"]
+position = Vector2( 264, 264 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b0"]
+position = Vector2( 261.5, 267.5 )
+shape = SubResource( 41 )
+
+[node name="Label" type="Label" parent="b0"]
+margin_left = 224.0
+margin_top = 256.0
+margin_right = 304.0
+margin_bottom = 302.0
+custom_fonts/font = SubResource( 39 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="b1" type="StaticBody2D" parent="."]
+position = Vector2( 920, 248 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="b1"]
+position = Vector2( 264, 264 )
+scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 8 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="b1"]
+position = Vector2( 261.5, 267.5 )
+shape = SubResource( 41 )
+
+[node name="Label" type="Label" parent="b1"]
+margin_left = 224.0
+margin_top = 256.0
+margin_right = 304.0
+margin_bottom = 302.0
+custom_fonts/font = SubResource( 39 )
+text = "0"
+align = 1
+valign = 1
+
+[node name="spoo1" type="RigidBody2D" parent="."]
+position = Vector2( 96, 328 )
+mass = 15.0
+physics_material_override = SubResource( 45 )
+gravity_scale = 9.8
+script = ExtResource( 35 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="animated_spoo" type="AnimatedSprite" parent="spoo1"]
+scale = Vector2( 0.06, 0.06 )
+frames = SubResource( 43 )
+animation = "ojos"
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="spoo1"]
+position = Vector2( 0, -2 )
+shape = SubResource( 44 )
+
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
-[connection signal="button_up" from="play" to="spoo" method="_on_play_button_up"]
-[connection signal="pressed" from="play" to="spoo" method="_on_play_pressed"]
-[connection signal="pressed" from="b1/Button1" to="." method="_on_Button1_pressed"]
-[connection signal="body_entered" from="b1/Area2D_b1" to="." method="_on_Area2D_b1_body_entered"]
-[connection signal="pressed" from="b2/Button2" to="." method="_on_Button2_pressed"]
-[connection signal="body_entered" from="b2/Area2D_b2" to="." method="_on_Area2D_b2_body_entered"]
-[connection signal="pressed" from="b3/Button3" to="." method="_on_Button3_pressed"]
-[connection signal="body_entered" from="b3/Area2D_b3" to="." method="_on_Area2D_b3_body_entered"]
-[connection signal="pressed" from="b4/Button4" to="." method="_on_Button4_pressed"]
-[connection signal="body_entered" from="b4/Area2D_b4" to="." method="_on_Area2D_b4_body_entered"]
-[connection signal="pressed" from="b5/Button5" to="." method="_on_Button5_pressed"]
-[connection signal="body_entered" from="b5/Area2D_b5" to="." method="_on_Area2D_b5_body_entered"]
-[connection signal="pressed" from="b6/Button6" to="." method="_on_Button6_pressed"]
-[connection signal="body_entered" from="b6/Area2D_b6" to="." method="_on_Area2D_b6_body_entered"]
-[connection signal="pressed" from="b7/Button7" to="." method="_on_Button7_pressed"]
-[connection signal="body_entered" from="b7/Area2D_b7" to="." method="_on_Area2D_b7_body_entered"]
-[connection signal="body_entered" from="coin1" to="." method="_on_coin1_body_entered"]
-[connection signal="body_entered" from="coin2" to="." method="_on_coin2_body_entered"]
-[connection signal="body_entered" from="coin3" to="." method="_on_coin3_body_entered"]
-[connection signal="timeout" from="Timer" to="spoo" method="_on_Timer_timeout"]
+[connection signal="timeout" from="Timer" to="spoo1" method="_on_Timer_timeout"]
 [connection signal="body_exited" from="abajo" to="." method="_on_abajo_body_exited"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
+[connection signal="pressed" from="start" to="spoo1" method="_on_start_pressed"]
 [connection signal="body_entered" from="borde_v" to="." method="_on_borde_v_body_entered"]
+[connection signal="body_entered" from="moneda1" to="." method="_on_moneda1_body_entered"]
+[connection signal="body_entered" from="moneda2" to="." method="_on_moneda2_body_entered"]
+[connection signal="body_entered" from="moneda3" to="." method="_on_moneda3_body_entered"]
+[connection signal="body_entered" from="moneda4" to="." method="_on_moneda4_body_entered"]
+[connection signal="body_entered" from="moneda5" to="." method="_on_moneda5_body_entered"]
+[connection signal="body_entered" from="bloque_r1/area_b1" to="." method="_on_area_b1_body_entered"]
+[connection signal="pressed" from="bloque_r1/b_b1" to="." method="_on_b_b1_pressed"]
+[connection signal="body_entered" from="bloque_r2/area_b2" to="." method="_on_area_b2_body_entered"]
+[connection signal="pressed" from="bloque_r2/b_b2" to="." method="_on_b_b2_pressed"]
+[connection signal="body_entered" from="bloque_r3/area_b3" to="." method="_on_area_b3_body_entered"]
+[connection signal="pressed" from="bloque_r3/b_b3" to="." method="_on_b_b3_pressed"]
+[connection signal="body_entered" from="bloque_r4/area_b4" to="." method="_on_area_b4_body_entered"]
+[connection signal="pressed" from="bloque_r4/b_b4" to="." method="_on_b_b4_pressed"]
+[connection signal="body_entered" from="bloque_r5/area_b5" to="." method="_on_area_b5_body_entered"]
+[connection signal="pressed" from="bloque_r5/b_b5" to="." method="_on_b_b5_pressed"]
