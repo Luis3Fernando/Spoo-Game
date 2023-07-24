@@ -115,15 +115,17 @@ texture_normal = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="add"]
 margin_left = 59.0
-margin_top = 150.0
-margin_right = 144.0
-margin_bottom = 177.0
+margin_top = 129.0
+margin_right = 148.0
+margin_bottom = 198.0
 custom_fonts/font = SubResource( 12 )
-text = "Agregar"
+text = "Agregar 
+Alumnos"
+clip_text = true
 
 [node name="Sprite" type="Sprite" parent="add"]
-position = Vector2( 100, 85 )
-scale = Vector2( 0.609375, 0.617188 )
+position = Vector2( 100.5, 62.5 )
+scale = Vector2( 0.695313, 0.617187 )
 texture = ExtResource( 9 )
 
 [node name="edit" type="TextureButton" parent="."]
@@ -134,16 +136,18 @@ margin_bottom = 706.0
 texture_normal = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="edit"]
-margin_left = 64.0
-margin_top = 150.0
-margin_right = 136.0
-margin_bottom = 177.0
+margin_left = 52.0
+margin_top = 126.0
+margin_right = 148.0
+margin_bottom = 199.0
 custom_fonts/font = SubResource( 13 )
-text = "Editar"
+text = "Lista de 
+Alumnos"
+clip_text = true
 
 [node name="Sprite" type="Sprite" parent="edit"]
-position = Vector2( 102, 86 )
-scale = Vector2( 0.570312, 0.572265 )
+position = Vector2( 102, 63 )
+scale = Vector2( 0.570312, 0.546875 )
 texture = ExtResource( 8 )
 
 [node name="drop" type="TextureButton" parent="."]
@@ -155,15 +159,17 @@ texture_normal = ExtResource( 6 )
 
 [node name="Label" type="Label" parent="drop"]
 margin_left = 59.0
-margin_top = 150.0
+margin_top = 124.0
 margin_right = 145.0
-margin_bottom = 177.0
+margin_bottom = 183.0
 custom_fonts/font = SubResource( 14 )
-text = "Eliminar"
+text = "Eliminar
+Alumnos"
+clip_text = true
 
 [node name="Sprite" type="Sprite" parent="drop"]
-position = Vector2( 106.125, 86.75 )
-scale = Vector2( 0.591797, 0.574219 )
+position = Vector2( 103.5, 62 )
+scale = Vector2( 0.632813, 0.578125 )
 texture = ExtResource( 10 )
 
 [connection signal="pressed" from="Sprite/Button" to="." method="_on_Button_pressed"]
