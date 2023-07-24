@@ -349,7 +349,7 @@ shape = SubResource( 22 )
 position = Vector2( 1032, 312 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 27 )
-frame = 13
+frame = 6
 playing = true
 
 [node name="LianasNight1" type="Sprite" parent="."]
@@ -781,7 +781,7 @@ __meta__ = {
 scale = Vector2( 0.06, 0.06 )
 frames = SubResource( 43 )
 animation = "ojos"
-frame = 6
+frame = 3
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="spoo1"]

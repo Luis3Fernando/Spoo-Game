@@ -2,7 +2,7 @@
 
 [ext_resource path="res://spoo_world/assets/audio/level3.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
-[ext_resource path="res://spoo_world/assets/img/paisajes/level3.jpg" type="Texture" id=3]
+[ext_resource path="res://spoo_world/assets/img/fondo333.png" type="Texture" id=3]
 [ext_resource path="res://spoo_world/world/levels/level3/level3.gd" type="Script" id=4]
 [ext_resource path="res://spoo_world/assets/icon/arrow_back50.png" type="Texture" id=5]
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=6]
@@ -39,7 +39,7 @@ script = ExtResource( 4 )
 
 [node name="fondo" type="Sprite" parent="."]
 position = Vector2( 640, 400 )
-scale = Vector2( 0.926194, 0.925926 )
+scale = Vector2( 1.66667, 1.66667 )
 texture = ExtResource( 3 )
 
 [node name="AudioFondo" type="AudioStreamPlayer" parent="."]
@@ -114,23 +114,23 @@ scale = Vector2( 1, 0.985916 )
 polygon = PoolVector2Array( 713, 602.857, 727.174, 611.996, 752.564, 611.99, 767, 600.829, 773, 588.657, 772, 287, 770, 275, 766, 263, 761, 253, 755, 242, 750, 234, 745, 226, 738, 218, 729, 210, 717, 202, 705, 195, 689, 190, 674, 188, 657, 187, 644, 187, 629, 188, 616, 191, 598, 197, 579, 205, 565, 213, 550, 224, 536, 240, 526, 255, 519, 269, 513, 285, 508, 301, 507, 318, 507, 345, 510, 367.543, 517, 390.871, 524, 408.114, 532, 422.314, 541, 434.486, 560, 450.714, 579, 460.857, 593, 466.943, 611, 472.014, 630, 474.043, 647, 474.043, 659, 473.029, 672, 468.971, 683, 463.9, 694, 458.829, 706, 450.714, 706.868, 590.388 )
 
 [node name="puntos" type="Sprite" parent="."]
-position = Vector2( 1012.75, 72 )
-scale = Vector2( 1.27949, 1 )
+position = Vector2( 273.625, 64 )
+scale = Vector2( 1.78846, 1 )
 texture = ExtResource( 15 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="puntos_l" type="Label" parent="puntos"]
-margin_left = -59.9849
-margin_top = -8.0
-margin_right = -3.98492
-margin_bottom = 15.0
+[node name="puntos_l" type="Label" parent="."]
+margin_left = 168.0
+margin_top = 56.0
+margin_right = 224.0
+margin_bottom = 79.0
 custom_fonts/font = SubResource( 2 )
 text = "0/20"
 
 [node name="spoo" type="AnimatedSprite" parent="."]
-position = Vector2( 160, 544 )
+position = Vector2( 184, 608 )
 scale = Vector2( 0.11, 0.11 )
 frames = SubResource( 1 )
 animation = "parpadear"

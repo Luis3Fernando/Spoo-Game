@@ -19,8 +19,10 @@ func showSceneWithDelay(scene_path: String, scene_rel: String):
 	var bandera_bien = buscar_palabra_bien(scene_path)
 	var bandera_mal = buscar_palabra_mal(scene_path)
 	
-	print("bien: ", bandera_bien)
-	print("mal: ", bandera_mal)
+	if bandera_bien:
+		print("pon el sonido de bien")
+	if bandera_mal:
+		print("pon el de mal")
 	#get_tree().get_root().add_child(scene_instance)
 	get_tree().get_root().add_child(scene_instance)
 	

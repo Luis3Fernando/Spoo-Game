@@ -32,7 +32,7 @@ onready var img_n7= $Numero7_img
 onready var img_n8= $Numero8_img
 onready var img_n9= $Numero9_img
 
-onready var label = $puntos/puntos_l
+onready var label = $puntos_l
 
 func _ready():
 	Singleton.stay = 2
@@ -141,6 +141,7 @@ func _input(event):
 
 
 func _on_back_pressed():
+	Singleton.rondas2-=1
 	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
 	get_tree().change_scene(new_scene_path)
 
@@ -175,7 +176,7 @@ func _on_verificar_pressed():
 		if !bandera:
 			break
 	
-	if bandera:
+	if bandera and _drawn_patterns.size()>=90:
 		if Singleton.rondas2<=20 and !student.completados["level2"]:
 			student.puntos["level2"] +=2
 		_on_vaciar_pressed()

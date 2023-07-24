@@ -366,14 +366,15 @@ texture_normal = ExtResource( 10 )
 expand = true
 
 [node name="puntos" type="Sprite" parent="."]
-position = Vector2( 659.25, 64 )
-scale = Vector2( 1.03333, 1 )
+position = Vector2( 680, 64 )
+scale = Vector2( 1.72308, 1 )
 texture = ExtResource( 16 )
 
-[node name="puntos_l" type="Label" parent="puntos"]
-margin_left = -56.0
-margin_top = -8.0
-margin_bottom = 15.0
+[node name="puntos_l" type="Label" parent="."]
+margin_left = 576.0
+margin_top = 56.0
+margin_right = 632.0
+margin_bottom = 79.0
 custom_fonts/font = SubResource( 14 )
 text = "0/20"
 

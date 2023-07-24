@@ -22,7 +22,7 @@ onready var madera6 = $madera6/Sprite
 onready var madera7 = $madera7/Sprite
 onready var madera8 = $madera8/Sprite
 
-onready var label = $puntos/puntos_l
+onready var label = $puntos_l
 onready var spoo = $spoo
 
 var tocar = 0
@@ -39,6 +39,7 @@ func _ready():
 	mostrar_bloques(numero_entero_aleatorio)
 
 func _on_back_pressed():
+	Singleton.rondas1-=1
 	var new_scene_path = "res://spoo_world/world/levels/level_main.tscn"  # Ruta a la nueva escena
 	get_tree().change_scene(new_scene_path)
 

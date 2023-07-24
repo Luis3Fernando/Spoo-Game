@@ -1,4 +1,4 @@
-[gd_scene load_steps=33 format=2]
+[gd_scene load_steps=47 format=2]
 
 [ext_resource path="res://spoo_world/assets/audio/level2.mp3" type="AudioStream" id=1]
 [ext_resource path="res://spoo_world/assets/icon/music.png" type="Texture" id=2]
@@ -30,6 +30,19 @@
 [ext_resource path="res://spoo_world/assets/audio/nueve.wav" type="AudioStream" id=28]
 [ext_resource path="res://spoo_world/assets/audio/trees.wav" type="AudioStream" id=29]
 [ext_resource path="res://spoo_world/assets/typography/GameOfSquids-1GMVL.ttf" type="DynamicFontData" id=30]
+[ext_resource path="res://spoo_world/assets/img/moo2.png" type="Texture" id=31]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-4.png" type="Texture" id=32]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-0.png" type="Texture" id=33]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-5.png" type="Texture" id=34]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-7.png" type="Texture" id=35]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-10.png" type="Texture" id=36]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-11.png" type="Texture" id=37]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-1.png" type="Texture" id=38]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-2.png" type="Texture" id=39]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-9.png" type="Texture" id=40]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-3.png" type="Texture" id=41]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-8.png" type="Texture" id=42]
+[ext_resource path="res://spoo_world/assets/img/gato_globo/824975974466473bf86c02ed27dc9a27EeqXckv0h7pdYnRk-6.png" type="Texture" id=43]
 
 [sub_resource type="DynamicFont" id=2]
 size = 18
@@ -40,6 +53,14 @@ animations = [ {
 "frames": [ ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 16 ), ExtResource( 16 ) ],
 "loop": true,
 "name": "parpadear",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=3]
+animations = [ {
+"frames": [ ExtResource( 33 ), ExtResource( 39 ), ExtResource( 38 ), ExtResource( 41 ), ExtResource( 32 ), ExtResource( 34 ), ExtResource( 43 ), ExtResource( 35 ), ExtResource( 42 ), ExtResource( 40 ), ExtResource( 36 ), ExtResource( 37 ) ],
+"loop": true,
+"name": "default",
 "speed": 5.0
 } ]
 
@@ -177,18 +198,18 @@ scale = Vector2( 0.784671, 0.857594 )
 texture = ExtResource( 14 )
 
 [node name="puntos" type="Sprite" parent="."]
-position = Vector2( 1012.75, 72 )
-scale = Vector2( 1.27949, 1 )
+position = Vector2( 261.625, 56 )
+scale = Vector2( 1.82949, 1 )
 texture = ExtResource( 15 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="puntos_l" type="Label" parent="puntos"]
-margin_left = -53.7324
-margin_top = -8.0
-margin_right = 2.26764
-margin_bottom = 15.0
+[node name="puntos_l" type="Label" parent="."]
+margin_left = 144.0
+margin_top = 48.0
+margin_right = 200.0
+margin_bottom = 71.0
 custom_fonts/font = SubResource( 2 )
 text = "0/20"
 
@@ -197,20 +218,22 @@ position = Vector2( 128, 664 )
 scale = Vector2( 0.11, 0.11 )
 frames = SubResource( 1 )
 animation = "parpadear"
+frame = 21
+playing = true
 
 [node name="verificar" type="TextureButton" parent="."]
-margin_left = 1008.0
-margin_top = 296.0
-margin_right = 1144.0
-margin_bottom = 416.0
+margin_left = 960.0
+margin_top = 216.0
+margin_right = 1096.0
+margin_bottom = 336.0
 texture_normal = ExtResource( 18 )
 expand = true
 
 [node name="vaciar" type="TextureButton" parent="."]
-margin_left = 1024.0
-margin_top = 512.0
-margin_right = 1120.0
-margin_bottom = 616.0
+margin_left = 960.0
+margin_top = 480.0
+margin_right = 1056.0
+margin_bottom = 584.0
 texture_normal = ExtResource( 19 )
 expand = true
 
@@ -252,6 +275,19 @@ stream = ExtResource( 22 )
 
 [node name="AudioNueve" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 28 )
+
+[node name="Moo2" type="Sprite" parent="."]
+position = Vector2( 1210.75, 464.25 )
+scale = Vector2( 0.308999, 0.321 )
+texture = ExtResource( 31 )
+
+[node name="gato_globo" type="AnimatedSprite" parent="."]
+position = Vector2( 216, 216 )
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 3 )
+frame = 10
+speed_scale = 1.5
+playing = true
 
 [connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="verificar" to="." method="_on_verificar_pressed"]
