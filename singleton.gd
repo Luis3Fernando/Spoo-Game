@@ -9,8 +9,10 @@ var rondas4 = 0
 var rondas5 = 0
 var stay = 0
 var progreso_actual = 0
+var bandera_sonido= false 
 
 func _ready():
+	
 	pass 
 
 func showSceneWithDelay(scene_path: String, scene_rel: String):
@@ -19,10 +21,33 @@ func showSceneWithDelay(scene_path: String, scene_rel: String):
 	var bandera_bien = buscar_palabra_bien(scene_path)
 	var bandera_mal = buscar_palabra_mal(scene_path)
 	
+<<<<<<< HEAD
 	if bandera_bien:
 		print("pon el sonido de bien")
 	if bandera_mal:
 		print("pon el de mal")
+=======
+	print("bien: ", bandera_bien)
+	print("mal: ", bandera_mal)
+	
+	
+	#if bandera_bien :
+	#	var audio= load("res://spoo_world/assets/audio/bien.mp3")
+	#	var audio_player = AudioStreamPlayer.new()
+	#	audio_player.stream = audio
+	#	add_child(audio_player)
+	#	audio_player.play()
+	#	audio_player.autoplay=false
+	
+	#if bandera_mal :
+	#	var audio = load("res://spoo_world/assets/audio/error.mp3")
+	#	var audio_player = AudioStreamPlayer.new()
+	#	audio_player.stream = audio
+	#	add_child(audio_player)
+	#	audio_player.play()
+	#	audio_player.autoplay=false
+	
+>>>>>>> e666446c8709a9109070c77ec49a3493069e3b0d
 	#get_tree().get_root().add_child(scene_instance)
 	get_tree().get_root().add_child(scene_instance)
 	
@@ -34,7 +59,7 @@ func showSceneWithDelay(scene_path: String, scene_rel: String):
 	timer.start()
 	
 	scene_reload = scene_rel
-	
+
 func buscar_palabra_bien(cadena: String) -> bool:
 	var palabra_buscada = "bien"
 	var longitud_cadena = cadena.length()

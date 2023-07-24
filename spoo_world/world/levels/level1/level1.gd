@@ -258,10 +258,10 @@ func _on_final_body_entered(body):
 	if numero_seleccionado == numero_entero_aleatorio:
 		if Singleton.rondas1<=20 and !student.completados["level1"] and tocar==1:
 			student.puntos["level1"]+=2
-		Singleton.showSceneWithDelay("res://spoo_world/world/modal/bien.tscn", "res://spoo_world/world/levels/level1/level1.tscn")
+			Singleton.showSceneWithDelay("res://spoo_world/world/modal/bien.tscn", "res://spoo_world/world/levels/level1/level1.tscn")
 	else:
 		if Singleton.rondas1<=20 and !student.completados["level1"] and tocar==1:
 			student.puntos["level1"] +=1
-		Singleton.showSceneWithDelay("res://spoo_world/world/modal/mal.tscn", "res://spoo_world/world/levels/level1/level1.tscn")
+			Singleton.showSceneWithDelay("res://spoo_world/world/modal/mal.tscn", "res://spoo_world/world/levels/level1/level1.tscn")
 	spoo.moving = false
 	#get_tree().change_scene("res://spoo_world/world/levels/level1/level1.tscn")

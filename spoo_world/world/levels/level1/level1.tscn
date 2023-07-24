@@ -402,8 +402,8 @@ stream = ExtResource( 24 )
 [node name="AudioOcho" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 22 )
 
-[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="back" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="back" to="." method="_on_back_pressed"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
 [connection signal="pressed" from="space1" to="." method="_on_space1_pressed"]
 [connection signal="pressed" from="space2" to="." method="_on_space2_pressed"]
