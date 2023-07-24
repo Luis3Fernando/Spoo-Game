@@ -13,7 +13,7 @@ func _ready():
 	for i in range(len(students)):
 		var object_student = Button.new()
 		object_student.text = "           "+str(i+1)+"                                                                                             "+ students[i].nombreCompleto+"                                      "+"/20"
-		object_student.icon = load("res://spoo_world/assets/icon/moneda_50.png")
+		object_student.icon = load("res://spoo_world/assets/icon/basura.png")
 		object_student.align = Button.ALIGN_LEFT
 		object_student.icon_align = Button.ALIGN_RIGHT
 		get_tree().get_root().get_node("delete/ScrollContainer/VBoxContainer").add_child(object_student)

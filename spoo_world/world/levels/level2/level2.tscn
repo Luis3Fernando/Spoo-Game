@@ -218,7 +218,7 @@ position = Vector2( 128, 664 )
 scale = Vector2( 0.11, 0.11 )
 frames = SubResource( 1 )
 animation = "parpadear"
-frame = 21
+frame = 22
 playing = true
 
 [node name="verificar" type="TextureButton" parent="."]
@@ -285,7 +285,7 @@ texture = ExtResource( 31 )
 position = Vector2( 216, 216 )
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 3 )
-frame = 10
+frame = 2
 speed_scale = 1.5
 playing = true
 

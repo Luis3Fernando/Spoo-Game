@@ -22,7 +22,7 @@ func _on_Button_pressed():
 func _on_JUGAR_pressed():
 	var nombre_input = get_tree().get_root().get_node("add/Sprite/Panel/Usuario2/Usuario").text
 	var apellido_input = get_tree().get_root().get_node("add/Sprite/Panel/Password/Password2").text
-	var nombre_completo = nombre_input +" " +apellido_input
+	var nombre_completo = nombre_input.strip_edges() +" " +apellido_input.strip_edges()
 	
 	objeto = Db_Estudiante.new()
 	objeto.crear_estudiante(nombre_completo)

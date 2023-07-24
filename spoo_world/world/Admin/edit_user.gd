@@ -43,6 +43,6 @@ func _on_atras_pressed():
 
 func _on_actualizar_pressed():
 	var nombre_completo = array_nombre[0] + " "+ array_nombre[1]+ " "+ array_nombre[2]
-	var nombre_nuevo = input_nombre.text+" "+input_apellido.text
+	var nombre_nuevo = input_nombre.text.strip_edges()+" "+input_apellido.text.strip_edges()
 	var objeto = Db_Estudiante.new()
 	objeto.actualizar_nombre_estudiante(nombre_completo, nombre_nuevo)

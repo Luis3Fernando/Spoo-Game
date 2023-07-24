@@ -24,27 +24,27 @@ func _ready():
 	completados = objeto.contar_niveles_completados(student.completados)
 	label_student.text = nombre_completo
 	label_levels.text = str(completados)+" /5"
-	Singleton.progreso_actual = completados + Singleton.progreso_actual
-	b1_s = student.completados["level1"]
-	b2_s = student.completados["level2"]
-	b3_s = student.completados["level3"]
-	b4_s = student.completados["level4"]
-	b5_s = student.completados["level5"]
 	
-	
-	if b1_s:
-		b1.disabled =true
-	
-
-func _on_ButtonAtras_pressed():	
-	var objeto = Db_Estudiante.new()
-	var progreso_antes = objeto.contar_niveles_completados(student.completados)
-	var new_scene_path = "res://spoo_world/world/inicio.tscn" 
-	
-	if progreso_antes<Singleton.progreso_actual:
-		objeto.actualizar_estudiante(Singleton.student.nombreCompleto, Singleton.student)
+	b2_s = student.completados["level1"]
+	b3_s = student.completados["level2"]
+	b4_s = student.completados["level3"]
+	b5_s = student.completados["level4"]
+		
+	if !b2_s:
+		b2.disabled =true
+		
+	if !b3_s:
+		b3.disabled =true
+		
+	if !b4_s:
+		b4.disabled =true
+		
+	if !b5_s:
+		b5.disabled =true
 		
 
+func _on_ButtonAtras_pressed():
+	var new_scene_path = "res://spoo_world/world/Admin/alerta_login.tscn" 
 	get_tree().change_scene(new_scene_path)	
 
 

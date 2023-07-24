@@ -46,6 +46,10 @@ script = ExtResource( 3 )
 [node name="AudioProgress" type="AudioStreamPlayer" parent="."]
 stream = ExtResource( 11 )
 
+[node name="AudioBoton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+volume_db = 15.0
+
 [node name="Sprite" type="Sprite" parent="."]
 position = Vector2( 640, 400 )
 texture = ExtResource( 2 )
@@ -58,10 +62,6 @@ margin_bottom = -198.455
 icon = ExtResource( 1 )
 flat = true
 icon_align = 1
-
-[node name="AudioBoton" type="AudioStreamPlayer" parent="Sprite/Button"]
-stream = ExtResource( 11 )
-volume_db = 15.0
 
 [node name="Label" type="Label" parent="Sprite"]
 margin_left = -133.0
