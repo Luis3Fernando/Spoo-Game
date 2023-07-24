@@ -18,6 +18,7 @@ var completados = {
 	"level4": false,
 	"level5": false
 }
+
 func _init():
 	# Constructor
 	nombreCompleto = "none"

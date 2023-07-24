@@ -16,7 +16,11 @@ func _ready():
 func showSceneWithDelay(scene_path: String, scene_rel: String):
 	var scene = load(scene_path)
 	var scene_instance = scene.instance()
+	var bandera_bien = buscar_palabra_bien(scene_path)
+	var bandera_mal = buscar_palabra_mal(scene_path)
 	
+	print("bien: ", bandera_bien)
+	print("mal: ", bandera_mal)
 	#get_tree().get_root().add_child(scene_instance)
 	get_tree().get_root().add_child(scene_instance)
 	
@@ -28,6 +32,33 @@ func showSceneWithDelay(scene_path: String, scene_rel: String):
 	timer.start()
 	
 	scene_reload = scene_rel
+	
+func buscar_palabra_bien(cadena: String) -> bool:
+	var palabra_buscada = "bien"
+	var longitud_cadena = cadena.length()
+	var longitud_palabra = palabra_buscada.length()
+
+	for i in range(longitud_cadena - longitud_palabra + 1):
+		var subcadena = cadena.substr(i, longitud_palabra)
+		if subcadena == palabra_buscada:
+			return true
+
+	return false
+	
+
+func buscar_palabra_mal(cadena: String) -> bool:
+	var palabra_buscada = "mal"
+	var longitud_cadena = cadena.length()
+	var longitud_palabra = palabra_buscada.length()
+
+	for i in range(longitud_cadena - longitud_palabra + 1):
+		var subcadena = cadena.substr(i, longitud_palabra)
+		if subcadena == palabra_buscada:
+			return true
+
+	return false
+
+
 func recargar():
 	var scene_main = "res://spoo_world/world/levels/level_main.tscn"
 	match stay:

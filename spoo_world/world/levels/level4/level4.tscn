@@ -1,4 +1,4 @@
-[gd_scene load_steps=20 format=2]
+[gd_scene load_steps=23 format=2]
 
 [ext_resource path="res://spoo_world/world/levels/level4/level4.gd" type="Script" id=1]
 [ext_resource path="res://spoo_world/assets/img/paisajes/level4.jpg" type="Texture" id=2]
@@ -11,6 +11,9 @@
 [ext_resource path="res://spoo_world/assets/icon/nomusic.png" type="Texture" id=9]
 [ext_resource path="res://spoo_world/assets/icon/ave.png" type="Texture" id=10]
 [ext_resource path="res://spoo_world/assets/icon/ave_iz.png" type="Texture" id=11]
+[ext_resource path="res://spoo_world/assets/img/igual.png" type="Texture" id=12]
+[ext_resource path="res://spoo_world/assets/img/mayor_que.png" type="Texture" id=13]
+[ext_resource path="res://spoo_world/assets/img/menor_que.png" type="Texture" id=14]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
@@ -97,10 +100,10 @@ custom_fonts/font = SubResource( 5 )
 text = "0 / 15"
 
 [node name="ColorRect" type="ColorRect" parent="."]
-margin_left = 417.0
-margin_top = 241.0
-margin_right = 544.0
-margin_bottom = 386.0
+margin_left = 448.0
+margin_top = 248.0
+margin_right = 575.0
+margin_bottom = 393.0
 color = Color( 0.160784, 0.14902, 0.192157, 1 )
 __meta__ = {
 "_edit_group_": true
@@ -114,10 +117,10 @@ margin_bottom = 103.0
 custom_fonts/font = SubResource( 7 )
 
 [node name="ColorRect2" type="ColorRect" parent="."]
-margin_left = 715.0
-margin_top = 241.0
-margin_right = 842.0
-margin_bottom = 386.0
+margin_left = 704.0
+margin_top = 240.0
+margin_right = 831.0
+margin_bottom = 385.0
 color = Color( 0.160784, 0.14902, 0.192157, 1 )
 __meta__ = {
 "_edit_group_": true
@@ -251,5 +254,32 @@ position = Vector2( 338, 602 )
 scale = Vector2( 0.3, 0.3 )
 texture = ExtResource( 11 )
 
+[node name="menor_que" type="TextureButton" parent="."]
+margin_left = 832.0
+margin_top = 576.0
+margin_right = 1363.0
+margin_bottom = 1046.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 14 )
+
+[node name="mayor_que" type="TextureButton" parent="."]
+margin_left = 280.0
+margin_top = 576.0
+margin_right = 811.0
+margin_bottom = 1046.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 13 )
+
+[node name="igual" type="TextureButton" parent="."]
+margin_left = 568.0
+margin_top = 576.0
+margin_right = 1148.0
+margin_bottom = 1006.0
+rect_scale = Vector2( 0.25, 0.25 )
+texture_normal = ExtResource( 12 )
+
 [connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
 [connection signal="pressed" from="TButton_Music" to="." method="_on_TButton_Music_pressed"]
+[connection signal="pressed" from="menor_que" to="." method="_on_menor_que_pressed"]
+[connection signal="pressed" from="mayor_que" to="." method="_on_mayor_que_pressed"]
+[connection signal="pressed" from="igual" to="." method="_on_igual_pressed"]

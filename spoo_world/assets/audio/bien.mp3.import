@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bien.mp3-1fb8c254f93fa88ce52f77bfa7ec000f.mp3str"
+
+[deps]
+
+source_file="res://spoo_world/assets/audio/bien.mp3"
+dest_files=[ "res://.import/bien.mp3-1fb8c254f93fa88ce52f77bfa7ec000f.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0
