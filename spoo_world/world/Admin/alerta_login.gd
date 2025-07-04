@@ -10,14 +10,6 @@ func _ready():
 	objeto = Db_Administrador.new()
 	admin = objeto.obtener_administrador()
 
-
-func _on_Password2_text_changed():
-	var texto = password_input.text
-	var arreglo = string_a_array(texto)
-	password = password + arreglo[0]
-	password_input.text = ""
-	for i in range(arreglo.size()):
-		password_input.text = password_input.text +"*"
 		
 func string_a_array(palabra: String) -> Array:
 	var array_de_caracteres = []
@@ -32,7 +24,7 @@ func string_a_array(palabra: String) -> Array:
 
 
 func _on_JUGAR_pressed():
-	if password.strip_edges()==admin["password"]:
+	if password_input.text.strip_edges()==admin["password"]:
 		var objeto = Db_Estudiante.new()
 		var student = Singleton.student
 		var progreso_antes = objeto.contar_niveles_completados(student.completados)

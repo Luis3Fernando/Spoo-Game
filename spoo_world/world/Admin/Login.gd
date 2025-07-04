@@ -12,7 +12,7 @@ func _ready():
 	admin = objeto.obtener_administrador()
 
 func _on_JUGAR_pressed():	
-	if usuario_input.text == admin["user"] and password.strip_edges() == admin["password"]:
+	if usuario_input.text == admin["user"] and password_input.text== admin["password"]:
 		var audio= get_node("AudioBoton")
 		audio.play()
 		get_tree().change_scene("res://spoo_world/world/Admin/admin_main.tscn")
@@ -27,14 +27,6 @@ func _on_back_pressed():
 	audio1.play()
 	get_tree().change_scene("res://spoo_world/world/inicio.tscn")
 
-
-func _on_Password2_text_changed():
-	var texto = password_input.text
-	var arreglo = string_a_array(texto)
-	password = password + arreglo[0]
-	password_input.text = ""
-	for i in range(arreglo.size()):
-		password_input.text = password_input.text +"*"
 func string_a_array(palabra: String) -> Array:
 	var array_de_caracteres = []
 	if palabra.empty():
