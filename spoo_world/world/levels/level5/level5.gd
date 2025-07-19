@@ -64,10 +64,10 @@ func generar_valores_cuadros():
 			
 		
 	elif iteration ==3 or iteration ==4:
-		var ubicaciones= generarNumerosAleatorios(9, 13)
+		var ubicaciones= generarNumerosAleatorios(2, 6)
 		var j=0
-		for i in range(8,15):
-			if ubicaciones[ceros]==i and (i>8 and i<14):
+		for i in range(1,8):
+			if ubicaciones[ceros]==i and (i>1 and i<7):
 				valores[j] = 0
 				ceros+=1
 				j+=1
@@ -77,10 +77,10 @@ func generar_valores_cuadros():
 				j+=1
 	
 	elif iteration ==5 or iteration ==6:
-		var ubicaciones= generarNumerosAleatorios(12, 17)
+		var ubicaciones= generarNumerosAleatorios(3, 7)
 		var j=0
-		for i in range(11,18):
-			if ubicaciones[ceros]==i and (i>11 and i<18):
+		for i in range(2,9):
+			if ubicaciones[ceros]==i and (i>2 and i<8):
 				valores[j] = 0
 				ceros+=1
 				j+=1
@@ -90,10 +90,10 @@ func generar_valores_cuadros():
 				j+=1
 			
 	elif iteration ==7 or iteration ==8:
-		var ubicaciones= generarNumerosAleatorios(19, 24)
+		var ubicaciones= generarNumerosAleatorios(4, 8)
 		var j=0
-		for i in range(18,25):
-			if ubicaciones[ceros]==i and (i>18 and i<25):
+		for i in range(3,10):
+			if ubicaciones[ceros]==i and (i>3 and i<9):
 				valores[j] = 0
 				ceros+=1
 				j+=1
@@ -103,10 +103,10 @@ func generar_valores_cuadros():
 				j+=1
 			
 	elif iteration ==9 or iteration ==10:
-		var ubicaciones= generarNumerosAleatorios(25, 30)
+		var ubicaciones= generarNumerosAleatorios(1, 5)
 		var j=0
-		for i in range(24,31):
-			if ubicaciones[ceros]==i and (i>24 and i<31):
+		for i in range(4,11):
+			if ubicaciones[ceros]==i and (i>0 and i<6):
 				valores[j] = 0
 				ceros+=1
 				j+=1

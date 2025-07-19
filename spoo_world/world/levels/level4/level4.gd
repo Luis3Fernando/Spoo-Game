@@ -63,8 +63,8 @@ func _ready():
 
 func generateNumbers():
 	# Generamos dos números aleatorios
-	number1 = rand_range(1, 20)
-	number2 = rand_range(1, 20)
+	number1 = rand_range(1, 10)
+	number2 = rand_range(1, 10)
 	numeroIzqButton.text = str(number1)
 	numeroDerButton.text = str(number2)
 	
