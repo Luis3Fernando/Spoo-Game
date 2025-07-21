@@ -14,4 +14,7 @@ This video game is oriented to children, therefore, the levels presented are bas
 In level 1, the children will learn to understand quantities by selecting the respective flows to be pushed by Spoo.
 <img src="assets/screenshots/level-1.png" width="600"/>
 
+- LEVEL2:
+In level 2, we must teach the child to be able to draw the corresponding numbers, between 1 and 9, there is also sound to indicate which number it is and lines to guide him/her.
+<img src="assets/screenshots/level-2.png" width="600"/>
 ---
