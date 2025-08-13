@@ -40,7 +40,7 @@ Level 5 is the last spoo adventure. Spoo will jump over the blocks to get to the
 
 - 1: In this small video game, we can collect coins to evaluate the student's performance
 - 2: There is an admin side to create a session of one or more students, it was thought that the teacher in charge of the children perform this management
-<img src="assets/screenshots/admin" width="600"/>
+<img src="assets/screenshots/admin.png" width="600"/>
 The user and password is: admin. We can also list the students
 <img src="assets/screenshots/students2.png" width="600"/>
 - 3: Spoo, has sounds implemented with voices in Spanish.
