@@ -5,7 +5,7 @@
 ![Version](https://img.shields.io/badge/version-3.5.0-449627) ![Language](https://img.shields.io/badge/language-GDScript-449627) ![Status](https://img.shields.io/badge/status-Completed-449627)
 ![Stars](https://img.shields.io/github/stars/Luis3Fernando/Spoo-Game?style=social)
 
-This is a small group project, carried out in the software engineering course, with the purpose of making an educational video game to teach addition to children who can't read yet. The code is open for use and modification under the MIT License. Please credit the authors and kindly notify us if you use or adapt the code. Thanks for reading
+This is a small group project, carried out in the software engineering course, with the purpose of making an educational video game to teach addition to children who can't read yet. The code is open for use and modification under the MIT License. Please credit the authors and kindly notify us if you use or adapt the code. Thanks for reading!
 
 ---
 
